@@ -1,0 +1,146 @@
+
+
+
+.services-list{
+  gap: 0.63rem;
+
+  @media screen and (min-width: 992px) {
+    gap: 1.25rem;
+
+  }
+}
+
+.services-list__item{
+  background-color: $grey-color;
+  border-radius: 0.625rem;
+  padding: 1.56rem;
+  @media screen and (min-width: 992px) {
+
+    flex-basis: calc((100% - 52px) / 3);
+    border-radius: 0.9375rem;
+
+    padding: 2.56rem 5.06rem 2.81rem 2.81rem;
+
+  }
+}
+
+.services-list__title{
+  max-width: 18rem;
+  margin-bottom: 1.12rem;
+
+  font-size: 1.3125rem;
+  font-weight: 400;
+  line-height: calc(1.64063 / 1.3125);
+  letter-spacing: -0.05906rem;
+
+
+  color: $black-color;
+
+  @media screen and (min-width: 992px) {
+    margin-bottom: 1.5rem;
+
+    max-width: 31.9375rem;
+
+
+    font-size: 2rem;
+    line-height: calc(2.5 / 2);
+    letter-spacing: -0.09rem;
+  }
+
+}
+
+.services-list__text {
+  margin-bottom: 1.25rem;
+
+  & ul{
+    list-style: initial;
+  }
+
+  & li {
+
+    font-family: Manrope;
+    max-width: 18.4375rem;
+
+
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: calc(1.4875 / 0.875);
+    letter-spacing: -0.02188rem;
+    color: $black-color;
+
+    opacity: 0.7;
+
+    @media screen and (min-width: 992px) {
+
+      max-width: 28.125rem;
+      font-size: 1.0625rem;
+      font-weight: 400;
+      line-height: calc(1.4875 / 1.0625);
+
+      letter-spacing: -0.02656rem;
+    }
+  }
+}
+
+
+
+
+
+
+
+.services-icon_thumb{
+  margin-bottom: 1.25rem;
+
+  width: 3.8125rem;
+  height: 3.8125rem;
+  border-radius: 50%;
+  background-color: $blue-color;
+
+  @media screen and (min-width: 992px) {
+    margin-bottom: 2.19rem;
+
+    width: 6.25rem;
+    height: 6.25rem;
+  }
+
+  & img{
+    width: 2.0625rem;
+    height: 2.0625rem;
+    @media screen and (min-width: 992px) {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+
+}
+
+.services-link_post{
+
+  padding: 0 1.56rem;
+  height: 3.125rem;
+
+  font-size: 0.8125rem;
+  font-style: normal;
+  line-height: calc(1.01563 / 0.8125);
+  letter-spacing: -0.02031rem;
+  color: $blue-color;
+  background-color: transparent;
+  border-radius: 0.3125rem;
+  border: 1px solid $blue-color;
+
+
+
+
+  @media screen and (min-width: 992px) {
+    height: 3.6875rem;
+
+    font-size: 0.9375rem;
+    line-height: calc(1.17188 / 0.9375);
+    letter-spacing: -0.02344rem;
+
+  }
+
+  & .arrow-btn{
+    fill:$blue-color !important ;
+  }
+}

@@ -1,0 +1,78 @@
+#about {
+  border-top: 1px solid white;
+  border-radius: 2.5rem;
+}
+
+.owners-list_item {
+  border-radius: 50%;
+  aspect-ratio: 1 / calc(60 / 60);
+  max-width: 60px;
+
+  @media screen and (min-width: 992px) {
+    max-width: 85px;
+    aspect-ratio: 1 / calc(85 / 85);
+
+
+  }
+
+}
+
+.owners-list_itemLast {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 60px;
+  height: 60px;
+
+  border: 1px solid $black-color;
+  opacity: 0.1;
+  border-radius: 50%;
+
+  @media screen and (min-width: 992px) {
+    width: 85px;
+    height: 85px;
+  }
+}
+
+.about_title {
+  margin-top: 2.19rem;
+  margin-bottom: 0;
+  max-width: 21.5625rem;
+  text-align: center;
+  font-family: Unbounded;
+  font-size: 1.625rem;
+  font-weight: 400;
+  line-height: calc(2.03125 / 1.625);
+  letter-spacing: -0.07313rem;
+  color: $black-color;
+
+  @media screen and (min-width: 992px) {
+    margin-top: 4.06rem;
+    max-width: 62.0625rem;
+
+    font-size: 3.375rem;
+    line-height: calc(4.21875 / 3.375);
+    letter-spacing: -0.15188rem;
+
+    color: $black-color;
+
+  }
+
+  & strong {
+    color: $accent-color;
+
+    font-family: Unbounded;
+    font-size: 1.625rem;
+    font-weight: 400;
+    line-height: calc(2.03125 / 1.625);
+    letter-spacing: -0.07313rem;
+    @media screen and (min-width: 992px) {
+      font-size: 3.375rem;
+
+      line-height: calc(4.21875 / 3.375);
+
+      letter-spacing: -0.15188rem;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.container {
+  padding: 0 16px;
+
+  @media screen and (max-width: 575px) {
+    max-width: 375px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    max-width: 1440px;
+    padding: 0 80px;
+  }
+  @media screen and (min-width:1920px ) {
+    max-width: 120rem;
+    padding: 0 4.375rem;
+  }
+}
+
+
+
+.button-style{
+  position: relative;
+  color: $white-color;
+  padding: 0 1.56rem;
+
+  height: 3.6875rem;
+
+  font-family: Unbounded;
+  font-size: 0.9375rem;
+  line-height: calc(1.17188 / 0.9375);
+  letter-spacing: -0.02344rem;
+
+
+  border-radius: 0.3125rem;
+  background-color:  $accent-color;
+}
+
+.arrow-btn{
+  position: absolute;
+  top: 53.5%;
+  right: 27%;
+
+}
