@@ -4,7 +4,6 @@
 
   width: 94%;
 
-
   &.is-hidden {
     & .menu {
       transform: translateX(100%);
@@ -25,29 +24,20 @@
   margin: 0 auto;
 
   & a {
-    color: $black-color;
-
-    font-family: Unbounded;
+    font-family: 'Unbounded', sans-serif;
     font-size: 1.5rem;
     font-weight: 400;
     line-height: calc(1.875 / 1.5);
 
     letter-spacing: -0.0675rem;
 
-    & :active, :focus {
-      color: $blue-color;
-
+    &:active,
+    &:focus {
+      color: $accent-color;
     }
   }
 }
 
 .menu-content {
   padding-top: 7.5rem;
-}
-
-.button-cta {
-  & .arrow-btn {
-    top: 42%;
-    left: 72%;
-  }
 }

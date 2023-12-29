@@ -1,7 +1,7 @@
 .cta-wrapper{
   border-radius: 0.625rem;
-  border: 1px solid $grey-color;
-  background-color: $grey-color;
+  border: 1px solid $secondary-bg-color;
+  background-color: $secondary-bg-color;
 
   background-size: 211%;
   background-repeat: no-repeat;
@@ -34,7 +34,6 @@
   line-height: calc(2.34375 / 1.875);
   letter-spacing: -0.08438rem;
 
-  color: $black-color;
 
 
   @media screen and (min-width: 992px) {
@@ -47,7 +46,7 @@
   }
 
   & strong {
-    color: $blue-color;
+    color: $accent-color;
 
     font-size: 1.875rem;
     font-weight: 400;
@@ -82,7 +81,6 @@
 
 .cta-text {
 
-  color: $black-color;
 
   font-family: Manrope;
   font-size: 0.875rem;
@@ -105,7 +103,7 @@
   width: 100%;
 
   border-radius: 0.3125rem;
-  border: 1px solid $grey-color;
+  border: 1px solid $secondary-bg-color;
   background-color: $white-color;
 
   @media screen and (min-width: 992px) {
@@ -123,7 +121,6 @@
     line-height: calc(1.3125 / 0.9375);
     letter-spacing: -0.02344rem;
 
-    color: $black-color;
 
     @media screen and (min-width: 992px) {
       font-size: 1.0625rem;
@@ -143,8 +140,8 @@
   font-size: 0.8125rem;
   line-height: calc(1.01563 / 0.8125);
   letter-spacing: -0.02031rem;
-  background-color: $blue-color;
-  border: 1px solid $blue-color;
+  background-color: $accent-color;
+  border: 1px solid $accent-color;
 
   border-radius: 0.3125rem;
 

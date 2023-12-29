@@ -13,24 +13,29 @@
 
 </head>
 
+<?php
+$page_id = get_the_ID();
+$is_black_theme = in_array($page_id, array(132, 129, 140, 138, 124, 121, 136, 134, 128, 126)) || is_page_template('services.php') || is_page_template('cases.php') ? true : false;
+?>
+
 <body style="visibility: hidden">
 
 <div class="wrapper">
-    <header class="header">
+    <header class="header <?php echo $is_black_theme ? "black-theme" : "white-theme"; ?>">
         <div class="container">
             <div class="header-wrapper d-flex align-items-center justify-content-between">
-                <div class="logo-thumb">
-                    <?php the_custom_logo(); ?>
-                </div>
+                
+                <?php $is_black_theme ? custom_theme_logo() : the_custom_logo(); ?>
+
                 <nav class="main-nav d-none d-lg-flex">
                     <?php get_template_part('templates/navigation', null, array('location' => 'menu-header')); ?>
                 </nav>
-                <div class="">
-                    polylang
-                </div>
-                <a class="header-button button-style d-flex align-items-center justify-content-between d-none d-lg-flex" href="#cta">
-                    <?php the_field('header_button');?>
-                </a>
+
+                <?php get_template_part('templates/languagesList'); ?>
+
+                <button class="button-primary d-none d-lg-flex">
+                    <?php translate_and_output('write_us'); ?>
+                </button>
 
                 <button class="hamburger hamburger--collapse d-flex align-items-center justify-content-center menu-button p-0 border-0 d-md-none"
                 type="button">

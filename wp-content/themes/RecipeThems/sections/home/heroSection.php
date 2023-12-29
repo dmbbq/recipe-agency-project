@@ -7,8 +7,8 @@
             </h1>
             <h2 class="hero-pre-title">
                 <svg class="pre-title_icon d-none d-lg-flex" width="77" height="63">
-                  <use href="<?php get_image('sprite.svg#icon-arrow_icon'); ?>"></use>
-                 </svg>
+                    <use href="<?php get_image('sprite.svg#icon-arrow_icon'); ?>"></use>
+                </svg>
                 <?php the_field('hero_pre_title');?>
             </h2>
             <a class="hero-button button-style" href="#cta">

@@ -5,7 +5,7 @@ add_action('after_setup_theme', 'theme_setup');
 add_filter('upload_mimes', 'svg_upload_allow');
 add_action('wpcf7_before_send_mail', 'send_message_to_telegram');
 add_filter('wp_check_filetype_and_ext', 'fix_svg_mime_type', 10, 5);
-
+add_action('customize_register', 'additional_logo_customize_register');
 
 function enqueue_scripts_and_styles(){
     wp_deregister_script('jquery');
@@ -31,34 +31,54 @@ function get_image($name)
     echo get_template_directory_uri() . "/assets/images/" . $name;
 }
 
+function additional_logo_customize_register($wp_customize)
+{
+    $wp_customize->add_setting('additional_logo', array(
+        'capability' => 'edit_theme_options',
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+
+    $wp_customize->add_control(
+        new WP_Customize_Image_Control(
+            $wp_customize,
+            'additional_logo',
+            array(
+                'label' => __('Additional Logo', 'your_theme_textdomain'),
+                'section' => 'title_tagline',
+                'settings' => 'additional_logo',
+            )
+        )
+    );
+}
+
+function custom_theme_logo()
+{
+    $additional_logo_url = get_theme_mod('additional_logo');
+    $site_name = get_bloginfo('name');
+
+    if ($additional_logo_url) {
+        echo '<a href="' . esc_url(pll_home_url()) . '" class="custom-logo-link" rel="home" aria-current="page"><img class="custom-logo" alt="' . esc_attr($site_name) . '" src="' . esc_url($additional_logo_url) . '" alt="Additional Logo" decoding="async"></a>';
+    }
+}
+
 function translate_and_output($string_key, $group = 'Main Page')
 {
-    global $strings_to_translate, $strings_to_translate_privacy;
-
-    $strings = $group === 'Privacy Policy' ? $strings_to_translate_privacy : $strings_to_translate;
+    global $strings_to_translate;
 
     if (function_exists('pll__')) {
-        echo pll__($strings[$string_key], $group);
+        echo pll__($strings_to_translate[$string_key], $group);
     } else {
-        echo $strings[$string_key];
+        echo $strings_to_translate[$string_key];
     }
 }
 
 $strings_to_translate = array(
-    '' => '',
-);
-
-$strings_to_translate_privacy = array(
-    '' => '',
+    'write_us' => 'Напишіть нам',
 );
 
 if (function_exists('pll_register_string')) {
     foreach ($strings_to_translate as $string_key => $string_value) {
         pll_register_string($string_key, $string_value, 'Main Page');
-    }
-
-    foreach ($strings_to_translate_privacy as $string_key => $string_value) {
-        pll_register_string($string_key, $string_value, 'Privacy Policy');
     }
 }
 

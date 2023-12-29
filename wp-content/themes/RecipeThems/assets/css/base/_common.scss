@@ -15,28 +15,33 @@
   }
 }
 
-
-
-.button-style{
-  position: relative;
-  color: $white-color;
-  padding: 0 1.56rem;
+.button-primary{
+  display: flex;
+  align-items: center;
+  gap: 0.31rem;
 
   height: 3.6875rem;
+  padding: 0 1.56rem;
+  border: none;
 
-  font-family: Unbounded;
   font-size: 0.9375rem;
+  font-weight: 400;
   line-height: calc(1.17188 / 0.9375);
   letter-spacing: -0.02344rem;
 
-
   border-radius: 0.3125rem;
-  background-color:  $accent-color;
-}
 
-.arrow-btn{
-  position: absolute;
-  top: 53.5%;
-  right: 27%;
+  color: $white-color;
+  background-color: $accent-color;
 
+  &::after {
+    content: '';
+    width: 0.75rem;
+    height: 0.6875rem;
+
+    background-image: url(../images/carret-right.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 }

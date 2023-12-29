@@ -20,10 +20,10 @@
                     <?php the_title();?>
                 </h2>
 
-                    <div class="services-list__text">
-                        <?php the_field('our_services_list');?>
+                <div class="services-list__text">
+                    <?php the_field('our_services_list');?>
 
-                    </div>
+                </div>
                 <a class="services-link_post button-style d-inline-flex align-items-center justify-content-center" href="#">
                     Детальніше
                     <svg class="arrow-btn" width="12" height="11">

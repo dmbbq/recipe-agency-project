@@ -10,10 +10,13 @@ html, body {
 }
 
 body {
+  font-size: 1.0625rem;
+  line-height: 1.4;
+
   overflow-x: hidden;
   font-family: 'Unbounded', sans-serif;
 
-  line-height: normal;
+  color: $primary-text-color;
 }
 
 main {
@@ -37,7 +40,11 @@ h2,
 h3,
 h4,
 h5,
-h6,
+h6{
+  font-weight: 400;
+  line-height: 1.2;
+}
+
 p {
   margin-top: 0;
 }
@@ -118,10 +125,12 @@ img {
 
 
 
-.title{
-
+h1{
+  font-size: 2.375rem;
+  letter-spacing: -0.10688rem;
   @media screen and (min-width: 992px) {
-
+    font-size: 5.625rem;
+    letter-spacing: -0.25313rem;
   }
 }
 

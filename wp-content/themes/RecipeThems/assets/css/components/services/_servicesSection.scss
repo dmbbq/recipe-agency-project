@@ -1,4 +1,12 @@
+#services{
+  & h1{
+    margin-bottom: 2.5rem;
 
+    @media screen and (min-width: 992px) {
+      margin-bottom: 6.25rem;
+    }
+  }
+}
 
 
 .services-list{
@@ -11,9 +19,11 @@
 }
 
 .services-list__item{
-  background-color: $grey-color;
   border-radius: 0.625rem;
   padding: 1.56rem;
+
+  background-color: $secondary-bg-color;
+
   @media screen and (min-width: 992px) {
 
     flex-basis: calc((100% - 52px) / 3);
@@ -34,7 +44,6 @@
   letter-spacing: -0.05906rem;
 
 
-  color: $black-color;
 
   @media screen and (min-width: 992px) {
     margin-bottom: 1.5rem;
@@ -66,7 +75,6 @@
     font-weight: 500;
     line-height: calc(1.4875 / 0.875);
     letter-spacing: -0.02188rem;
-    color: $black-color;
 
     opacity: 0.7;
 
@@ -94,7 +102,7 @@
   width: 3.8125rem;
   height: 3.8125rem;
   border-radius: 50%;
-  background-color: $blue-color;
+  background-color: $accent-color;
 
   @media screen and (min-width: 992px) {
     margin-bottom: 2.19rem;
@@ -123,10 +131,10 @@
   font-style: normal;
   line-height: calc(1.01563 / 0.8125);
   letter-spacing: -0.02031rem;
-  color: $blue-color;
+  color: $accent-color;
   background-color: transparent;
   border-radius: 0.3125rem;
-  border: 1px solid $blue-color;
+  border: 1px solid $accent-color;
 
 
 
@@ -140,7 +148,4 @@
 
   }
 
-  & .arrow-btn{
-    fill:$blue-color !important ;
-  }
 }

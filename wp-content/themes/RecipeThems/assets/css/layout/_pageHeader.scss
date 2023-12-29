@@ -1,45 +1,3 @@
-#menu-menu-1 {
-  display: flex;
-  gap: 0.31rem;
-
-  & li {
-    padding: 0.62rem 1.25rem;
-    border-radius: 0.3125rem;
-    background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(7.5px);
-  }
-
-  & a {
-
-    font-size: 1.0625rem;
-    line-height: calc(1.38125 / 1.0625);
-    letter-spacing: -0.02656rem;
-
-    color: $white-color;
-
-  }
-}
-
-.header-wrapper{
-  @media screen and (max-width: 991px) {
-    padding: 12px;
-    border-radius: 5px;
-    border: 1px solid rgba(255, 255, 255, 0.17);
-    background-color: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(12.5px);
-  }
-}
-
-.logo-thumb {
-  width: 89px;
-  height: 38px;
-
-  @media screen and (min-width: 992px) {
-    width: 187px;
-    height: 78px;
-  }
-}
-
 .header {
   position: absolute;
   width: 100%;
@@ -48,12 +6,72 @@
   left: 0;
   z-index: 200;
 
+  &.white-theme{
+    & .nav-list {
+      & li {
+        background-color: $third-bg-color;
+      }
+
+      & a {
+        color: $white-color;
+      }
+    }
+
+    & .header-wrapper{
+      @media screen and (max-width: 991px) {
+        border: 1px solid rgba(255, 255, 255, 0.17);
+        background-color: rgba(255, 255, 255, 0.05);
+      }
+    }
+  }
+
+  &.black-theme{
+    & .nav-list {
+      & li {
+        background-color: $secondary-bg-color;
+      }
+    }
+
+    & .header-wrapper{
+      @media screen and (max-width: 991px){
+        background-color: $secondary-bg-color;
+      }
+    }
+  }
+
+  & .custom-logo-link {
+    width: 89px;
+    height: 38px;
+
+    @media screen and (min-width: 992px) {
+      width: 187px;
+      height: 78px;
+    }
+  }
+
+  & .nav-list {
+    display: flex;
+    gap: 0.31rem;
+
+    & li {
+      padding: 0.62rem 1.25rem;
+      border-radius: 0.3125rem;
+      backdrop-filter: blur(7.5px);
+    }
+
+    & a {
+      font-family: 'Manrope', sans-serif;
+
+      line-height: calc(1.38125 / 1.0625);
+      letter-spacing: -0.02656rem;
+    }
+  }
 }
 
-.header-button {
-  gap: 0.31rem;
-
-  &::after {
-    content: '>';
+.header-wrapper{
+  @media screen and (max-width: 991px) {
+    padding: 0.75rem;
+    border-radius: 0.3125rem;
+    backdrop-filter: blur(12.5px);
   }
 }
