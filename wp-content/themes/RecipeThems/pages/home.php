@@ -6,9 +6,10 @@ Template Name: Home
 
 <?php get_header(); ?>
 
-<main>
+<main id="home">
     <?php get_template_part('sections/home/heroSection'); ?>
     <?php get_template_part('sections/home/aboutSection'); ?>
+    <?php get_template_part('sections/ctaSection', null, array('page' => 'home')); ?>
 </main>
 
 <?php get_footer(); ?>

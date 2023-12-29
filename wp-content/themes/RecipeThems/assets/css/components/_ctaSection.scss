@@ -1,157 +1,98 @@
-.cta-wrapper{
-  border-radius: 0.625rem;
-  border: 1px solid $secondary-bg-color;
+.cta-wrapper {
+  border-radius: $primary-radius;
+  border: 1px solid $fourth-bg-color;
   background-color: $secondary-bg-color;
-
-  background-size: 211%;
   background-repeat: no-repeat;
-  background-position: 0% -236%;
 
-  padding: 2.19rem 1.87rem 11.94rem;
-
-  @media screen and (min-width: 992px) {
-    background-size: 80%;
-    background-position: 250% 19%;
-    background-repeat: no-repeat;
-    border-radius: 0.9375rem;
-    padding-top: 5rem;
-    padding-left: 5rem;
-    padding-bottom: 5rem;
-
-    position: relative;
-    z-index: 1;
-
-  }
-}
-
-
-.cta-title {
-
-  margin-bottom: 0.94rem;
-
-  font-size: 1.875rem;
-  font-weight: 400;
-  line-height: calc(2.34375 / 1.875);
-  letter-spacing: -0.08438rem;
-
-
-
-  @media screen and (min-width: 992px) {
-    max-width: 62.875rem;
-    margin-bottom: 2.19rem;
-
-    font-size: 3.75rem;
-    line-height: calc(4.6875 / 3.75);
-    letter-spacing: -0.16875rem;
+  &.home,
+  &.services,
+  &.about {
+    background-position: right bottom;
   }
 
-  & strong {
-    color: $accent-color;
+  &.home,
+  &.services{
+    padding: 5rem;
+    
+    background-size: 56.3483%;
 
-    font-size: 1.875rem;
-    font-weight: 400;
-    line-height: 125%;
-    letter-spacing: -0.08438rem;
+    & h2 {
+      & strong {
+        position: relative;
+        z-index: 1;
 
-    @media screen and (min-width: 992px) {
-      position: relative;
-      color: $white-color;
+        color: $white-color;
 
-      font-size: 3.75rem;
-      font-weight: 400;
-      line-height: 125%;
-      letter-spacing: -0.16875rem;
-      &:after {
-        z-index: -1;
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: calc(100% + 1.135rem);
-        height: 100%;
-        background-color: #72AFFF;
-        border-radius: 0.5rem;
+        &::before {
+          content: '';
+          position: absolute;
+          top: calc(50% + 0.3125rem);
+          left: -0.46875rem;
+          transform: translateY(-50%);
+          z-index: -1;
+
+          height: 100%;
+          width: calc(100% + 1.6875rem);
+
+          border-radius: $third-radius;
+
+          background-color: $accent-color;
+        }
       }
     }
   }
 
-}
+  &.about {
+    padding: 6.25rem;
 
+    background-size: 34.6067%;
 
-.cta-text {
-
-
-  font-family: Manrope;
-  font-size: 0.875rem;
-  line-height: calc(1.225 / 0.875);
-  letter-spacing: -0.00875rem;
-  opacity: 0.6;
-
-  @media screen and (min-width: 992px) {
-    max-width: 26.5rem;
-
-    font-size: 1.0625rem;
-    line-height: calc(1.4875 / 1.0625);
-    letter-spacing: -0.02656rem;
-  }
-}
-
-.cf7-input{
-  padding-left: 1.5rem;
-  height: 3.75rem;
-  width: 100%;
-
-  border-radius: 0.3125rem;
-  border: 1px solid $secondary-bg-color;
-  background-color: $white-color;
-
-  @media screen and (min-width: 992px) {
-    max-width: 21.875rem;
-    padding-left: 1.75rem;
-    height: 4.5rem;
-
+    & h2 {
+      & strong {
+        color: $accent-color
+      }
+    }
   }
 
-  &::placeholder{
-    opacity: 0.3;
-    font-family: Manrope;
-    font-size: 0.9375rem;
-    font-weight: 500;
-    line-height: calc(1.3125 / 0.9375);
-    letter-spacing: -0.02344rem;
+  & h2 {
+    margin-bottom: 2.19rem;
 
+    font-size: 3.75rem;
+    letter-spacing: -0.16875rem;
+  }
 
-    @media screen and (min-width: 992px) {
-      font-size: 1.0625rem;
-      font-weight: 400;
-      line-height: calc(1.4875 / 1.0625);
+  & > div {
+    max-width: 60.5493%;
+    margin-bottom: 1.25rem;
 
-      letter-spacing: -0.02656rem;
+    & p {
+      position: relative;
+
+      display: flex;
+      gap: 0.31rem;
+
+      & .cf7-button {
+        flex-shrink: 0;
+      }
     }
   }
 }
 
+.cta-text {
+  margin-bottom: 2.19rem;
+}
 
-.cf7-button{
-  padding: 0 1.5rem;
-  height: 3.5rem;
-  color: $white-color;
-  font-size: 0.8125rem;
-  line-height: calc(1.01563 / 0.8125);
-  letter-spacing: -0.02031rem;
-  background-color: $accent-color;
-  border: 1px solid $accent-color;
+.cta-link{
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.9375rem;
+  line-height: calc(1.17188 / 0.9375);
 
-  border-radius: 0.3125rem;
-
-  @media screen and (min-width: 992px) {
-    padding: 0 1.56rem;
-
-    height: 4.5rem ;
-
-    font-size: 0.9375rem;
-    line-height: calc(1.17188 / 0.9375);
-    letter-spacing: -0.02344rem;
+  & a {
+    text-decoration: underline;
   }
+}
+
+.cta-text,
+.cta-link {
+  opacity: 0.7;
 }

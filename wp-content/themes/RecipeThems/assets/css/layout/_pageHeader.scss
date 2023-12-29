@@ -23,6 +23,14 @@
         background-color: rgba(255, 255, 255, 0.05);
       }
     }
+
+    & .languages-wrapper__icon{
+      fill: $white-color;
+    }
+
+    & .languages-list__link{
+      color: $white-color;
+    }
   }
 
   &.black-theme{
@@ -36,6 +44,10 @@
       @media screen and (max-width: 991px){
         background-color: $secondary-bg-color;
       }
+    }
+
+    & .languages-wrapper__icon{
+      fill: $accent-color;
     }
   }
 
@@ -75,3 +87,25 @@
     backdrop-filter: blur(12.5px);
   }
 }
+
+.languages-wrapper{
+  gap: 0.94rem;
+}
+
+.languages-list{
+  gap: 0.44rem;
+}
+
+.languages-list__link {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.125rem;
+  line-height: calc(1.4625 / 1.125);
+  letter-spacing: -0.02813rem;
+
+  opacity: 0.4;
+
+  &.current {
+    opacity: 1;
+  }
+}
+

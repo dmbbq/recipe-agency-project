@@ -24,7 +24,7 @@ $is_black_theme = in_array($page_id, array(132, 129, 140, 138, 124, 121, 136, 13
     <header class="header <?php echo $is_black_theme ? "black-theme" : "white-theme"; ?>">
         <div class="container">
             <div class="header-wrapper d-flex align-items-center justify-content-between">
-                
+
                 <?php $is_black_theme ? custom_theme_logo() : the_custom_logo(); ?>
 
                 <nav class="main-nav d-none d-lg-flex">

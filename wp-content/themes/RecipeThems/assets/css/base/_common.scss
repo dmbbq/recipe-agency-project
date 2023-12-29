@@ -18,6 +18,7 @@
 .button-primary{
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.31rem;
 
   height: 3.6875rem;
@@ -36,6 +37,8 @@
 
   &::after {
     content: '';
+    flex-shrink: 0;
+
     width: 0.75rem;
     height: 0.6875rem;
 
@@ -43,5 +46,82 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+  }
+}
+
+.section-title{
+  font-size: 3.75rem;
+  line-height: 1.25;
+  letter-spacing: -0.16875rem;
+}
+
+.cf7-input {
+  all: unset;
+  box-sizing: border-box;
+
+  width: 21.875rem;
+  height: 4.5rem;
+
+  border-radius: $secondary-radius;
+  border: 1px solid $fourth-bg-color;
+
+  font-family: 'Manrope', sans-serif;
+
+  background-color: $white-color;
+
+  &::placeholder{
+    opacity: 0.3;
+  }
+
+  &[name="username"]{
+    padding-left: 1.75rem;
+  }
+
+  &[name="number"]{
+    padding: 0 0 0 4.75rem !important;
+  }
+}
+
+.cf7-button {
+  width: 16.875rem;
+  height: 4.5rem;
+}
+
+.intl-tel-input {
+  & .selected-flag{
+    padding-left: 1.75rem;
+
+    & .iti-arrow{
+      right: 0.81rem;
+      opacity: 0.3;
+    }
+  }
+
+  &.allow-dropdown{
+    & .selected-flag {
+      width: 4.75rem;
+    }
+  }
+}
+
+.wpcf7-spinner{
+  position: absolute !important;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+
+  margin: 0 !important;
+}
+
+.wpcf7-response-output,
+.wpcf7-not-valid-tip{
+  display: none !important;
+}
+
+.benefits-thumb{
+  & ul{
+    & br{
+      display: none;
+    }
   }
 }
