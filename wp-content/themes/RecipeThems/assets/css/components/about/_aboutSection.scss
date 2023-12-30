@@ -1,0 +1,35 @@
+#about {
+  & .about {
+    & p {
+      font-family: "Manrope", sans-serif;
+
+      &:first-of-type{
+        margin-bottom: 1.5rem;
+      }
+
+      &:last-of-type{
+        margin-bottom: 2.1875rem;
+      }
+    }
+  }
+
+  & .about-title {
+    margin-bottom: 2.1875rem;
+  }
+
+  & .about-swiper {
+    height: 100%;
+    width: 156.355%;
+
+    & .swiper-slide {
+      aspect-ratio: 1 / calc(600 / 450);
+
+      border-radius: $primary-radius;
+      overflow: hidden;
+    }
+
+    & dt {
+      display: contents;
+    }
+  }
+}

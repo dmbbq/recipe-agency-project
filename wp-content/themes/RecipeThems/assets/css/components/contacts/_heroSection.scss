@@ -1,0 +1,46 @@
+#contacts{
+
+
+
+
+
+}
+
+.contacts-list_item{
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts-list_text{
+  margin-bottom: 0.94rem;
+
+  font-family: 'Manrope' , sans-serif;
+  font-size: 0.875rem;
+  line-height: calc(1.225 /  0.875);
+  letter-spacing: -0.00875rem;
+
+  opacity: 0.5;
+  @media screen and (min-width: 992px) {
+    margin-bottom: 1.25rem;
+
+    font-size: 1.0625rem;
+    line-height: calc(1.4875 / 1.0625);
+    letter-spacing: -0.02656rem;
+  }
+}
+
+.contacts-list__link{
+  font-size: 1.0625rem;
+  line-height: calc(1.32813 / 1.0625);
+  letter-spacing: -0.04781rem;
+  
+  @media screen and (min-width: 992px) {
+    max-width: 27.3125rem;
+
+    font-size: 1.375rem;
+    line-height: calc(2.13125 / 1.375);
+    letter-spacing: -0.06188rem;
+  }
+}
+
+

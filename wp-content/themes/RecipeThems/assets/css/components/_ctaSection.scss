@@ -6,14 +6,16 @@
 
   &.home,
   &.services,
-  &.about {
+  &.about,
+  &.contacts {
     background-position: right bottom;
   }
 
   &.home,
-  &.services{
+  &.services,
+  &.contacts {
     padding: 5rem;
-    
+
     background-size: 56.3483%;
 
     & h2 {
@@ -82,7 +84,7 @@
   margin-bottom: 2.19rem;
 }
 
-.cta-link{
+.cta-link {
   font-family: 'Manrope', sans-serif;
   font-size: 0.9375rem;
   line-height: calc(1.17188 / 0.9375);

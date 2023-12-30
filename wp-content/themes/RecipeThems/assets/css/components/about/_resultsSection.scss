@@ -1,0 +1,65 @@
+#about {
+  & .results {
+    & .section-header {
+      margin-bottom: 6.625rem;
+
+      & + ul {
+        display: flex;
+        gap: 1.25rem;
+
+        & li {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          padding: 2.5rem;
+          border-radius: $fifth-radius;
+
+          background-color: $secondary-bg-color;
+
+          &:not(:last-child) {
+            aspect-ratio: 1 / calc(21.375 / 26.875);
+
+            flex-basis: calc((100% - 3.75rem) / 4);
+          }
+
+          &:last-child {
+            aspect-ratio: 1 / calc(21.375 / 55);
+
+            flex-basis: calc((100% - 1.25rem) / 2);
+
+            background-image: url(../images/dollar.webp);
+            background-position: right bottom;
+            background-size: 36.0227%;
+            background-repeat: no-repeat;
+          }
+
+          & h3 {
+            font-size: 3.75rem;
+            line-height: calc(4.6875 / 3.75);
+            letter-spacing: -0.16875rem;
+
+            color: $accent-color;
+          }
+
+          & p {
+            font-family: 'Manrope', sans-serif;
+
+            opacity: 0.9;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  & .results-title {
+    font-size: 3.375rem;
+    line-height: calc(4.55625 / 3.375);
+    letter-spacing: -0.15188rem;
+
+    & strong {
+      color: $accent-color;
+    }
+  }
+}

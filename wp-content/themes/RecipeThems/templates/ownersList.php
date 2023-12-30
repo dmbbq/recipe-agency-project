@@ -1,6 +1,6 @@
 <?php
-$roma = get_field('owners_roma');
-$valik = get_field('owners_valik');
+$roma = get_field('owners_roma' , 119);
+$valik = get_field('owners_valik' , 119);
 ?>
 
 <ul class="owners-list d-flex align-items-center justify-content-center position-relative">

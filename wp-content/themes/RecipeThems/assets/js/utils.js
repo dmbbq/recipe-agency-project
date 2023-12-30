@@ -2,7 +2,7 @@ import throttle from "lodash.throttle";
 import { WOW } from "wowjs/dist/wow.min";
 import refs from "./refs";
 
-const { bodyEl } = refs;
+const { bodyEl, swiperToInit } = refs;
 
 const throttledHandleResize = throttle(handleResize, 200);
 
@@ -79,6 +79,21 @@ const replaceInputWithButton = () => {
   newButton.text(value);
   newButton.attr("data-text", value);
 };
+
+const initSwiperClasses = () => {
+  swiperToInit.find('dl').replaceWith(function () {
+    return $('<div>', {
+      class: 'swiper-slide',
+      html: $(this).html()
+    });
+  });
+
+  swiperToInit.find('style').remove();
+  swiperToInit.find('br').remove();
+  swiperToInit.find('div').addClass('swiper-wrapper');
+}
+
+initSwiperClasses();
 
 $("document").ready(function () {
   bodyEl.css("visibility", "visible");

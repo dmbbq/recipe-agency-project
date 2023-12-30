@@ -10,14 +10,19 @@ html, body {
 }
 
 body {
-  font-size: 1.0625rem;
+  font-size: 0.875rem;
   line-height: 1.4;
-  letter-spacing: -0.02656rem;
+  letter-spacing: -0.00875rem;
 
   overflow-x: hidden;
   font-family: 'Unbounded', sans-serif;
 
   color: $primary-text-color;
+
+  @media screen and (min-width: 992px){
+    font-size: 1.0625rem;
+    letter-spacing: -0.02656rem;
+  }
 }
 
 main {

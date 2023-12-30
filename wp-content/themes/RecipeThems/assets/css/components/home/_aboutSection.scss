@@ -1,4 +1,4 @@
-#about {
+.about-section {
   border-top: 1px solid white;
   border-radius: 2.5rem;
 }
@@ -11,10 +11,7 @@
   @media screen and (min-width: 992px) {
     max-width: 85px;
     aspect-ratio: 1 / calc(85 / 85);
-
-
   }
-
 }
 
 .owners-list_itemLast {
@@ -36,8 +33,9 @@
 }
 
 .about_title {
+  margin-bottom: 2.19rem;
+
   margin-top: 2.19rem;
-  margin-bottom: 0;
   max-width: 21.5625rem;
   text-align: center;
   font-family: Unbounded;
@@ -47,6 +45,8 @@
   letter-spacing: -0.07313rem;
 
   @media screen and (min-width: 992px) {
+    margin-bottom: 5rem;
+
     margin-top: 4.06rem;
     max-width: 62.0625rem;
 
@@ -75,7 +75,7 @@
   }
 }
 
-.benefits-thumb {
+.benefits-wrapper {
   & ul {
     display: flex;
     flex-direction: column;
@@ -84,114 +84,119 @@
 
     @media screen and (min-width: 992px) {
       flex-direction: row;
+      gap: 1.25rem;
+
     }
 
     & li {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+
       padding: 1.56rem;
 
-      aspect-ratio: 1 / (calc(19.5 / 21.5625));
-      background-color: $secondary-bg-color;
-      border-radius: $fourth-radius ;
+      font-family: 'Manrope', sans-serif;
 
+      background-color: $secondary-bg-color;
+      border-radius: $fourth-radius;
 
       @media screen and (min-width: 992px) {
-        padding: 3.12rem 0 2.75rem 3.12rem ;
-        //aspect-ratio: 1 / (calc(35.625 / 36.25));
-        border-radius: $primary-radius ;
-
+        padding: 3.125rem 0 2.94rem 3.15rem;
+        border-radius: $primary-radius;
       }
 
       & img {
+        aspect-ratio: 1 / calc(6.5625 / 7.1875);
         max-width: 7.1875rem;
-        max-height: 6.5625rem;
+
         margin-bottom: auto;
 
         @media screen and (min-width: 992px) {
+          aspect-ratio: 1 / calc(11.5625 / 12.625);
+
           max-width: 12.625rem;
-          max-height: 11.5625rem;
         }
       }
 
       & h2 {
-
         margin-bottom: 0.94rem;
-        font-family: 'Manrope', sans-serif;
+
         font-size: 1.25rem;
         font-weight: 500;
         line-height: calc(1.5 / 1.25);
         letter-spacing: -0.0125rem;
 
         @media screen and (min-width: 992px) {
-          max-width: 26.3125rem;
-          margin-top:7.44rem ;
+          margin-top: 6.06rem;
 
           margin-bottom: 1.56rem;
 
           font-size: 2rem;
+          line-height: calc(2.5 / 2);
           font-weight: 600;
           letter-spacing: -0.04rem;
-        }
 
-        & strong {
-          font-family: 'Manrope', sans-serif;
-          font-size: 1.25rem;
-          font-weight: 500;
-          line-height: calc(1.5 / 1.25);
-          letter-spacing: -0.0125rem;
-          color: $accent-color;
+          & strong {
+            font-size: 1.25rem;
+            font-weight: 500;
+            line-height: calc(1.5 / 1.25);
+            letter-spacing: -0.0125rem;
 
-          @media screen and (min-width: 992px) {
-            font-size: 2rem;
-            font-weight: 600;
-            letter-spacing: -0.04rem;
+            color: $accent-color;
+
+            @media screen and (min-width: 992px) {
+              font-size: 2rem;
+              font-weight: 600;
+              letter-spacing: -0.04rem;
+            }
           }
         }
       }
-    }
-    & p{
-      margin: 0;
 
-      font-family: 'Manrope' , sans-serif;
-      font-size: 0.875rem;
-      line-height: calc(1.225 / 0.875);
-      letter-spacing: -0.00875rem;
-      @media screen and (min-width: 992px) {
-        max-width: 29.3125rem;
+      & p {
+        margin: 0;
 
-        font-size: 1.0625rem;
-        line-height: calc(1.4875 / 1.0625);
-        letter-spacing: -0.02656rem;
+        & br {
+          @media screen and (max-width: 991px){
+            display: none;
+          }
+        }
+      }
+
+      & > br {
+        display: none;
       }
     }
   }
 }
 
-.link-to-post{
-  color:$white-color;
-  background-color: $accent-color;
-  font-size: 0.8125rem;
-  letter-spacing: -0.02031rem;
-
-  border-radius: 0.3125rem;
-
+.benefits-link {
   height: 3.3125rem;
 
+  font-size: 0.8125rem;
+  letter-spacing: -0.02031rem;
+  border-radius: 0.3125rem;
+  color: $white-color;
+  background-color: $accent-color;
 
 
-  @media screen and (max-width: 991px ) {
+
+  @media screen and (max-width: 991px) {
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
 
-
-
-
   @media screen and (min-width: 992px) {
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
+
+    background-image: url("../images/link_bg.webp"), url("../images/arrow-top-right.svg");
+    background-position: center, top 0.9375rem right 0.9375rem;
+    background-repeat: no-repeat;
+    background-size: cover, 3.125rem;
 
     padding-left: 2.81rem;
     padding-bottom: 2.81rem;
