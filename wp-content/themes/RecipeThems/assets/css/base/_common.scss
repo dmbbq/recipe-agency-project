@@ -50,9 +50,13 @@
 }
 
 .section-title{
-  font-size: 3.75rem;
+  font-size: clamp(2.375rem, 2.041rem + 1.42vw, 3.75rem);
   line-height: 1.25;
-  letter-spacing: -0.16875rem;
+  letter-spacing: -0.10688rem;
+
+  @media screen and (min-width: 992px){
+    letter-spacing: -0.16875rem;
+  }
 }
 
 .cf7-input {
@@ -117,3 +121,91 @@
 .wpcf7-not-valid-tip{
   display: none !important;
 }
+
+.socials-list{
+  gap: 5px ;
+}
+
+.socials-list__link{
+  @include hover(fill $accent-color $black-color);
+}
+
+.ctrl-list{
+  display: flex;
+  gap: 0.625rem;
+}
+
+.ctrl-list__item {
+  @include hover(stroke $white-color $accent-color, background-color $accent-color transparent);
+
+  display: flex;
+
+  width: 3.75rem;
+  height: 3.75rem;
+  
+  border: 1px solid $accent-color;
+  border-radius: $sixth-radius;
+
+  cursor: pointer;
+
+  &.swiper-button-disabled{
+    stroke: $accent-color;
+    background-color: transparent;
+  }
+}
+
+.section-header{
+  margin-bottom: 5rem;
+}
+
+$owner-list-length: 8;
+
+.owners-list {
+  & ul {
+    display: flex;
+
+    li {
+      @for $i from 1 through 3 {
+        &:nth-child(#{$i}) {
+          z-index: 3 - $i + 1;
+        }
+      }
+
+       position: relative;
+
+       width: 5.3125rem;
+       height: 5.3125rem;
+
+       border-radius: 50%;
+       overflow: hidden;
+
+      &:not(:first-child){
+        margin-left: -1.2525rem;
+      }
+
+       &:last-child{
+         position: relative;
+
+         display: flex;
+         align-items: center;
+         justify-content: center;
+
+         &::after {
+           content: '';
+
+           position: absolute;
+           inset: 0;
+
+           width: 100%;
+           height: 100%;
+
+           border-radius: 50%;
+           border: 1px solid $primary-text-color;
+
+           opacity: 0.15;
+         }
+       }
+     }
+  }
+}
+

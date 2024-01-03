@@ -75,7 +75,8 @@ function translate_and_output($string_key, $group = 'Main Page')
 $strings_to_translate = array(
     'write_us' => 'Напишіть нам',
     'privacy_text' => 'Натискаючи на кнопку “Залишити заявку” ви погоджуєтесь з',
-    'privacy_link' => 'умовами політики конфіденційності'
+    'privacy_link' => 'умовами політики конфіденційності',
+    'leave_statement' => 'Залишити заявку'
 );
 
 if (function_exists('pll_register_string')) {

@@ -10,6 +10,9 @@ Template Name: Home
     <?php get_template_part('sections/about/heroSection'); ?>
     <?php get_template_part('sections/about/resultsSection'); ?>
     <?php get_template_part('sections/about/aboutSection'); ?>
+    <?php get_template_part('sections/clientsSection'); ?>
+    <?php get_template_part('sections/about/valuesSection'); ?>
+    <?php get_template_part('sections/about/teamSection'); ?>
     <?php get_template_part('sections/ctaSection', null, array('page' => 'about')); ?>
 </main>
 

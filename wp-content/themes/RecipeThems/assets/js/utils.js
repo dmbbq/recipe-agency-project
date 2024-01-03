@@ -81,19 +81,40 @@ const replaceInputWithButton = () => {
 };
 
 const initSwiperClasses = () => {
-  swiperToInit.find('dl').replaceWith(function () {
-    return $('<div>', {
-      class: 'swiper-slide',
-      html: $(this).html()
-    });
-  });
+  swiperToInit.each(function() {
+    const currentElement = $(this);
 
-  swiperToInit.find('style').remove();
-  swiperToInit.find('br').remove();
-  swiperToInit.find('div').addClass('swiper-wrapper');
+    const replaceWithDiv = (selector, className) => {
+      currentElement.find(selector).replaceWith(function () {
+        return $('<div>', {
+          class: className,
+          html: $(this).html()
+        });
+      });
+    };
+
+    const galleryDlTag = currentElement.find('dl');
+
+    if (galleryDlTag.length > 0) {
+      replaceWithDiv('dl', 'swiper-slide');
+      currentElement.find('style, br').remove();
+      currentElement.find('div').addClass('swiper-wrapper');
+    } else {
+      replaceWithDiv('ul', 'swiper-wrapper');
+      replaceWithDiv('li', 'swiper-slide');
+    }
+  });
 }
 
 initSwiperClasses();
+
+const hideCtrl = () => {
+  const teamSwiperSlides = $('.team-swiper .swiper-slide')
+
+  if(teamSwiperSlides[0] && teamSwiperSlides.length < 5){
+    $('.team-section .ctrl-list').css('display', 'none')
+  }
+}
 
 $("document").ready(function () {
   bodyEl.css("visibility", "visible");
@@ -101,4 +122,5 @@ $("document").ready(function () {
   new WOW().init();
 
   replaceInputWithButton();
+  hideCtrl();
 });

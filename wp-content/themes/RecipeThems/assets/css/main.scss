@@ -1,11 +1,12 @@
+//Utils
+@import "utils/mixins";
+
 //Base
 @import "base/variables";
 @import "base/fonts";
 @import "base/utils";
-@import "base/common";
 
-//Utils
-@import "utils/mixins";
+@import "base/common";
 
 //Vendors
 @import "vendors/hamburgers";
@@ -17,10 +18,15 @@
 
 //Common components
 @import "components/ctaSection";
+@import "components/clientsSection";
 
 //Home page
 @import "components/home/heroSection";
 @import "components/home/aboutSection";
+@import "components/home/processes";
+@import "components/home/services";
+
+
 
 //Services page
 @import "components/services/servicesSection";
@@ -29,7 +35,6 @@
 @import "components/about/heroSection";
 @import "components/about/resultsSection";
 @import "components/about/aboutSection";
-@import "components/clientsSection";
 @import "components/about/valuesSection";
 @import "components/about/teamSection";
 

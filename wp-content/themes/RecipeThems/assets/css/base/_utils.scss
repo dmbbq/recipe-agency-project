@@ -10,7 +10,7 @@ html, body {
 }
 
 body {
-  font-size: 0.875rem;
+  font-size: clamp(0.875rem, 0.829rem + 0.19vw, 1.063rem);
   line-height: 1.4;
   letter-spacing: -0.00875rem;
 
@@ -20,13 +20,16 @@ body {
   color: $primary-text-color;
 
   @media screen and (min-width: 992px){
-    font-size: 1.0625rem;
     letter-spacing: -0.02656rem;
   }
 }
 
 main {
   flex: 1 1 auto;
+}
+
+section {
+  overflow-x: hidden;
 }
 
 .wrapper {
@@ -134,11 +137,10 @@ img {
 }
 
 h1{
-  font-size: 2.375rem;
+  font-size: clamp(2.375rem, 1.586rem + 3.37vw, 5.625rem);
   letter-spacing: -0.10688rem;
 
   @media screen and (min-width: 992px) {
-    font-size: 5.625rem;
     letter-spacing: -0.25313rem;
   }
 }

@@ -1,0 +1,10 @@
+.clients-swiper{
+  & .swiper-wrapper {
+    transition-timing-function: linear;
+  }
+
+  & .swiper-slide{
+    height: 200px;
+    background-color: tomato;
+  }
+}
