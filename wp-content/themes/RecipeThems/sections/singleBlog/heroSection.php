@@ -1,8 +1,14 @@
 <section class="hero">
-    <div class="container">
-        <h1>
-           <?php the_field('title'); ?>
-        </h1>
+    <div class="container d-flex align-items-end h-100">
+        <div>
+            <h1 class="hero-title section-title">
+                <?php the_field('title'); ?>
+            </h1>
+            <div class="d-flex justify-content-between align-items-center">
+                <?php get_template_part('templates/singleBlog/infoList'); ?>
+                <?php get_template_part('templates/singleBlog/categoryList'); ?>
+            <div>
+        </div>
     </div>
 </section>
 

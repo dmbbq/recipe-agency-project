@@ -2,9 +2,16 @@
   & .hero {
     aspect-ratio: 1 / calc(70 / 120);
     margin-bottom: -2.5rem;
+    padding-bottom: 7.0625rem;
 
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+
+    color: $white-color
+  }
+
+  & .hero-title {
+    margin-bottom: 2.94rem;
   }
 }

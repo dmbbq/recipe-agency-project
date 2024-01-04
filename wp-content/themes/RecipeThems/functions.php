@@ -6,6 +6,7 @@ add_filter('upload_mimes', 'svg_upload_allow');
 add_action('wpcf7_before_send_mail', 'send_message_to_telegram');
 add_filter('wp_check_filetype_and_ext', 'fix_svg_mime_type', 10, 5);
 add_action('customize_register', 'additional_logo_customize_register');
+add_action('wp_head', 'increment_post_views');
 
 function enqueue_scripts_and_styles(){
     wp_deregister_script('jquery');
@@ -61,6 +62,33 @@ function custom_theme_logo()
     }
 }
 
+function increment_post_views()
+{
+    if (is_single()) {
+        $post_id = get_the_ID();
+
+        $views = get_post_meta($post_id, 'post_views', true);
+        $views = 0;
+        $views = empty($views) ? 1 : $views + 1;
+        update_post_meta($post_id, 'post_views', $views);
+    }
+}
+
+//function my_connection_types() {
+//    p2p_register_connection_type( array(
+//        'name' => 'skills_to_doctors',
+//        'from' => 'doctors',
+//        'to' => 'skills'
+//    ) );
+//
+//    p2p_register_connection_type( array(
+//        'name' => 'post_to_post',
+//        'from' => 'services',
+//        'to' => 'doctors'
+//    ) );
+//}
+//add_action( 'p2p_init', 'my_connection_types' );
+
 function translate_and_output($string_key, $group = 'Main Page')
 {
     global $strings_to_translate;
@@ -76,7 +104,8 @@ $strings_to_translate = array(
     'write_us' => 'Напишіть нам',
     'privacy_text' => 'Натискаючи на кнопку “Залишити заявку” ви погоджуєтесь з',
     'privacy_link' => 'умовами політики конфіденційності',
-    'leave_statement' => 'Залишити заявку'
+    'leave_statement' => 'Залишити заявку',
+    'views' => 'переглядів',
 );
 
 if (function_exists('pll_register_string')) {
