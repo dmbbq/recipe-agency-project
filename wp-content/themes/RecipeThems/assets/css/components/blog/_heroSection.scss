@@ -1,0 +1,83 @@
+#blog {
+  padding-top: 13.625rem;
+
+  & .hero {
+     & .blog-list {
+       --bs-gutter-x: 2.1875rem;
+       row-gap: 5.3125rem;
+     }
+
+    & .blog-list__link {
+      font-family: 'Manrope', sans-serif;
+
+      & br {
+        display: none;
+      }
+    }
+
+    & .blog-list__thumb {
+      aspect-ratio: 1 / calc(400 / 570);
+
+      margin-bottom: 1.5625rem;
+
+      border-radius: $fourth-radius;
+    }
+
+    & .blog-list__date {
+      margin-bottom: 0.625rem;
+
+      font-size: clamp(0.813rem, 0.767rem + 0.19vw, 1rem);
+
+      opacity: 0.3;
+    }
+
+    & .blog-list__title{
+      font-size: 1.25rem;
+      line-height: calc(1.75 / 1.25);
+    }
+  }
+
+  & .hero-title{
+    margin-bottom: 6.25rem;
+  }
+
+  & .swiper-pagination{
+    all: unset;
+
+    & span {
+      &:not(:last-child){
+        margin-right: 0.44rem;
+      }
+    }
+  }
+
+  & .swiper-pagination-bullet{
+    all: unset;
+
+    border-radius: 0.5rem;
+    border: 1px solid $fourth-bg-color;
+    background-color: transparent;
+    cursor: pointer;
+
+    &.swiper-pagination-bullet-active {
+      border-color: $accent-color;
+      background-color: $accent-color;
+      color: $white-color;
+    }
+  }
+
+  & .swiper-pagination-bullet,
+  & .swiper-pagination-bullet-ellipsis{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 4.375rem;
+    height: 4.375rem;
+
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: calc(1.5625 / 1.25);
+  }
+}

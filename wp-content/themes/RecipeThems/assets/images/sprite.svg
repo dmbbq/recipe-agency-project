@@ -28,5 +28,10 @@
         <symbol id="icon-carret-right-rounded" viewBox="0 0 18 32">
             <path fill="transparent" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3.5556" d="M1.778 1.778l14.222 14.222-14.222 14.222"></path>
         </symbol>
+        <symbol id="icon-procesess" viewBox="0 0 39 32">
+            <path fill="#fff" style="fill: var(--color1, #fff)" d="M18.696 15.752l-0.11-2.473h1.67l-0.095 2.473 2.316-0.89 0.512 1.591-2.379 0.693 1.575 1.953-1.347 0.977-1.418-2.064-1.426 2.064-1.347-0.977 1.583-1.953-2.371-0.693 0.504-1.591 2.332 0.89z"></path>
+            <path fill="none" stroke="#fff" style="stroke: var(--color1, #fff)" stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="4" stroke-width="0.9846" d="M8.653 0.492c-9.354 2.215-12.307 25.846 0 31.015"></path>
+            <path fill="none" stroke="#fff" style="stroke: var(--color1, #fff)" stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="4" stroke-width="0.9846" d="M30.286 0.492c9.354 2.215 12.307 25.846 0 31.015"></path>
+        </symbol>
     </defs>
 </svg>

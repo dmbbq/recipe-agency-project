@@ -18,15 +18,13 @@
 
 //Common components
 @import "components/ctaSection";
-@import "components/clientsSection";
+@import "components/partnersSection";
 
 //Home page
 @import "components/home/heroSection";
 @import "components/home/aboutSection";
 @import "components/home/processes";
 @import "components/home/services";
-
-
 
 //Services page
 @import "components/services/servicesSection";
@@ -41,4 +39,9 @@
 //Contacts page
 @import "components/contacts/heroSection";
 
+//Blog page
+@import "components/blog/heroSection";
 
+//Single Blog page
+@import "components/singleBlog/heroSection";
+@import "components/singleBlog/detailsSection";

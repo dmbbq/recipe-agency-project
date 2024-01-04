@@ -12,6 +12,9 @@ $contacts_image = get_field('info_image');
 
 <section class="section">
     <div class="container">
+        <h1>
+            <?php the_field('contacts_title');?>
+        </h1>
         <div class="contacts-wrapper justify-content-between row">
             <div class="col-lg-6">
                 <div class="contacts-wrapper__content">

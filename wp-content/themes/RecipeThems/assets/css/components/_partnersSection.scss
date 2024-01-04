@@ -1,0 +1,31 @@
+.partners-swiper-top{
+  margin-bottom: 0.625rem;
+}
+
+.partners-swiper-bottom{
+  margin-left: -20.3125rem !important;
+}
+
+.partners-swiper-top,
+.partners-swiper-bottom{
+  //pointer-events: none;
+  width: 110.674%;
+
+  & .swiper-wrapper {
+    transition-timing-function: cubic-bezier(0, 0, 1, 1);
+  }
+
+  & img {
+    width: auto;
+    height: auto;
+    object-fit: initial;
+  }
+}
+
+.partners-list__item {
+  aspect-ratio: 1 / calc(180 / 320);
+
+  border-radius: $primary-radius;
+  background-color: $secondary-bg-color;
+}
+

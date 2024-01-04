@@ -116,6 +116,33 @@ const hideCtrl = () => {
   }
 }
 
+export function renderEllipsisBullet(index, className) {
+  const swiper = this;
+  const total = swiper.slides.length;
+  const current = swiper.realIndex;
+
+  const numberOfBullets = 2; // Shows 2 bullets before and after the current bullet
+
+  // Check if the current bullet is the active one
+  let isActive = (index === current) ? 'swiper-pagination-bullet-active' : '';
+
+  if (index < numberOfBullets || index > total - numberOfBullets || Math.abs(current - index) < numberOfBullets) {
+    return `<span class="${className} ${isActive}" role="button" tabindex="0" aria-label="Go to slide ${index + 1}">${index + 1}</span>`;
+  }
+
+  // For ellipsis on the left
+  if (index === numberOfBullets && current - numberOfBullets > numberOfBullets - 1) {
+    return '<span class="swiper-pagination-bullet-ellipsis">...</span>';
+  }
+
+  // For ellipsis on the right
+  if (index === total - numberOfBullets - 1 && current + numberOfBullets < total - numberOfBullets - 1) {
+    return '<span class="swiper-pagination-bullet-ellipsis">...</span>';
+  }
+
+  return '';
+}
+
 $("document").ready(function () {
   bodyEl.css("visibility", "visible");
 

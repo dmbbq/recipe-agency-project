@@ -9,17 +9,21 @@ $image_url = isset($args['image_url']) ? $args['image_url'] : get_field('cta_ima
 <section class="section" id="cta">
     <div class="container">
         <div class="cta-wrapper <?php echo $page; ?>">
-            <?php echo $title; ?>
+            <?php echo preg_match('/<h2>/', $title) ? $title : "<h2>$title</h2>"; ?>
             <p class="cta-text">
                 <?php echo $text; ?>
             </p>
             <?php echo do_shortcode('[cf7form cf7key="appointment"]'); ?>
-            <p class="cta-link mb-0">
-                <?php translate_and_output('privacy_text'); ?>
-                <a href="<?php echo get_permalink(pll_get_post(283)); ?>">
-                    <?php translate_and_output('privacy_link'); ?>
-                </a>
-            </p>
+            <?php if(!is_page(pll_get_post(124, $current_lang))){
+                ?>
+                <p class="cta-link mb-0">
+                    <?php translate_and_output('privacy_text'); ?>
+                    <a href="<?php echo get_permalink(pll_get_post(283)); ?>">
+                        <?php translate_and_output('privacy_link'); ?>
+                    </a>
+                </p>
+            <?php
+            }?>
         </div>
     </div>
 </section>

@@ -3,19 +3,13 @@
   border: 1px solid $fourth-bg-color;
   background-color: $secondary-bg-color;
   background-repeat: no-repeat;
+  background-position: right bottom;
 
-  &.home,
-  &.services,
-  &.about,
-  &.contacts {
-    background-position: right bottom;
-  }
+  padding: 5rem;
 
   &.home,
   &.services,
   &.contacts {
-    padding: 5rem;
-
     background-size: 56.3483%;
 
     & h2 {
@@ -44,9 +38,12 @@
     }
   }
 
-  &.about {
+  &.about,
+  &.blog {
     padding: 6.25rem;
+  }
 
+  &.about {
     background-size: 34.6067%;
 
     & h2 {
@@ -56,16 +53,30 @@
     }
   }
 
+  &.blog {
+    background-size: 46.4044%;
+
+    background-color: $primary-text-color;
+
+    & .cta-text{
+      opacity: 1;
+    }
+
+    & .cta-text,
+    & h2 {
+      color: $white-color;
+    }
+  }
+
   & h2 {
     margin-bottom: 2.19rem;
 
-    font-size: 3.75rem;
+    font-size: clamp(1.875rem, 1.42rem + 1.94vw, 3.75rem);
     letter-spacing: -0.16875rem;
   }
 
   & > div {
     max-width: 60.5493%;
-    margin-bottom: 1.25rem;
 
     & p {
       position: relative;
@@ -85,8 +96,9 @@
 }
 
 .cta-link {
-  font-family: 'Manrope', sans-serif;
-  font-size: 0.9375rem;
+  margin-top: 1.25rem;
+
+  font-size: clamp(0.625rem, 0.549rem + 0.32vw, 0.938rem);
   line-height: calc(1.17188 / 0.9375);
 
   & a {
@@ -96,5 +108,6 @@
 
 .cta-text,
 .cta-link {
-  opacity: 0.7;
+   font-family: 'Manrope', sans-serif;
+    opacity: 0.7;
 }
