@@ -8,6 +8,5 @@ $current_lang = pll_current_language();
             <?php the_field('our_services_title', pll_get_post(140, $current_lang)); ?>
         </h1>
         <?php get_template_part('templates/services/servicesList'); ?>
-
     </div>
 </section>

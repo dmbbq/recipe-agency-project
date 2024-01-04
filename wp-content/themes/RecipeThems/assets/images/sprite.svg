@@ -40,5 +40,9 @@
             <path fill="none" stroke="#fff" style="stroke: var(--color1, #fff)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.8235" d="M37.402 14.046c0.892 1.167 0.892 2.743 0 3.908-2.81 3.669-9.553 11.223-17.425 11.223s-14.615-7.554-17.425-11.223c-0.434-0.559-0.67-1.246-0.67-1.954s0.236-1.395 0.67-1.954c2.81-3.669 9.553-11.223 17.425-11.223s14.615 7.554 17.425 11.223v0z"></path>
             <path fill="none" stroke="#fff" style="stroke: var(--color1, #fff)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.8235" d="M19.978 21.647c3.119 0 5.647-2.528 5.647-5.647s-2.528-5.647-5.647-5.647c-3.119 0-5.647 2.528-5.647 5.647s2.528 5.647 5.647 5.647z"></path>
         </symbol>
+        <symbol id="icon-mail-check" viewBox="0 0 32 32">
+            <path fill="none" stroke="#72afff" style="stroke: var(--color1, #72afff)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.2857" d="M14.667 25.333h-8c-0.707 0-1.386-0.281-1.886-0.781s-0.781-1.178-0.781-1.886v-13.333c0-0.707 0.281-1.386 0.781-1.886s1.178-0.781 1.886-0.781h18.667c0.707 0 1.386 0.281 1.886 0.781s0.781 1.178 0.781 1.886v8"></path>
+            <path fill="none" stroke="#72afff" style="stroke: var(--color1, #72afff)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.2857" d="M4 9.333l12 8 12-8M20 25.333l2.667 2.667 5.333-5.333"></path>
+        </symbol>
     </defs>
 </svg>

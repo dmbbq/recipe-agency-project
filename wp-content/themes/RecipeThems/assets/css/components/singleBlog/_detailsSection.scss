@@ -1,18 +1,68 @@
 #single-blog {
   & .details {
-    height: 1000px;
     border-radius: 2.5rem;
     background-color: $white-color;
   }
 
-  & .info-list {
-    gap: 2.5rem;
+  & .details-aside {
+    position: sticky;
+    top: 0;
+
+    padding-right: 1.25rem;
+
+    @media screen and (min-width: 992px) {
+      width: 25.2809%;
+    }
   }
 
-  & .info-list__item {
+  & .authors-list{
+
+  }
+
+  & .authors-list__item {
     gap: 0.75rem;
 
     font-family: 'Manrope', sans-serif;
-    font-size: clamp(0.875rem, 0.814rem + 0.26vw, 1.125rem);
+
+    &:not(:last-child) {
+      margin-bottom: 1.25rem;
+    }
+  }
+
+  & .authors-list__thumb {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+  }
+
+  & .authors-list__title {
+    margin-bottom: 0.625rem;
+
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1;
+
+    @media screen and (min-width: 992px) {
+      font-weight: 600;
+    }
+  }
+
+  & .authors-list__text {
+    font-size: 0.875rem;
+
+    opacity: 0.6;
+
+    @media screen and (max-width: 991px) {
+      letter-spacing: -0.00875rem;
+    }
+
+    @media screen and (min-width: 992px) {
+      line-height: calc(1.09375 / 0.875);
+      font-weight: 500;
+    }
+  }
+
+  & .details-content {
+    width: 51.6853%;
   }
 }

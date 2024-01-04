@@ -1,15 +1,7 @@
 .container {
-  padding: 0 15px;
-
-  @media screen and (max-width: 575px) {
-    max-width: 375px;
-  }
+  padding: 0 0.9375rem;
 
   @media screen and (min-width: 1440px) {
-    max-width: 1440px;
-    padding: 0 80px;
-  }
-  @media screen and (min-width:1920px ) {
     max-width: 120rem;
     padding: 0 4.375rem;
   }
@@ -63,9 +55,10 @@
   all: unset;
   box-sizing: border-box;
 
-  width: 21.875rem;
+  width: 100%;
   height: 4.5rem;
 
+  padding-left: 1.75rem;
   border-radius: $secondary-radius;
   border: 1px solid $fourth-bg-color;
 
@@ -77,17 +70,12 @@
     opacity: 0.3;
   }
 
-  &[name="username"]{
-    padding-left: 1.75rem;
-  }
-
   &[name="number"]{
     padding: 0 0 0 4.75rem !important;
   }
 }
 
 .cf7-button {
-  width: 16.875rem;
   height: 4.5rem;
 }
 
@@ -117,9 +105,16 @@
   margin: 0 !important;
 }
 
+.cf7sg-response-output,
 .wpcf7-response-output,
 .wpcf7-not-valid-tip{
   display: none !important;
+}
+
+form {
+  br {
+    display: none;
+  }
 }
 
 .socials-list{

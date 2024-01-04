@@ -7,6 +7,7 @@ add_action('wpcf7_before_send_mail', 'send_message_to_telegram');
 add_filter('wp_check_filetype_and_ext', 'fix_svg_mime_type', 10, 5);
 add_action('customize_register', 'additional_logo_customize_register');
 add_action('wp_head', 'increment_post_views');
+add_action( 'p2p_init', 'my_connection_types' );
 
 function enqueue_scripts_and_styles(){
     wp_deregister_script('jquery');
@@ -74,20 +75,13 @@ function increment_post_views()
     }
 }
 
-//function my_connection_types() {
-//    p2p_register_connection_type( array(
-//        'name' => 'skills_to_doctors',
-//        'from' => 'doctors',
-//        'to' => 'skills'
-//    ) );
-//
-//    p2p_register_connection_type( array(
-//        'name' => 'post_to_post',
-//        'from' => 'services',
-//        'to' => 'doctors'
-//    ) );
-//}
-//add_action( 'p2p_init', 'my_connection_types' );
+function my_connection_types() {
+    p2p_register_connection_type( array(
+        'name' => 'team_to_blog',
+        'from' => 'blog',
+        'to' => 'team'
+    ) );
+}
 
 function translate_and_output($string_key, $group = 'Main Page')
 {
@@ -106,6 +100,8 @@ $strings_to_translate = array(
     'privacy_link' => 'умовами політики конфіденційності',
     'leave_statement' => 'Залишити заявку',
     'views' => 'переглядів',
+    'keywords' => 'Ключові слова',
+    'share' => 'Поділитись публікацією'
 );
 
 if (function_exists('pll_register_string')) {

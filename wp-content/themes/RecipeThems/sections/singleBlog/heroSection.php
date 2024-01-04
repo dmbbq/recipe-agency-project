@@ -1,13 +1,13 @@
 <section class="hero">
     <div class="container d-flex align-items-end h-100">
-        <div>
+        <div class="w-100">
             <h1 class="hero-title section-title">
                 <?php the_field('title'); ?>
             </h1>
-            <div class="d-flex justify-content-between align-items-center">
+            <div class="hero-content d-flex justify-content-between align-items-center">
                 <?php get_template_part('templates/singleBlog/infoList'); ?>
                 <?php get_template_part('templates/singleBlog/categoryList'); ?>
-            <div>
+            </div>
         </div>
     </div>
 </section>
