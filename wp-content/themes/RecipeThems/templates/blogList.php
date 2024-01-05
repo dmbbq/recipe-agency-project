@@ -10,7 +10,7 @@ $query = new WP_Query($args);
 if ($query->have_posts()) {
     $total_posts = $query->post_count;
 
-    $posts_per_list = 12;
+    $posts_per_list = 1;
     $lists_count = ceil($total_posts / $posts_per_list);
 
     $posts_per_list_mob = 6;
@@ -51,19 +51,7 @@ if ($query->have_posts()) {
                 </li>
             <?php } ?>
         </ul>
-        <div class="blog-ctrl">
-            <div class="blog-ctrl__item prev">
-                <svg class="blog-ctrl__icon" width="20" height="20">
-                    <use href="<?php get_image('sprite.svg#icon-carret-left'); ?>"></use>
-                </svg>
-            </div>
-            <div class="swiper-pagination"></div>
-            <div class="blog-ctrl__item next">
-                <svg class="blog-ctrl__icon" width="20" height="20">
-                    <use href="<?php get_image('sprite.svg#icon-carret-right'); ?>"></use>
-                </svg>
-            </div>
-        </div>
+        <?php get_template_part('templates/blogCtrl'); ?>
     </div>
 
     <?php

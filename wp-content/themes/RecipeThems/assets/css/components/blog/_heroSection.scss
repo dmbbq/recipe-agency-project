@@ -2,10 +2,10 @@
   padding-top: 13.625rem;
 
   & .hero {
-     & .blog-list {
-       --bs-gutter-x: 2.1875rem;
-       row-gap: 5.3125rem;
-     }
+    & .blog-list {
+      --bs-gutter-x: 2.1875rem;
+      row-gap: 5.3125rem;
+    }
 
     & .blog-list__link {
       font-family: 'Manrope', sans-serif;
@@ -31,33 +31,28 @@
       opacity: 0.3;
     }
 
-    & .blog-list__title{
+    & .blog-list__title {
       font-size: 1.25rem;
       line-height: calc(1.75 / 1.25);
     }
   }
 
-  & .hero-title{
+  & .hero-title {
     margin-bottom: 6.25rem;
   }
 
-  & .swiper-pagination{
+  & .swiper-pagination {
     all: unset;
 
     & span {
-      &:not(:last-child){
+      &:not(:last-child) {
         margin-right: 0.44rem;
       }
     }
   }
 
-  & .swiper-pagination-bullet{
+  & .swiper-pagination-bullet {
     all: unset;
-
-    border-radius: 0.5rem;
-    border: 1px solid $fourth-bg-color;
-    background-color: transparent;
-    cursor: pointer;
 
     &.swiper-pagination-bullet-active {
       border-color: $accent-color;
@@ -67,7 +62,16 @@
   }
 
   & .swiper-pagination-bullet,
-  & .swiper-pagination-bullet-ellipsis{
+  & .blog-ctrl__item {
+    border-radius: 0.5rem;
+    border: 1px solid $fourth-bg-color;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  & .swiper-pagination-bullet,
+  & .swiper-pagination-bullet-ellipsis,
+  & .blog-ctrl__item {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -79,5 +83,14 @@
     font-size: 1.25rem;
     font-weight: 500;
     line-height: calc(1.5625 / 1.25);
+  }
+
+  & .swiper-pagination-bullet,
+  & .blog-ctrl__item {
+    @include hover(stroke $black-color $white-color, fill $black-color $white-color, background-color transparent $accent-color, color $primary-text-color $white-color);
+  }
+
+  & .blog-ctrl {
+    gap: 0.44rem;
   }
 }

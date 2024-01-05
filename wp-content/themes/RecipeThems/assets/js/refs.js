@@ -6,7 +6,8 @@ const refs = {
   appButtons: $(".app-button-js"),
   appBackdrop: $("#appointment"),
   appHideButton: $(".appointment-button"),
-  swiperToInit: $(".swiper.init")
+  swiperToInit: $(".swiper.init"),
+  blogSwiperPagination: $(".blog-page-swiper .swiper-pagination")
 };
 
 export default refs;

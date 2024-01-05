@@ -123,10 +123,13 @@ export function renderEllipsisBullet(index, className) {
 
   const numberOfBullets = 2; // Shows 2 bullets before and after the current bullet
 
+  // Check if the current bullet is within the range to show
+  const isWithinRange = index >= current - numberOfBullets && index <= current + numberOfBullets;
+
   // Check if the current bullet is the active one
   let isActive = (index === current) ? 'swiper-pagination-bullet-active' : '';
 
-  if (index < numberOfBullets || index > total - numberOfBullets || Math.abs(current - index) < numberOfBullets) {
+  if (index === 0 || index === total - 1 || isWithinRange) {
     return `<span class="${className} ${isActive}" role="button" tabindex="0" aria-label="Go to slide ${index + 1}">${index + 1}</span>`;
   }
 
