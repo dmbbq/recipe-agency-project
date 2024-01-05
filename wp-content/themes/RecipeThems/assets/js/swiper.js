@@ -74,7 +74,21 @@ const handlePaginationClick = (e) => {
     blogPageSwiper.slideTo(slideIndex - 1, 0)
 }
 
+const handleNavigationClick = (e) => {
+    if (e.currentTarget.classList.contains('first')) {
+        blogPageSwiper.slideTo(0, 0);
+    } else if (e.currentTarget.classList.contains('last')) {
+        blogPageSwiper.slideTo(blogPageSwiper.slides.length - 1, 0);
+    }
+};
+
+refs.blogSwiperNavigation.on("click", handleNavigationClick)
 refs.blogSwiperPagination.on("click", handlePaginationClick)
+
+const singleBlogSwiper = new Swiper('.single-blog-swiper', {
+    spaceBetween: 35,
+    slidesPerView: 3
+})
 
 
 

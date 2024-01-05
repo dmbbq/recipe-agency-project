@@ -3,6 +3,6 @@
         <h1 class="hero-title">
             <?php the_field('title'); ?>
         </h1>
-        <?php get_template_part('templates/blogList'); ?>
-    <div>
+        <?php get_template_part('templates/blog/blogList'); ?>
+    </div>
 </section>

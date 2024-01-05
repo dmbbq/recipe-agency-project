@@ -1,4 +1,8 @@
-<div class="blog-ctrl d-flex">
+<?php
+$custom_class = $args['class'] ?? '';
+?>
+
+<div class="blog-ctrl <?= $custom_class; ?>">
     <div class="blog-ctrl__item first align-items-center justify-content-center">
         <svg class="ctrl-list__icon" width="20" height="20">
             <use href="<?php get_image('sprite.svg#icon-double-carret-left'); ?>"></use>

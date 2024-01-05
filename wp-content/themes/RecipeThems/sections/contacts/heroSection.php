@@ -1,7 +1,7 @@
 <?php
 $tel_roma = get_field('number_roma');
 
-$loc_valik = get_field('number_valik');
+$tel_valik = get_field('number_valik');
 
 $location = get_field('address_link');
 
@@ -29,9 +29,9 @@ $contacts_image = get_field('info_image');
                                target="<?php echo $tel_roma['target']; ?>">
                                 <?php echo $tel_roma['title']; ?>
                             </a>
-                            <a class="contacts-list__link" href="<?php echo $loc_valik['url']; ?>"
-                               target="<?php echo $loc_valik['target']; ?>">
-                                <?php echo $loc_valik['title']; ?>
+                            <a class="contacts-list__link" href="<?php echo $tel_valik['url']; ?>"
+                               target="<?php echo $tel_valik['target']; ?>">
+                                <?php echo $tel_valik['title']; ?>
                             </a>
                         </li>
                         <li class="contacts-list__item">

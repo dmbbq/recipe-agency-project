@@ -13,6 +13,7 @@ $args = array(
 <main id="single-blog">
     <?php get_template_part('sections/singleBlog/heroSection'); ?>
     <?php get_template_part('sections/singleBlog/detailsSection'); ?>
+    <?php get_template_part('sections/singleBlog/blogSection'); ?>
     <?php get_template_part('sections/ctaSection', null, $args); ?>
 </main>
 

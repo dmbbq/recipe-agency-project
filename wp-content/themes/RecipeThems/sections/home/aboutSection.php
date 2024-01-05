@@ -11,7 +11,7 @@
                 <?php the_field('benefits_list'); ?>
             </div>
             <div class="col-lg-4 ">
-                <a class="benefits-link" href="<?php echo get_permalink(pll_get_post(128)); ?>"
+                <a class="benefits-link" href="<?= get_permalink(pll_get_post(128)); ?>"
                    target="<?php echo $link_to_post['target']; ?>">
                     <?php the_field('benefits_button_text'); ?>
                 </a>

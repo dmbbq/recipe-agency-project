@@ -17,12 +17,11 @@
                     <?php echo wp_get_attachment_image($services_icon, 'full', false, array('class' => '')); ?>
                 </div>
                 <h2 class="services-list__title">
-                    <?php the_title();?>
+                    <?php the_field('card_title'); ?>
                 </h2>
 
                 <div class="services-list__text">
-                    <?php the_field('our_services_list');?>
-
+                    <?php the_field('services_list');?>
                 </div>
                 <a class="services-link_post button-style d-inline-flex align-items-center justify-content-center" href="#">
                     Детальніше

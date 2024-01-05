@@ -101,7 +101,10 @@ $strings_to_translate = array(
     'leave_statement' => 'Залишити заявку',
     'views' => 'переглядів',
     'keywords' => 'Ключові слова',
-    'share' => 'Поділитись публікацією'
+    'share' => 'Поділитись публікацією',
+    'author' => 'Автор статті',
+    'same_posts' => 'Cхожі публікації',
+    'all_posts' => 'Всі публікації'
 );
 
 if (function_exists('pll_register_string')) {

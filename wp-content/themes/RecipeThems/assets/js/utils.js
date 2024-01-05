@@ -108,14 +108,6 @@ const initSwiperClasses = () => {
 
 initSwiperClasses();
 
-const hideCtrl = () => {
-  const teamSwiperSlides = $('.team-swiper .swiper-slide')
-
-  if(teamSwiperSlides[0] && teamSwiperSlides.length < 5){
-    $('.team-section .ctrl-list').css('display', 'none')
-  }
-}
-
 export function renderEllipsisBullet(index, className) {
   const swiper = this;
   const total = swiper.slides.length;
@@ -152,5 +144,4 @@ $("document").ready(function () {
   new WOW().init();
 
   replaceInputWithButton();
-  hideCtrl();
 });

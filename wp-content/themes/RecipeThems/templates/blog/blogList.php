@@ -10,11 +10,8 @@ $query = new WP_Query($args);
 if ($query->have_posts()) {
     $total_posts = $query->post_count;
 
-    $posts_per_list = 1;
+    $posts_per_list = 12;
     $lists_count = ceil($total_posts / $posts_per_list);
-
-    $posts_per_list_mob = 6;
-    $lists_count_mob = ceil($total_posts / $posts_per_list_mob);
     ?>
 
     <div class="swiper blog-page-swiper">
@@ -51,7 +48,10 @@ if ($query->have_posts()) {
                 </li>
             <?php } ?>
         </ul>
-        <?php get_template_part('templates/blogCtrl'); ?>
+        <?php
+        $blogCtrlClass = ($lists_count > 1) ? 'd-flex justify-content-center' : 'd-none';
+        get_template_part('templates/blogCtrl', null, array('class' => $blogCtrlClass));
+        ?>
     </div>
 
     <?php

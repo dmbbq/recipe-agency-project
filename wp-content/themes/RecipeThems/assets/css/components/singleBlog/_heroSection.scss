@@ -8,7 +8,24 @@
     background-size: cover;
     background-repeat: no-repeat;
 
-    color: $white-color
+    color: $white-color;
+
+    & .info-list {
+      gap: 2.5rem;
+    }
+
+    & .info-list__item {
+      stroke: $white-color;
+      fill: $white-color;
+    }
+
+    & .category-list__item {
+      font-size: clamp(0.813rem, 0.782rem + 0.13vw, 0.938rem);
+      letter-spacing: -0.04219rem;
+
+      color: $primary-text-color;
+      background-color: $white-color;
+    }
   }
 
   & .hero-title {
@@ -18,29 +35,26 @@
   & .hero-content{
     font-family: 'Manrope', sans-serif;
   }
+}
 
-  & .info-list {
-    gap: 2.5rem;
-  }
+.category-list {
+  gap: 0.31rem;
+}
 
-  & .info-list__item {
-    gap: 0.75rem;
+.category-list__item {
+  padding: 0.94rem 1.25rem;
+  border-radius: $seventh-radius;
 
-    font-size: clamp(0.875rem, 0.814rem + 0.26vw, 1.125rem);
-  }
+  letter-spacing: -0.04219rem;
+}
 
-  & .category-list {
-    gap: 0.31rem;
-  }
+.info-list__item {
+  gap: 0.75rem;
 
-  & .category-list__item {
-    padding: 0.94rem 1.25rem;
-    border-radius: $seventh-radius;
+  font-size: clamp(0.875rem, 0.814rem + 0.26vw, 1.125rem);
+}
 
-    font-size: clamp(0.813rem, 0.782rem + 0.13vw, 0.938rem);
-    letter-spacing: -0.04219rem;
-
-    color: $primary-text-color;
-    background-color: $white-color;
-  }
+.category-list__item,
+.info-list__item {
+  font-family: "Manrope", sans-serif;
 }
