@@ -113,6 +113,7 @@
 
     @media screen and (min-width: 992px) {
       position: absolute;
+
       display: flex;
       align-items: center;
       gap: 1.56rem;
@@ -127,10 +128,6 @@
 
   & .pre-title_icon{
     flex-shrink: 0;
-  }
-
-  & #cta {
-    padding-top: 0;
   }
 }
 

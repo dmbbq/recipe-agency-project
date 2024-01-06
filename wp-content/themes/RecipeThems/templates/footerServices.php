@@ -1,4 +1,4 @@
-<ul class="services-list d-flex flex-column ">
+<ul class="services-list d-flex flex-column">
     <?php
     $args = array(
         'post_type' => 'our-services',

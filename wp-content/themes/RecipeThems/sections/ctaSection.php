@@ -9,7 +9,7 @@ $image_url = $args['image_url'] ?? get_field('cta_image');
 $is_mailing = is_page(pll_get_post(124, $current_lang)) || is_singular('blog');
 ?>
 
-<section class="section" id="cta">
+<section class="<?= (!is_page(pll_get_post(119, $current_lang))) ? 'section' : ''; ?> section--padding" id="cta">
     <div class="container">
         <div class="cta-wrapper <?= $page; ?>">
             <?= preg_match('/<h2>/', $title) ? $title : "<h2>$title</h2>"; ?>

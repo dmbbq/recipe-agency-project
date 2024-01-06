@@ -1,7 +1,7 @@
 <section class="section about">
     <div class="container">
         <div class="row">
-            <div class="col-lg-4">
+            <div class="col-lg-4 about-wrapper">
                 <h2 class="section-title about-title">
                     <?php the_field('about_title'); ?>
                 </h2>

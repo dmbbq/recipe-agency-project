@@ -1,45 +1,102 @@
 #about {
   & .results {
     & .section-header {
-      margin-bottom: 6.625rem;
+      margin-bottom: 1.81rem;
+
+      @media screen and (min-width: 992px) {
+        margin-bottom: min(5.9552%, 6.625rem);
+      }
+
+      & > div:first-child {
+        @media screen and (max-width: 991px) {
+          margin-bottom: 1.81rem;
+        }
+      }
 
       & + ul {
-        display: flex;
-        gap: 1.25rem;
+        @media screen and (min-width: 992px) {
+          display: flex;
+          gap: 1.25rem;
+        }
 
         & li {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-
-          padding: 2.5rem;
-          border-radius: $fifth-radius;
+          padding: 1.56rem;
+          border-radius: $fourth-radius;
 
           background-color: $secondary-bg-color;
 
-          &:not(:last-child) {
-            aspect-ratio: 1 / calc(21.375 / 26.875);
+          @media screen and (min-width: 992px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
 
-            flex-basis: calc((100% - 3.75rem) / 4);
+            padding: 2.5rem;
+            border-radius: $fifth-radius;
+          }
+
+          &:not(:last-child) {
+            @media screen and (max-width: 991px) {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+
+              min-height: 10.625rem;
+              margin-bottom: 0.31rem;
+            }
+
+            @media screen and (min-width: 992px) {
+              aspect-ratio: 1 / calc(21.375 / 26.875);
+
+              flex-basis: calc((100% - 3.75rem) / 4);
+            }
           }
 
           &:last-child {
-            aspect-ratio: 1 / calc(21.375 / 55);
-
-            flex-basis: calc((100% - 1.25rem) / 2);
-
-            background-image: url(../images/dollar.webp);
-            background-position: right bottom;
-            background-size: 36.0227%;
+            background-image: url(../images/dollar-mob.webp);
+            background-position: bottom;
+            background-size: 19.0625rem;
             background-repeat: no-repeat;
+
+            @media screen and (max-width: 991px) {
+              min-height: 15.9375rem;
+            }
+
+            @media screen and (min-width: 992px) {
+              aspect-ratio: 1 / calc(21.375 / 55);
+
+              flex-basis: calc((100% - 1.25rem) / 2);
+
+              background-image: url(../images/dollar.webp);
+              background-position: right bottom;
+              background-size: 36.0227%;
+            }
+
+            & h3 {
+              @media screen and (max-width: 991px) {
+                margin-bottom: 0.94rem;
+              }
+            }
+
+            & br {
+              @media screen and (max-width: 575px) {
+                display: none;
+              }
+            }
           }
 
           & h3 {
-            font-size: 3.75rem;
-            line-height: calc(4.6875 / 3.75);
-            letter-spacing: -0.16875rem;
+            margin-bottom: 0;
+
+            font-size: clamp(2.5rem, 2.197rem + 1.29vw, 3.75rem);
+            line-height: 1;
+            letter-spacing: -0.1125rem;
 
             color: $accent-color;
+
+            @media screen and (min-width: 992px) {
+              line-height: calc(4.6875 / 3.75);
+              letter-spacing: -0.16875rem;
+            }
           }
 
           & p {
@@ -54,9 +111,14 @@
   }
 
   & .results-title {
-    font-size: 3.375rem;
-    line-height: calc(4.55625 / 3.375);
-    letter-spacing: -0.15188rem;
+    font-size: clamp(1.625rem, 1.2rem + 1.81vw, 3.375rem);
+    line-height: 1.25;
+    letter-spacing: -0.07313rem;
+
+    @media screen and (min-width: 992px) {
+      line-height: calc(4.55625 / 3.375);
+      letter-spacing: -0.15188rem;
+    }
 
     & strong {
       color: $accent-color;

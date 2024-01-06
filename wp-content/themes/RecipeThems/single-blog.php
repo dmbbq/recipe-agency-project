@@ -1,5 +1,6 @@
 <?php
 get_header();
+
 $current_lang = pll_current_language();
 
 $args = array(

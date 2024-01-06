@@ -6,7 +6,7 @@ const { menuBackdrop, menuButton, menuNavLinks } = refs;
 
 const handleClick = () => {
     menuBackdrop.hasClass("is-hidden")
-        ? showBackdrop(menuBackdrop)
+        ? showBackdrop(menuBackdrop, true)
         : hideBackdrop(menuBackdrop);
 };
 

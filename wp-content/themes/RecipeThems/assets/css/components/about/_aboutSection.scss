@@ -1,31 +1,72 @@
 #about {
   & .about {
+    & .about-wrapper {
+      @media screen and (max-width: 991px) {
+        margin-bottom: 2.19rem;
+      }
+    }
+
     & p {
       font-family: "Manrope", sans-serif;
 
-      &:first-of-type{
-        margin-bottom: 1.5rem;
+      &:first-of-type {
+        margin-bottom: 1.25rem;
+
+        @media screen and (min-width: 992px) {
+          margin-bottom: 1.5rem;
+        }
       }
 
-      &:last-of-type{
-        margin-bottom: 2.1875rem;
+      &:last-of-type {
+        margin-bottom: 1.56rem;
+
+        @media screen and (min-width: 992px) {
+          margin-bottom: 2.1875rem;
+        }
+      }
+
+      & br {
+        @media screen and (max-width: 991px) {
+          display: none;
+        }
       }
     }
   }
 
   & .about-title {
-    margin-bottom: 2.1875rem;
+    margin-bottom: 1.56rem;
+
+    font-size: clamp(1.875rem, 1.42rem + 1.94vw, 3.75rem);
+
+    @media screen and (min-width: 992px) {
+      margin-bottom: 2.1875rem;
+    }
   }
 
   & .about-swiper {
-    height: 100%;
-    width: 156.355%;
+    width: 18.125rem;
+    margin-left: 1.0625rem !important;
+
+    overflow: visible !important;
+
+    @media screen and (min-width: 992px){
+      width: 156.355%;
+      height: 100%;
+
+      overflow: hidden !important;
+    }
 
     & .swiper-slide {
-      aspect-ratio: 1 / calc(600 / 450);
+      height: 21.125rem;
 
-      border-radius: $primary-radius;
+      border-radius: $ninth-radius;
       overflow: hidden;
+
+      @media screen and (min-width: 992px) {
+        aspect-ratio: 1 / calc(600 / 450);
+
+        border-radius: $primary-radius;
+      }
     }
 
     & dt {

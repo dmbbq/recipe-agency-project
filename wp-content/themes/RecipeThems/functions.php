@@ -95,7 +95,7 @@ function translate_and_output($string_key, $group = 'Main Page')
 }
 
 $strings_to_translate = array(
-    'write_us' => 'Напишіть нам',
+    'write_us' => 'Написати нам',
     'privacy_text' => 'Натискаючи на кнопку “Залишити заявку” ви погоджуєтесь з',
     'privacy_link' => 'умовами політики конфіденційності',
     'leave_statement' => 'Залишити заявку',
@@ -104,7 +104,10 @@ $strings_to_translate = array(
     'share' => 'Поділитись публікацією',
     'author' => 'Автор статті',
     'same_posts' => 'Cхожі публікації',
-    'all_posts' => 'Всі публікації'
+    'all_posts' => 'Всі публікації',
+    'details' => 'Детальніше',
+    'more_partners' => 'Більше клієнтів',
+    'hide' => 'Приховати'
 );
 
 if (function_exists('pll_register_string')) {

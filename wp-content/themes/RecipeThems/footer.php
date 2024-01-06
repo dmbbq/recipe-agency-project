@@ -7,7 +7,6 @@ $email = get_field('email_link', 136);
 
 ?>
 
-
 <footer class="footer">
     <div class="container">
 
@@ -93,7 +92,6 @@ $email = get_field('email_link', 136);
                         </div>
                         <div class="d-lg-none">
                             <?php get_template_part('templates/socialsList'); ?>
-
                         </div>
                     </div>
 

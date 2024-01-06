@@ -28,8 +28,22 @@ main {
   flex: 1 1 auto;
 }
 
-section {
+.section{
   overflow-x: hidden;
+
+  padding-top: 4.6875rem;
+
+  @media screen and (min-width: 992px){
+    padding-top: min(13.0209%, 15.625rem);
+  }
+
+  &--padding{
+    padding-bottom: 4.6875rem;
+
+    @media screen and (min-width: 992px){
+      padding-bottom: min(13.0209%, 15.625rem);
+    }
+  }
 }
 
 .wrapper {
@@ -142,18 +156,6 @@ h1{
 
   @media screen and (min-width: 992px) {
     letter-spacing: -0.25313rem;
-  }
-}
-
-.section{
-  padding-top: 4.63rem;
-
-  @media screen and (min-width: 1440px) {
-    padding-top: 15.63rem;
-  }
-
-  &--padding{
-    padding-bottom: 15.63rem;
   }
 }
 

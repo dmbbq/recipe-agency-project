@@ -4,10 +4,18 @@ import {renderEllipsisBullet} from "./utils.js"
 import refs from "./refs"
 
 const aboutSwiper = new Swiper('.about-swiper', {
-    spaceBetween: 15,
-    slidesPerView: 4,
+    centeredSlides: true,
+    spaceBetween: 5,
+    slidesPerView: 1,
     grabCursor: true,
-    loop: true
+    loop: true,
+    breakpoints: {
+        992: {
+            centeredSlides: false,
+            slidesPerView: 4,
+            spaceBetween: 15,
+        }
+    }
 })
 
 const clientsSwiperTop = new Swiper('.partners-swiper-top', {

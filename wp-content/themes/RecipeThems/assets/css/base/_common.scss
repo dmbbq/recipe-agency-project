@@ -10,13 +10,18 @@
 .button-primary {
   @include hover(background-color $accent-color $secondary-accent-color);
 
-  height: 3.6875rem;
-  padding: 0 1.56rem;
+  height: 3.25rem;
+  padding: 0 1.25rem;
   border: none;
 
   font-family: 'Unbounded', sans-serif;
 
   color: $white-color;
+
+  @media screen and (min-width: 992px){
+    height: 3.6875rem;
+    padding: 0 1.56rem;
+  }
 
   &::after {
     content: '';
@@ -50,7 +55,7 @@
 
   border-radius: 0.3125rem;
 
-  font-size: 0.9375rem;
+  font-size: clamp(0.813rem, 0.782rem + 0.13vw, 0.938rem);
   font-weight: 400;
   line-height: calc(1.17188 / 0.9375);
   letter-spacing: -0.02344rem;
@@ -167,7 +172,11 @@ form {
 }
 
 .section-header {
-  margin-bottom: 5rem;
+  margin-bottom: 2.19rem;
+
+  @media screen and (min-width: 992px){
+    margin-bottom: 5rem;
+  }
 }
 
 $owner-list-length: 8;
@@ -185,14 +194,23 @@ $owner-list-length: 8;
 
       position: relative;
 
-      width: 5.3125rem;
-      height: 5.3125rem;
+      width: 3.75rem;
+      height: 3.75rem;
 
       border-radius: 50%;
       overflow: hidden;
 
+      @media screen and (min-width: 992px){
+        width: 5.3125rem;
+        height: 5.3125rem;
+      }
+
       &:not(:first-child) {
-        margin-left: -1.2525rem;
+        margin-left: -0.81rem;
+
+        @media screen and (min-width: 992px){
+          margin-left: -1.2525rem;
+        }
       }
 
       &:last-child {
@@ -201,6 +219,14 @@ $owner-list-length: 8;
         display: flex;
         align-items: center;
         justify-content: center;
+
+        font-size: clamp(0.75rem, 0.72rem + 0.13vw, 0.875rem);
+        line-height: 1;
+        letter-spacing: -0.03375rem;
+
+        @media screen and (min-width: 992px){
+          letter-spacing: -0.03938rem;
+        }
 
         &::after {
           content: '';

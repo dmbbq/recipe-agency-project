@@ -1,147 +1,140 @@
 import throttle from "lodash.throttle";
-import { WOW } from "wowjs/dist/wow.min";
+import {WOW} from "wowjs/dist/wow.min";
 import refs from "./refs";
 
-const { bodyEl, swiperToInit } = refs;
+const {bodyEl, swiperToInit} = refs;
 
 const throttledHandleResize = throttle(handleResize, 200);
 
 let currentBackdrop = null;
 
 export const showBackdrop = (backdrop, hideOnResize = false) => {
-  if (!backdrop) {
-    return;
-  }
-  disableBodyScroll();
+    if (!backdrop) {
+        return;
+    }
+    disableBodyScroll();
 
-  backdrop.removeClass("is-hidden");
-  backdrop.on("click", handleBackdropClick);
-  window.on("keydown", handleKeyDown);
-  currentBackdrop = backdrop;
+    backdrop.removeClass("is-hidden");
+    backdrop.on("click", handleBackdropClick);
+    $(window).on("keydown", handleKeyDown);
+    currentBackdrop = backdrop;
 
-  if (hideOnResize) {
-    window.on("resize", throttledHandleResize);
-  }
+    if (hideOnResize) {
+        $(window).on("resize", throttledHandleResize);
+    }
 };
 
 export const hideBackdrop = (backdrop) => {
-  if (!backdrop) {
-    return;
-  }
+    if (!backdrop) {
+        return;
+    }
 
-  enableBodyScroll();
+    enableBodyScroll();
 
-  backdrop.addClass("is-hidden");
-  backdrop.removeClass("click", handleBackdropClick);
-  window.off("keydown", handleKeyDown);
-  window.off("resize", throttledHandleResize);
+    backdrop.addClass("is-hidden");
+    backdrop.removeClass("click", handleBackdropClick);
+    $(window).off("keydown", handleKeyDown);
+    $(window).off("resize", throttledHandleResize);
 
-  currentBackdrop = null;
+    currentBackdrop = null;
 };
 
 function handleBackdropClick(e) {
-  if (e.target === e.currentTarget) {
-    hideBackdrop(currentBackdrop);
-  }
+    if (e.target === e.currentTarget) {
+        hideBackdrop(currentBackdrop);
+    }
 }
 
 function handleKeyDown(e) {
-  if (e.code === "Escape") {
-    hideBackdrop(currentBackdrop);
-  }
+    if (e.key === "Escape") {
+        hideBackdrop(currentBackdrop);
+    }
 }
 
 function handleResize() {
-  const { innerWidth } = window;
+    const {innerWidth} = window;
 
-  if (innerWidth >= 768) {
-    hideBackdrop(currentBackdrop);
-  }
+    if (innerWidth >= 768) {
+        hideBackdrop(currentBackdrop);
+    }
 }
 
 export function enableBodyScroll() {
-  bodyEl.css("overflow-y", "scroll");
+    bodyEl.css("overflow-y", "scroll");
 }
 
 export function disableBodyScroll() {
-  bodyEl.css("overflow-y", "hidden");
+    bodyEl.css("overflow-y", "hidden");
 }
 
 const replaceInputWithButton = () => {
-  const submitInput = $('.wpcf7-form [type="submit"]');
-  const value = submitInput.val();
+    const submitInput = $('.wpcf7-form [type="submit"]');
+    const value = submitInput.val();
 
-  submitInput.prop("outerHTML", function () {
-    return this.outerHTML.replace(/input/gi, "button");
-  });
+    submitInput.prop("outerHTML", function () {
+        return this.outerHTML.replace(/input/gi, "button");
+    });
 
-  const newButton = $('.wpcf7-form [type="submit"]');
-  newButton.text(value);
-  newButton.attr("data-text", value);
+    const newButton = $('.wpcf7-form [type="submit"]');
+    newButton.text(value);
+    newButton.attr("data-text", value);
 };
 
 const initSwiperClasses = () => {
-  swiperToInit.each(function() {
-    const currentElement = $(this);
+    swiperToInit.each(function () {
+        const currentElement = $(this);
 
-    const replaceWithDiv = (selector, className) => {
-      currentElement.find(selector).replaceWith(function () {
-        return $('<div>', {
-          class: className,
-          html: $(this).html()
-        });
-      });
-    };
+        const replaceWithDiv = (selector, className) => {
+            currentElement.find(selector).replaceWith(function () {
+                return $('<div>', {
+                    class: className,
+                    html: $(this).html()
+                });
+            });
+        };
 
-    const galleryDlTag = currentElement.find('dl');
-
-    if (galleryDlTag.length > 0) {
-      replaceWithDiv('dl', 'swiper-slide');
-      currentElement.find('style, br').remove();
-      currentElement.find('div').addClass('swiper-wrapper');
-    } else {
-      replaceWithDiv('ul', 'swiper-wrapper');
-      replaceWithDiv('li', 'swiper-slide');
-    }
-  });
+        replaceWithDiv('dl', 'swiper-slide');
+        currentElement.find('style, br').remove();
+        currentElement.find('div').addClass('swiper-wrapper');
+    });
 }
 
 initSwiperClasses();
 
 export function renderEllipsisBullet(index, className) {
-  const swiper = this;
-  const total = swiper.slides.length;
-  const current = swiper.realIndex;
+    const swiper = this;
+    const total = swiper.slides.length;
+    const current = swiper.realIndex;
 
-  const numberOfBullets = 2; // Shows 2 bullets before and after the current bullet
+    const numberOfBullets = 2; // Shows 2 bullets before and after the current bullet
 
-  // Check if the current bullet is within the range to show
-  const isWithinRange = index >= current - numberOfBullets && index <= current + numberOfBullets;
+    // Check if the current bullet is within the range to show
+    const isWithinRange = index >= current - numberOfBullets && index <= current + numberOfBullets;
 
-  // Check if the current bullet is the active one
-  let isActive = (index === current) ? 'swiper-pagination-bullet-active' : '';
+    // Check if the current bullet is the active one
+    let isActive = (index === current) ? 'swiper-pagination-bullet-active' : '';
 
-  if (index === 0 || index === total - 1 || isWithinRange) {
-    return `<span class="${className} ${isActive}" role="button" tabindex="0" aria-label="Go to slide ${index + 1}">${index + 1}</span>`;
-  }
+    if (index === 0 || index === total - 1 || isWithinRange) {
+        return `<span class="${className} ${isActive}" role="button" tabindex="0" aria-label="Go to slide ${index + 1}">${index + 1}</span>`;
+    }
 
-  // For ellipsis on the left
-  if (index === numberOfBullets && current - numberOfBullets > numberOfBullets - 1) {
-    return '<span class="swiper-pagination-bullet-ellipsis">...</span>';
-  }
+    // For ellipsis on the left
+    if (index === numberOfBullets && current - numberOfBullets > numberOfBullets - 1) {
+        return '<span class="swiper-pagination-bullet-ellipsis">...</span>';
+    }
 
-  // For ellipsis on the right
-  if (index === total - numberOfBullets - 1 && current + numberOfBullets < total - numberOfBullets - 1) {
-    return '<span class="swiper-pagination-bullet-ellipsis">...</span>';
-  }
+    // For ellipsis on the right
+    if (index === total - numberOfBullets - 1 && current + numberOfBullets < total - numberOfBullets - 1) {
+        return '<span class="swiper-pagination-bullet-ellipsis">...</span>';
+    }
 
-  return '';
+    return '';
 }
 
 $("document").ready(function () {
-  bodyEl.css("visibility", "visible");
+    bodyEl.css("visibility", "visible");
 
-  new WOW().init();
+    new WOW().init();
 
-  replaceInputWithButton();
+    replaceInputWithButton();
 });
