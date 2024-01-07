@@ -19,6 +19,8 @@
     "clean-webpack-plugin": "^4.0.0",
     "core-js": "^3.33.3",
     "css-loader": "^6.8.1",
+    "css-minimizer-webpack-plugin": "^5.0.1",
+    "mini-css-extract-plugin": "^2.7.6",
     "postcss-loader": "^7.3.3",
     "postcss-preset-env": "^9.3.0",
     "sass": "^1.69.5",
@@ -32,7 +34,6 @@
   "dependencies": {
     "animate.css": "^4.1.1",
     "bootstrap": "^5.3.2",
-    "jquery": "^3.7.1",
     "lodash.throttle": "^4.1.1",
     "modern-normalize": "^2.0.0",
     "swiper": "^11.0.5",

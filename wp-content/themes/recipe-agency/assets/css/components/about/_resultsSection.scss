@@ -14,40 +14,61 @@
       }
 
       & + ul {
-        @media screen and (min-width: 992px) {
+        @media screen and (min-width: 768px) {
           display: flex;
-          gap: 1.25rem;
+          flex-wrap: wrap;
+          gap: 0.4375rem;
+        }
+
+        @media screen and (min-width: 1200px) {
+          gap: 1.1236%;
         }
 
         & li {
-          padding: 1.56rem;
+          padding: 1.5625rem;
           border-radius: $fourth-radius;
 
           background-color: $secondary-bg-color;
 
-          @media screen and (min-width: 992px) {
+          @media screen and (min-width: 768px) and (max-width: 1199px) {
+            flex: 1 0 20.9375rem;
+          }
+
+          @media screen and (min-width: 1200px) {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
 
-            padding: 2.5rem;
             border-radius: $fifth-radius;
           }
 
+          @media screen and (min-width: 1200px) {
+            padding: min(2.5rem, 2.2472%);
+          }
+
           &:not(:last-child) {
-            @media screen and (max-width: 991px) {
+            @media screen and (max-width: 767px) {
+              margin-bottom: 0.31rem;
+            }
+
+            @media screen and (max-width: 1199px) {
               display: flex;
               flex-direction: column;
               justify-content: space-between;
 
               min-height: 10.625rem;
-              margin-bottom: 0.31rem;
             }
 
-            @media screen and (min-width: 992px) {
+            @media screen and (min-width: 1200px) {
               aspect-ratio: 1 / calc(21.375 / 26.875);
 
-              flex-basis: calc((100% - 3.75rem) / 4);
+              flex-basis: 24.1574%;
+            }
+
+            & br {
+              @media screen and (min-width: 768px) and (max-width: 1919px) {
+                display: none;
+              }
             }
           }
 
@@ -57,14 +78,14 @@
             background-size: 19.0625rem;
             background-repeat: no-repeat;
 
-            @media screen and (max-width: 991px) {
+            @media screen and (max-width: 1199px) {
               min-height: 15.9375rem;
             }
 
-            @media screen and (min-width: 992px) {
+            @media screen and (min-width: 1200px) {
               aspect-ratio: 1 / calc(21.375 / 55);
 
-              flex-basis: calc((100% - 1.25rem) / 2);
+              flex-basis: 49.4382%;
 
               background-image: url(../images/dollar.webp);
               background-position: right bottom;

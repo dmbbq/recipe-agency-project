@@ -1,6 +1,10 @@
 .container {
   padding: 0 0.9375rem;
 
+  @media screen and (max-width: 767px) {
+    max-width: 33.75rem;
+  }
+
   @media screen and (min-width: 1440px) {
     max-width: 120rem;
     padding: 0 4.375rem;
@@ -112,17 +116,22 @@
   &::placeholder {
     opacity: 0.3;
   }
+  
+  &.wpcf7-not-valid {
+    border-color: $invalid-text-color;
+  }
 }
 
 .cf7-button {
   height: 3.5rem;
 
-  @media screen and (max-width: 575px){
-    max-width: fit-content;
+  @media screen and (min-width: 768px){
+    height: 3.75rem;
   }
 
   @media screen and (min-width: 992px) {
     height: 4.5rem;
+    padding: 0 2.875rem;
   }
 }
 

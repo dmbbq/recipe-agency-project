@@ -4,7 +4,7 @@ $image_url_mob = get_field('values_image_mob');
 ?>
 
 <section class="values">
-    <div class="container d-flex flex-column justify-content-between h-100">
+    <div class="container d-flex flex-column justify-content-between h-100 gap-3">
         <div>
             <h2 class="section-title-secondary values-title">
                 <?php the_field('values_title'); ?>

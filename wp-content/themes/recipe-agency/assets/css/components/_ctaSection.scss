@@ -1,11 +1,10 @@
 .cta-wrapper {
   border-radius: $primary-radius;
-  border: 1px solid $fourth-bg-color;
   background-color: $secondary-bg-color;
   background-repeat: no-repeat;
   background-position: right bottom;
 
-  padding: 2.19rem 1.875rem 7.5rem;
+  padding: 2.1875rem 1.875rem 7.5rem;
 
   @media screen and (min-width: 992px) {
     padding: 5rem;
@@ -53,7 +52,7 @@
     background-position: right bottom;
     background-size: 21.0625rem;
 
-    @media screen and (min-width: 992px){
+    @media screen and (min-width: 992px) {
       background-size: 34.6067%;
     }
 
@@ -65,107 +64,161 @@
   }
 
   &.blog {
-    background-size: 46.4044%;
-
+    background-size: 100%;
     background-color: $primary-text-color;
 
-    & .cta-text {
-      opacity: 1;
+    @media screen and (max-width: 991px) {
+      padding: 2.1875rem 1.875rem 11.4375rem;
     }
 
-    & .cta-text,
+    @media screen and (min-width: 992px) {
+      background-size: auto 100%;
+    }
+
     & h2 {
+      @media screen and (max-width: 1199px) {
+        margin-bottom: 0.94rem;
+      }
+    }
+
+    & .cta-text {
+      gap: 0.625rem;
+
+      margin-bottom: 1.375rem;
+
+      @media screen and (min-width: 1200px) {
+        gap: 0.94rem;
+
+        margin-bottom: 3.125rem;
+      }
+    }
+
+    & h2,
+    & .cta-text {
       color: $white-color;
     }
 
     & > div {
-      width: 49.219%;
+      max-width: 48.5625rem;
+
+      & p {
+        & .wpcf7-form-control-wrap {
+          flex: 1 0 17.8125rem;
+
+          @media screen and (min-width: 768px) {
+            flex: 1 0;
+          }
+        }
+
+        & .cf7-button {
+          flex: 1 0 17.8125rem;
+          padding: 0 1.875rem;
+
+          @media screen and (min-width: 768px){
+            flex: initial;
+            min-width: 12rem;
+          }
+        }
+      }
+    }
+  }
+
+  &:not(.blog) {
+    border: 1px solid $fourth-bg-color;
+
+    & .cta-text {
+      margin-bottom: 0.94rem;
+      opacity: 0.7;
+
+      @media screen and (min-width: 992px) {
+        margin-bottom: 2.1875rem;
+        opacity: 0.6;
+      }
+    }
+
+    & > div {
+      @media screen and (min-width: 992px) {
+        width: 60.5493%;
+      }
 
       @media screen and (min-width: 1920px) {
-        min-width: 48.5625rem;
+        min-width: 61.25rem;
       }
 
       & p {
         & .wpcf7-form-control-wrap {
-          width: 74.647%;
+          @media screen and (max-width: 575px) {
+            max-width: 17.8125rem;
+          }
+
+          @media screen and (min-width: 576px) {
+            flex: 1 0 17.8125rem;
+          }
+
+          @media screen and (min-width: 992px) {
+            flex: 1 0 21.875rem;
+          }
         }
 
         & .cf7-button {
-          width: 24.7104%;
+          @media screen and (max-width: 575px) {
+            max-width: fit-content;
+          }
+
+          @media screen and (min-width: 576px) {
+            flex: 1 0 11.25rem;
+          }
+
+          @media screen and (min-width: 992px) {
+            flex: 1 0 16.875rem;
+          }
         }
       }
     }
   }
 
   & h2 {
-    margin-bottom: 0.94rem;
-
     font-size: clamp(1.875rem, 1.42rem + 1.94vw, 3.75rem);
-    letter-spacing: -0.16875rem;
+    letter-spacing: -0.08438rem;
 
     @media screen and (min-width: 992px) {
       margin-bottom: 2.19rem;
+
+      letter-spacing: -0.16875rem;
+    }
+
+    & br {
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
     }
   }
 
   & > div {
-    @media screen and (min-width: 992px) {
-      width: 60.5493%;
-    }
-
-    @media screen and (min-width: 1920px) {
-      min-width: 57.5rem;
-    }
-
     & p {
       position: relative;
 
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 0.3125rem;
 
       margin-bottom: 0;
-
-      @media screen and (min-width: 992px) {
-        flex-direction: row;
-        justify-content: space-between;
-      }
-
-      & .wpcf7-form-control-wrap {
-        @media screen and (max-width: 991px){
-          margin-bottom: 0.4375rem;
-        }
-
-        @media screen and (min-width: 992px) {
-          width: 35.7142%;
-        }
-      }
-
-      & .cf7-button {
-        @media screen and (min-width: 992px) {
-          width: 27.5510%;
-        }
-      }
     }
   }
 }
 
 .cta-text {
-  gap: 0.94rem;
-
-  margin-bottom: 0.94rem;
-
-  @media screen and (max-width: 991px){
-    opacity: 0.6;
-  }
-
-  @media screen and (min-width: 992px) {
-    margin-bottom: 2.19rem;
-  }
-
   & br {
-    @media screen and (max-width: 575px){
+    @media screen and (max-width: 767px) {
       display: none;
     }
+  }
+}
+
+.cta-text__icon {
+  @media screen and (max-width: 575px) {
+    width: 1.0625rem;
+    height: 1.0625rem;
   }
 }
 
@@ -175,11 +228,14 @@
   font-size: clamp(0.625rem, 0.549rem + 0.32vw, 0.938rem);
   line-height: calc(1.17188 / 0.9375);
 
-  @media screen and (max-width: 575px){
+  opacity: 0.7;
+
+  @media screen and (max-width: 575px) {
     max-width: 11.25rem;
   }
 
   @media screen and (min-width: 992px) {
+    width: 60.5493%;
     margin-top: 1.25rem;
   }
 
@@ -191,5 +247,4 @@
 .cta-text,
 .cta-link {
   font-family: 'Manrope', sans-serif;
-  opacity: 0.7;
 }

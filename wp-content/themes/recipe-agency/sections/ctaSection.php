@@ -16,7 +16,7 @@ $is_mailing = is_page(pll_get_post(124, $current_lang)) || is_singular('blog');
             <?= preg_match('/<h2>/', $title) ? $title : "<h2>$title</h2>"; ?>
             <p class="cta-text <?= $is_mailing ? 'd-flex' : ''; ?>">
                 <?php if ($is_mailing): ?>
-                    <svg class="cta-text__icon" width="28" height="28">
+                    <svg class="cta-text__icon flex-shrink-0" width="28" height="28">
                         <use href="<?= get_image('sprite.svg#icon-mail-check'); ?>"></use>
                     </svg>
                 <?php endif; ?>

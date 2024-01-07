@@ -38,7 +38,7 @@
 
         $counter = 0;
         foreach ($matching_posts as $post) {
-            if ($counter < 3) {
+            if ($counter < 4) {
                 ?>
                 <li class="blog-list__item col-lg-4">
                     <a href="<?php echo $post['permalink']; ?>" class="blog-list__link">

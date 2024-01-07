@@ -106,26 +106,22 @@ export function renderEllipsisBullet(index, className) {
     const total = swiper.slides.length;
     const current = swiper.realIndex;
 
-    const numberOfBullets = 2; // Shows 2 bullets before and after the current bullet
+    const numberOfBullets = 2;
 
-    // Check if the current bullet is within the range to show
     const isWithinRange = index >= current - numberOfBullets && index <= current + numberOfBullets;
 
-    // Check if the current bullet is the active one
-    let isActive = (index === current) ? 'swiper-pagination-bullet-active' : '';
+    let isActive = (index === current) ? 'swiper-pagination-bullet-active fw-medium d-inline-flex align-items-center justify-content-center' : '';
 
     if (index === 0 || index === total - 1 || isWithinRange) {
-        return `<span class="${className} ${isActive}" role="button" tabindex="0" aria-label="Go to slide ${index + 1}">${index + 1}</span>`;
+        return `<span class="${className} fw-medium d-inline-flex align-items-center justify-content-center ${isActive}" role="button" tabindex="0" aria-label="Go to slide ${index + 1}">${index + 1}</span>`;
     }
 
-    // For ellipsis on the left
     if (index === numberOfBullets && current - numberOfBullets > numberOfBullets - 1) {
-        return '<span class="swiper-pagination-bullet-ellipsis">...</span>';
+        return '<span class="swiper-pagination-bullet-ellipsis fw-medium d-inline-flex align-items-center justify-content-center">...</span>';
     }
 
-    // For ellipsis on the right
     if (index === total - numberOfBullets - 1 && current + numberOfBullets < total - numberOfBullets - 1) {
-        return '<span class="swiper-pagination-bullet-ellipsis">...</span>';
+        return '<span class="swiper-pagination-bullet-ellipsis fw-medium d-inline-flex align-items-center justify-content-center">...</span>';
     }
 
     return '';

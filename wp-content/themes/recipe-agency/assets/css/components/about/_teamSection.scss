@@ -1,26 +1,24 @@
 #about {
   & .team-section {
     & .ctrl-list {
-      @media screen and (max-width: 575px) {
+      @media screen and (max-width: 767px) {
         display: none;
       }
     }
   }
 
   & .team-swiper {
-    @media screen and (max-width: 767px){
-      width: 18.125rem;
-    }
+    width: 18.125rem;
 
-    @media screen and (min-width: 575px){
+    @media screen and (min-width: 768px) {
       width: 36.6875rem;
     }
 
-    @media screen and (min-width: 992px){
+    @media screen and (min-width: 992px) {
       width: auto;
     }
 
-    @media screen and (max-width: 991px){
+    @media screen and (max-width: 991px) {
       overflow: visible !important;
     }
   }
@@ -31,11 +29,11 @@
     border-radius: $primary-radius;
     overflow: hidden;
 
-    @media screen and (max-width: 991px){
+    @media screen and (max-width: 991px) {
       height: 21.125rem;
     }
 
-    @media screen and (min-width: 992px){
+    @media screen and (min-width: 992px) {
       aspect-ratio: 1 / calc(550 / 430);
 
       margin-bottom: 1.56rem;

@@ -9,6 +9,10 @@
     & p {
       font-family: "Manrope", sans-serif;
 
+      @media screen and (min-width: 992px) and (max-width: 1919px) {
+        max-width: 92.416%;
+      }
+
       &:first-of-type {
         margin-bottom: 1.25rem;
 
@@ -26,7 +30,7 @@
       }
 
       & br {
-        @media screen and (max-width: 991px) {
+        @media screen and (max-width: 1919px) {
           display: none;
         }
       }
@@ -43,15 +47,15 @@
 
   & .about-swiper {
     width: 18.125rem;
-    margin-left: 1.0625rem !important;
 
-    overflow: visible !important;
+    @media screen and (max-width: 991px) {
+      overflow: visible !important;
+      margin-left: 1.0625rem !important;
+    }
 
-    @media screen and (min-width: 992px){
+    @media screen and (min-width: 992px) {
       width: 156.355%;
       height: 100%;
-
-      overflow: hidden !important;
     }
 
     & .swiper-slide {

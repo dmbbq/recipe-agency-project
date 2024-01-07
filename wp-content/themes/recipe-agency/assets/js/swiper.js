@@ -2,6 +2,7 @@ import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
 import {renderEllipsisBullet} from "./utils.js"
 import refs from "./refs"
+import throttle from "lodash.throttle";
 
 const aboutSwiper = new Swiper('.about-swiper', {
     centeredSlides: true,
@@ -12,35 +13,59 @@ const aboutSwiper = new Swiper('.about-swiper', {
     breakpoints: {
         992: {
             centeredSlides: false,
+            slidesPerView: 3,
+        },
+        1440: {
             slidesPerView: 4,
-            spaceBetween: 15,
+            centeredSlides: false,
+            spaceBetween: 15
         }
     }
 })
 
-const clientsSwiperTop = new Swiper('.partners-swiper-top', {
+const partnersSwiperTop = new Swiper('.partners-swiper-top', {
     loop: true,
     allowTouchMove: false,
     speed: 4000,
+    slidesPerView: 3,
+    spaceBetween: 10,
     autoplay: {
         delay: 0,
-        disableOnInteraction: true,
     },
-    slidesPerView: 6,
-    spaceBetween: 10,
+    breakpoints: {
+        992: {
+            slidesPerView: 4,
+        },
+        1440: {
+            slidesPerView: 5,
+        },
+        1920: {
+            slidesPerView: 6
+        }
+    }
 });
 
-const clientsSwiperBottom = new Swiper('.partners-swiper-bottom', {
+const partnersSwiperBottom = new Swiper('.partners-swiper-bottom', {
     loop: true,
     allowTouchMove: false,
+    slidesPerView: 3,
+    spaceBetween: 10,
     speed: 4000,
     autoplay: {
         delay: 0,
-        disableOnInteraction: true,
         reverseDirection: true
     },
-    slidesPerView: 6,
-    spaceBetween: 10,
+    breakpoints: {
+        992: {
+            slidesPerView: 4,
+        },
+        1440: {
+            slidesPerView: 5,
+        },
+        1920: {
+            slidesPerView: 6
+        }
+    }
 });
 
 const teamSwiper = new Swiper('.team-swiper', {
@@ -52,7 +77,7 @@ const teamSwiper = new Swiper('.team-swiper', {
         prevEl: ".team-section .prev"
     },
     breakpoints: {
-        576: {
+        768: {
             slidesPerView: 2
         },
         992: {
@@ -69,17 +94,37 @@ const teamSwiper = new Swiper('.team-swiper', {
     }
 })
 
-const blogPageSwiper = new Swiper('.blog-page-swiper', {
+const blogPageSwiper = new Swiper('.blog-page-swiper.desk', {
     spaceBetween: 70,
     slidesPerView: 1,
     autoHeight: true,
     allowTouchMove: false,
     navigation: {
-        prevEl: ".blog-page-swiper .prev",
-        nextEl: ".blog-page-swiper .next"
+        prevEl: ".blog-page-swiper.desk .prev",
+        nextEl: ".blog-page-swiper.desk .next"
     },
     pagination: {
-        el: '.blog-page-swiper .swiper-pagination',
+        el: '.blog-page-swiper.desk .swiper-pagination',
+        renderBullet: renderEllipsisBullet,
+    },
+    on: {
+        slideChange: function () {
+            this.pagination.render();
+        },
+    }
+});
+
+const blogPageSwiperMob = new Swiper('.blog-page-swiper.mob', {
+    spaceBetween: 70,
+    slidesPerView: 1,
+    autoHeight: true,
+    allowTouchMove: false,
+    navigation: {
+        prevEl: ".blog-page-swiper.mob .prev",
+        nextEl: ".blog-page-swiper.mob .next"
+    },
+    pagination: {
+        el: '.blog-page-swiper.mob .swiper-pagination',
         renderBullet: renderEllipsisBullet,
     },
     on: {
@@ -95,13 +140,18 @@ const handlePaginationClick = (e) => {
     }
 
     const slideIndex = $(e.target).text()
-    blogPageSwiper.slideTo(slideIndex - 1, 0)
+
+    if ($(e.currentTarget.closest('.blog-page-swiper')).hasClass('desk')) {
+        blogPageSwiper.slideTo(slideIndex - 1, 0)
+    } else {
+        blogPageSwiperMob.slideTo(slideIndex - 1, 0)
+    }
 }
 
 const handleNavigationClick = (e) => {
-    if (e.currentTarget.classList.contains('first')) {
+    if ($(e.currentTarget).hasClass('first')) {
         blogPageSwiper.slideTo(0, 0);
-    } else if (e.currentTarget.classList.contains('last')) {
+    } else if ($(e.currentTarget).hasClass('last')) {
         blogPageSwiper.slideTo(blogPageSwiper.slides.length - 1, 0);
     }
 };
