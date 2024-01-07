@@ -1,0 +1,44 @@
+.blog-list {
+  --bs-gutter-x: 2.1875rem;
+  row-gap: 5.3125rem;
+}
+
+.blog-list__link {
+  font-family: 'Manrope', sans-serif;
+
+  &:hover,
+  &:focus {
+    & .blog-list__image {
+      scale: 1.03;
+    }
+  }
+
+  & br {
+    display: none;
+  }
+}
+
+.blog-list__thumb {
+  aspect-ratio: 1 / calc(400 / 570);
+
+  margin-bottom: 1.5625rem;
+
+  border-radius: $fourth-radius;
+}
+
+.blog-list__image {
+  @include transition(scale);
+}
+
+.blog-list__date {
+  margin-bottom: 0.625rem;
+
+  font-size: clamp(0.813rem, 0.767rem + 0.19vw, 1rem);
+
+  opacity: 0.3;
+}
+
+.blog-list__title {
+  font-size: 1.25rem;
+  line-height: calc(1.75 / 1.25);
+}

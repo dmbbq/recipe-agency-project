@@ -1,0 +1,48 @@
+//Utils
+@import "utils/mixins";
+
+//Base
+@import "base/variables";
+@import "base/fonts";
+@import "base/utils";
+
+@import "base/common";
+
+//Vendors
+@import "vendors/hamburgers";
+
+//Layouts
+@import "layout/pageHeader";
+@import "layout/pageFooter";
+@import "layout/menu";
+
+//Common components
+@import "components/ctaSection";
+@import "components/partnersSection";
+@import "components/blogSection";
+
+//Home page
+@import "components/home/heroSection";
+@import "components/home/aboutSection";
+@import "components/home/processesSection";
+@import "components/home/servicesSection";
+
+//Services page
+@import "components/services/servicesSection";
+
+//About page
+@import "components/about/heroSection";
+@import "components/about/resultsSection";
+@import "components/about/aboutSection";
+@import "components/about/valuesSection";
+@import "components/about/teamSection";
+
+//Contacts page
+@import "components/contacts/heroSection";
+
+//Blog page
+@import "components/blog/heroSection";
+
+//Single Blog page
+@import "components/singleBlog/heroSection";
+@import "components/singleBlog/detailsSection";

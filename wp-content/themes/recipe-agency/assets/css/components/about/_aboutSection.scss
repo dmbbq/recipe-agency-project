@@ -1,0 +1,75 @@
+#about {
+  & .about-section {
+    & .about-wrapper {
+      @media screen and (max-width: 991px) {
+        margin-bottom: 2.19rem;
+      }
+    }
+
+    & p {
+      font-family: "Manrope", sans-serif;
+
+      &:first-of-type {
+        margin-bottom: 1.25rem;
+
+        @media screen and (min-width: 992px) {
+          margin-bottom: 1.5rem;
+        }
+      }
+
+      &:last-of-type {
+        margin-bottom: 1.56rem;
+
+        @media screen and (min-width: 992px) {
+          margin-bottom: 2.1875rem;
+        }
+      }
+
+      & br {
+        @media screen and (max-width: 991px) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  & .about-title {
+    margin-bottom: 1.56rem;
+
+    @media screen and (min-width: 992px) {
+      margin-bottom: 2.1875rem;
+    }
+  }
+
+  & .about-swiper {
+    width: 18.125rem;
+    margin-left: 1.0625rem !important;
+
+    overflow: visible !important;
+
+    @media screen and (min-width: 992px){
+      width: 156.355%;
+      height: 100%;
+
+      overflow: hidden !important;
+    }
+
+    & .swiper-slide {
+      height: 21.125rem;
+
+      border-radius: $ninth-radius;
+      overflow: hidden;
+
+      @media screen and (min-width: 992px) {
+        aspect-ratio: 1 / calc(600 / 450);
+        height: auto;
+
+        border-radius: $primary-radius;
+      }
+    }
+
+    & dt {
+      display: contents;
+    }
+  }
+}

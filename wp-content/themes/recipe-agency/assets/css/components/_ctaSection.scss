@@ -1,0 +1,195 @@
+.cta-wrapper {
+  border-radius: $primary-radius;
+  border: 1px solid $fourth-bg-color;
+  background-color: $secondary-bg-color;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+
+  padding: 2.19rem 1.875rem 7.5rem;
+
+  @media screen and (min-width: 992px) {
+    padding: 5rem;
+  }
+
+  &.home,
+  &.services,
+  &.contacts {
+    background-size: 56.3483%;
+
+    & h2 {
+      & strong {
+        position: relative;
+        z-index: 1;
+
+        color: $white-color;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: calc(50% + 0.3125rem);
+          left: -0.46875rem;
+          transform: translateY(-50%);
+          z-index: -1;
+
+          height: 100%;
+          width: calc(100% + 1.6875rem);
+
+          border-radius: $third-radius;
+
+          background-color: $accent-color;
+        }
+      }
+    }
+  }
+
+  &.about,
+  &.blog {
+    @media screen and (min-width: 992px) {
+      padding: 6.25rem;
+    }
+  }
+
+  &.about {
+    background-position: right bottom;
+    background-size: 21.0625rem;
+
+    @media screen and (min-width: 992px){
+      background-size: 34.6067%;
+    }
+
+    & h2 {
+      & strong {
+        color: $accent-color
+      }
+    }
+  }
+
+  &.blog {
+    background-size: 46.4044%;
+
+    background-color: $primary-text-color;
+
+    & .cta-text {
+      opacity: 1;
+    }
+
+    & .cta-text,
+    & h2 {
+      color: $white-color;
+    }
+
+    & > div {
+      width: 49.219%;
+
+      @media screen and (min-width: 1920px) {
+        min-width: 48.5625rem;
+      }
+
+      & p {
+        & .wpcf7-form-control-wrap {
+          width: 74.647%;
+        }
+
+        & .cf7-button {
+          width: 24.7104%;
+        }
+      }
+    }
+  }
+
+  & h2 {
+    margin-bottom: 0.94rem;
+
+    font-size: clamp(1.875rem, 1.42rem + 1.94vw, 3.75rem);
+    letter-spacing: -0.16875rem;
+
+    @media screen and (min-width: 992px) {
+      margin-bottom: 2.19rem;
+    }
+  }
+
+  & > div {
+    @media screen and (min-width: 992px) {
+      width: 60.5493%;
+    }
+
+    @media screen and (min-width: 1920px) {
+      min-width: 57.5rem;
+    }
+
+    & p {
+      position: relative;
+
+      display: flex;
+      flex-direction: column;
+
+      margin-bottom: 0;
+
+      @media screen and (min-width: 992px) {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      & .wpcf7-form-control-wrap {
+        @media screen and (max-width: 991px){
+          margin-bottom: 0.4375rem;
+        }
+
+        @media screen and (min-width: 992px) {
+          width: 35.7142%;
+        }
+      }
+
+      & .cf7-button {
+        @media screen and (min-width: 992px) {
+          width: 27.5510%;
+        }
+      }
+    }
+  }
+}
+
+.cta-text {
+  gap: 0.94rem;
+
+  margin-bottom: 0.94rem;
+
+  @media screen and (max-width: 991px){
+    opacity: 0.6;
+  }
+
+  @media screen and (min-width: 992px) {
+    margin-bottom: 2.19rem;
+  }
+
+  & br {
+    @media screen and (max-width: 575px){
+      display: none;
+    }
+  }
+}
+
+.cta-link {
+  margin-top: 0.625rem;
+
+  font-size: clamp(0.625rem, 0.549rem + 0.32vw, 0.938rem);
+  line-height: calc(1.17188 / 0.9375);
+
+  @media screen and (max-width: 575px){
+    max-width: 11.25rem;
+  }
+
+  @media screen and (min-width: 992px) {
+    margin-top: 1.25rem;
+  }
+
+  & a {
+    text-decoration: underline;
+  }
+}
+
+.cta-text,
+.cta-link {
+  font-family: 'Manrope', sans-serif;
+  opacity: 0.7;
+}
