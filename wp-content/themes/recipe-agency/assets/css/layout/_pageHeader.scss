@@ -65,6 +65,12 @@
     display: flex;
     gap: 0.31rem;
 
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      gap: 1.31rem;
+
+
+    }
+
     & li {
       border-radius: 0.3125rem;
       backdrop-filter: blur(7.5px);
@@ -78,6 +84,11 @@
       font-family: 'Manrope', sans-serif;
       line-height: calc(1.38125 / 1.0625);
       letter-spacing: -0.02656rem;
+
+      @media screen and (min-width: 768px) and (max-width: 991px) {
+        padding: 0.32rem 0.75rem;
+
+      }
     }
   }
 }
@@ -100,7 +111,7 @@
 
 .languages-list__link {
   font-family: 'Manrope', sans-serif;
-  font-size: 1.125rem;
+  font-size: clamp(0.875rem, 0.814rem + 0.26vw, 1.125rem);
   line-height: calc(1.4625 / 1.125);
   letter-spacing: -0.02813rem;
 

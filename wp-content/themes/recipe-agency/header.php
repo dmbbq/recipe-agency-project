@@ -27,7 +27,7 @@ $is_black_theme = in_array($page_id, array(132, 129, 140, 138, 124, 121, 136, 13
 
                 <?php $is_black_theme ? custom_theme_logo() : the_custom_logo(); ?>
 
-                <nav class="main-nav d-none d-lg-flex">
+                <nav class="main-nav d-none d-md-flex">
                     <?php get_template_part('templates/navigation', null, array('location' => 'menu-header')); ?>
                 </nav>
 

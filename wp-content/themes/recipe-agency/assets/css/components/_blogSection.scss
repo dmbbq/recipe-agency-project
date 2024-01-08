@@ -26,17 +26,6 @@
   }
 }
 
-#home,
-#about{
-  & .blog-list__item {
-    &:not(:nth-last-child(2)) {
-      @media screen and (max-width: 767px) {
-        margin-bottom: 2.19rem;
-      }
-    }
-  }
-}
-
 .blog-list__thumb {
   aspect-ratio: 1 / calc(14.375 / 21.5625);
 

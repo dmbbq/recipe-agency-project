@@ -5,21 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d9b00336-d57f-4bcf-ab54-a00826f04c0b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../recipe-agency/templates/singleBlog/asideCta.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/css/components/singleBlog/_detailsSection.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/components/singleBlog/_detailsSection.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/css/components/home/_heroSection.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/components/home/_heroSection.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/css/components/singleBlog/_heroSection.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/components/singleBlog/_heroSection.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/css/layout/_pageFooter.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/layout/_pageFooter.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/css/layout/_pageHeader.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/layout/_pageHeader.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../recipe-agency/dist/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/dist/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/dist/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/dist/css/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../recipe-agency/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../recipe-agency/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/functions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../recipe-agency/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/sections/about/aboutSection.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/sections/about/aboutSection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/sections/about/heroSection.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/sections/about/heroSection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/sections/blogSection.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/sections/blogSection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/sections/home/processesSection.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/sections/home/processesSection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/sections/singleBlog/blogSection.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/templates/footerServices.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/templates/footerServices.php" afterDir="false" />
+    </list>
+    <list id="4d1a8957-bea8-4a10-b9af-bda5b05ba84b" name="Changes by eduardbrugos" comment="">
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/css/components/_blogSection.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/components/_blogSection.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/css/components/singleBlog/_detailsSection.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/components/singleBlog/_detailsSection.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/css/components/singleBlog/_heroSection.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/components/singleBlog/_heroSection.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/images/sprite.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/images/sprite.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../recipe-agency/sections/singleBlog/detailsSection.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/sections/singleBlog/detailsSection.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../recipe-agency/sections/singleBlog/heroSection.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/sections/singleBlog/heroSection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/single-blog.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/single-blog.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/templates/singleBlog/blogList.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/templates/singleBlog/blogList.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/templates/singleBlog/categoryList.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/templates/singleBlog/categoryList.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/templates/singleBlog/infoList.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/templates/singleBlog/infoList.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,8 +41,37 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/../recipe-agency/assets/css/components/singleBlog/_heroSection.scss">
+      <ranges>
+        <range start1="11" end1="12" start2="11" end2="12" changelist="4d1a8957-bea8-4a10-b9af-bda5b05ba84b" />
+        <range start1="14" end1="16" start2="14" end2="21" changelist="4d1a8957-bea8-4a10-b9af-bda5b05ba84b" />
+        <range start1="20" end1="20" start2="25" end2="29" changelist="4d1a8957-bea8-4a10-b9af-bda5b05ba84b" />
+        <range start1="43" end1="44" start2="52" end2="53" changelist="d9b00336-d57f-4bcf-ab54-a00826f04c0b" />
+        <range start1="66" end1="67" start2="75" end2="78" changelist="4d1a8957-bea8-4a10-b9af-bda5b05ba84b" />
+        <range start1="69" end1="70" start2="80" end2="89" changelist="4d1a8957-bea8-4a10-b9af-bda5b05ba84b" />
+        <range start1="73" end1="74" start2="92" end2="93" changelist="4d1a8957-bea8-4a10-b9af-bda5b05ba84b" />
+        <range start1="76" end1="76" start2="95" end2="119" changelist="4d1a8957-bea8-4a10-b9af-bda5b05ba84b" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/../recipe-agency/footer.php">
+      <ranges>
+        <range start1="6" end1="6" start2="6" end2="8" changelist="d9b00336-d57f-4bcf-ab54-a00826f04c0b" />
+        <range start1="30" end1="31" start2="32" end2="33" changelist="d9b00336-d57f-4bcf-ab54-a00826f04c0b" />
+        <range start1="38" end1="39" start2="40" end2="41" changelist="d9b00336-d57f-4bcf-ab54-a00826f04c0b" />
+        <range start1="48" end1="49" start2="50" end2="51" changelist="d9b00336-d57f-4bcf-ab54-a00826f04c0b" />
+        <range start1="57" end1="58" start2="59" end2="60" changelist="4d1a8957-bea8-4a10-b9af-bda5b05ba84b" />
+        <range start1="64" end1="65" start2="66" end2="67" changelist="4d1a8957-bea8-4a10-b9af-bda5b05ba84b" />
+        <range start1="85" end1="86" start2="87" end2="88" changelist="d9b00336-d57f-4bcf-ab54-a00826f04c0b" />
+        <range start1="125" end1="126" start2="127" end2="128" changelist="4d1a8957-bea8-4a10-b9af-bda5b05ba84b" />
+      </ranges>
+    </file>
+  </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/usr/local/Cellar/php/8.3.1/bin/php" />
   <component name="ProjectId" id="2aVF9H4Hmn53B0fA8NT1IU9IUuD" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -43,6 +81,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "/Applications/MAMP/htdocs/recipe/wp-content/themes/RecipeThems/assets/images",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",

@@ -5,6 +5,8 @@ $tel_valik = get_field('number_valik', 136);
 
 $email = get_field('email_link', 136);
 
+$current_lang = pll_current_language();
+
 ?>
 
 <footer class="footer">
@@ -28,7 +30,7 @@ $email = get_field('email_link', 136);
                 <div class="d-flex justify-content-between footer-content--mob">
                     <div class="">
                         <p class="upper-nav">
-                            Навігація по сайту
+                            <?= translate_and_output('navigation'); ?>
                         </p>
                         <nav class="main-nav">
                             <?php get_template_part('templates/navigation', null, array('location' => 'menu-header')); ?>
@@ -36,7 +38,7 @@ $email = get_field('email_link', 136);
                     </div>
                     <div class="d-flex flex-column d-lg-none">
                         <p class="upper-nav">
-                            Послуги
+                            <?= translate_and_output('services'); ?>
                         </p>
                         <?php get_template_part('templates/footerServices'); ?>
                     </div>
@@ -46,7 +48,7 @@ $email = get_field('email_link', 136);
 
             <div class="footer-wrapper__item">
                 <p class="footer-content__text">
-                    <?php the_field('footer_text'); ?>
+                    <?php the_field('footer_text', pll_get_post(119, $current_lang)); ?>
                 </p>
                 <button class="button-primary ">
                     <?= translate_and_output('write_us'); ?>
@@ -55,14 +57,14 @@ $email = get_field('email_link', 136);
                 <div class="d-flex justify-content-between footer-content">
                     <div class="d-none d-lg-block">
                         <p class="upper-nav">
-                            Послуги
+                            <?= translate_and_output('services'); ?>
                         </p>
                         <?php get_template_part('templates/footerServices'); ?>
                     </div>
                     <div class="d-flex justify-content-between justify-content-lg-around justify-content-xl-between flex-lg-column footer-info">
                         <div class="">
                             <p class="upper-nav">
-                                Номер телефону
+                                <?= translate_and_output('number'); ?>
                             </p>
                             <ul class="contacts-list">
                                 <li class="contacts-list__item">
@@ -83,7 +85,7 @@ $email = get_field('email_link', 136);
 
                         <div class="mail-wrapper d-none d-lg-block">
                             <p class="upper-nav">
-                                Електронна пошта
+                                <?= translate_and_output('email'); ?>
                             </p>
                             <a class="contacts-list__link" href="<?php echo $email['url']; ?>"
                                target="<?php echo $email['target']; ?>">
@@ -123,7 +125,7 @@ $email = get_field('email_link', 136);
 <style>
     @media screen and (min-width: 992px) {
         .footer {
-            background-image: url(<?php the_field('footer_image_bg'); ?>);
+            background-image: url(<?php the_field('footer_image_bg', pll_get_post(119, $current_lang)); ?>);
         }
     }
 </style>

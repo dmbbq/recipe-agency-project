@@ -13,7 +13,7 @@
             $services_icon = get_field('our_services_icons');
             ?>
             <li class="services-list__item">
-                <a class="services-list__link" href="#">
+                <a class="services-list__link" href="<?= get_permalink(); ?>">
                    <?php the_field('thumbnail_title');?>
                 </a>
             </li>

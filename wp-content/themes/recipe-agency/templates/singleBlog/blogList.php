@@ -40,16 +40,16 @@
         foreach ($matching_posts as $post) {
             if ($counter < 4) {
                 ?>
-                <li class="blog-list__item col-lg-4">
-                    <a href="<?php echo $post['permalink']; ?>" class="blog-list__link">
+                <li class="blog-list__item col-xl-4 col-md-6 <?= ($counter === 4) ? 'd-none d-md-block d-xl-none' : ''; ?>">
+                    <a href="<?= $post['permalink']; ?>" class="blog-list__link">
                         <div class="blog-list__thumb overflow-hidden">
-                            <?php echo wp_get_attachment_image($post['image_id'], 'full', false, array('class' => 'blog-list__image')); ?>
+                            <?= wp_get_attachment_image($post['image_id'], 'full', false, array('class' => 'blog-list__image')); ?>
                         </div>
                         <span class="blog-list__date fw-medium d-inline-block">
-                                <?php echo date('d.m.Y', strtotime($post['date'])); ?>
-                            </span>
+                                <?= date('d.m.Y', strtotime($post['date'])); ?>
+                        </span>
                         <h2 class="blog-list__title fw-medium mb-0">
-                            <?php echo $post['title']; ?>
+                            <?= $post['title']; ?>
                         </h2>
                     </a>
                 </li>

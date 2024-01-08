@@ -112,7 +112,17 @@ $strings_to_translate = array(
     'all_posts' => 'Всі публікації',
     'details' => 'Детальніше',
     'more_partners' => 'Більше клієнтів',
-    'hide' => 'Приховати'
+    'hide' => 'Приховати',
+    'services' => 'Послуги',
+    'number' => 'Номер телефону',
+    'navigation' => 'Навігація по сайту',
+    'copyright' => '2019 — 2023 © All rights reserved',
+    'privacy_policy' => 'Політика конфіденційності',
+    'design' => 'Дизайн сайту',
+    'email' => 'Електронна пошта'
+
+
+
 );
 
 if (function_exists('pll_register_string')) {

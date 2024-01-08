@@ -13,6 +13,15 @@
     background-position: center;
     background-size: cover;
 
+
+    @media screen and (min-width: 1440px) {
+      aspect-ratio: 1 / calc(768 / 1400);
+
+      //padding-bottom: 5.31rem;
+    }
+
+
+
     @media screen and (min-width: 1920px) {
       aspect-ratio: 1 / calc(1080 / 1920);
 
@@ -130,4 +139,5 @@
     flex-shrink: 0;
   }
 }
+
 
