@@ -34,7 +34,7 @@ $is_black_theme = in_array($page_id, array(132, 129, 140, 138, 124, 121, 136, 13
                 <?php get_template_part('templates/languagesList'); ?>
 
                 <button class="button-primary d-none d-lg-flex">
-                    <?php translate_and_output('write_us'); ?>
+                    <?= translate_and_output('write_us'); ?>
                 </button>
 
                 <button class="hamburger hamburger--collapse d-flex align-items-center justify-content-center menu-button p-0 border-0 d-md-none"

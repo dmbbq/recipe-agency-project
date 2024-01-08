@@ -7,7 +7,7 @@
                 </h2>
                 <?php the_field('about_text'); ?>
                 <button class="button-primary">
-                    <?php translate_and_output('write_us'); ?>
+                    <?= translate_and_output('write_us'); ?>
                 </button>
             </div>
             <div class="col-lg-7 col-xl-8">

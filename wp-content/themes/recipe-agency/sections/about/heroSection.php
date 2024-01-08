@@ -17,7 +17,7 @@
                          <?php the_field('hero_text'); ?>
                     </p>
                     <button class="hero-button button-primary" type="button">
-                        <?php translate_and_output('write_us'); ?>
+                        <?= translate_and_output('write_us'); ?>
                     </button>
                 </div>
             </div>

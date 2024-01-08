@@ -1,4 +1,4 @@
-<section class="section details">
+<section class="section details overflow-visible">
     <div class="container">
         <div class="d-lg-flex align-items-lg-start">
             <aside class="details-aside">

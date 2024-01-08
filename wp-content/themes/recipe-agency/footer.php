@@ -49,7 +49,7 @@ $email = get_field('email_link', 136);
                     <?php the_field('footer_text'); ?>
                 </p>
                 <button class="button-primary ">
-                    <?php translate_and_output('write_us'); ?>
+                    <?= translate_and_output('write_us'); ?>
                 </button>
 
                 <div class="d-flex justify-content-between footer-content">

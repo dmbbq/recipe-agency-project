@@ -1,14 +1,20 @@
 #single-blog {
   & .hero {
-    aspect-ratio: 1 / calc(70 / 120);
-    margin-bottom: -2.5rem;
-    padding-bottom: 7.0625rem;
+    height: 48.125rem;
+    padding-bottom: 2.5rem;
 
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 
     color: $white-color;
+
+    @media screen and (min-width: 992px) {
+      aspect-ratio: 1 / calc(70 / 120);
+
+      padding-bottom: 7.0625rem;
+      margin-bottom: -2.5rem;
+    }
 
     & .info-list {
       gap: 2.5rem;
@@ -29,10 +35,26 @@
   }
 
   & .hero-title {
-    margin-bottom: 2.94rem;
+    margin-bottom: 1.56rem;
+
+    font-size: clamp(1.5rem, 0.954rem + 2.33vw, 3.75rem);
+    letter-spacing: -0.0675rem;
+
+    @media screen and (min-width: 992px) {
+      margin-bottom: 2.94rem;
+
+      line-height: 1.25;
+      letter-spacing: -0.16875rem;
+    }
+
+    & br {
+      @media screen and (max-width: 991px){
+        display: none;
+      }
+    }
   }
 
-  & .hero-content{
+  & .hero-content {
     font-family: 'Manrope', sans-serif;
   }
 }

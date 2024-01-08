@@ -7,9 +7,10 @@ add_action('wpcf7_before_send_mail', 'send_message_to_telegram');
 add_filter('wp_check_filetype_and_ext', 'fix_svg_mime_type', 10, 5);
 add_action('customize_register', 'additional_logo_customize_register');
 add_action('wp_head', 'increment_post_views');
-add_action( 'p2p_init', 'my_connection_types' );
+add_action('p2p_init', 'my_connection_types');
 
-function enqueue_scripts_and_styles(){
+function enqueue_scripts_and_styles()
+{
     wp_deregister_script('jquery');
     wp_register_script('jquery', '//code.jquery.com/jquery-1.11.0.min.js');
     wp_register_script('jquery-migrate', '//code.jquery.com/jquery-migrate-1.2.1.min.js');
@@ -20,7 +21,8 @@ function enqueue_scripts_and_styles(){
     wp_enqueue_script('main-js', get_template_directory_uri() . '/dist/js/main.bundle.js', array('jquery'), null, true);
 }
 
-function theme_setup(){
+function theme_setup()
+{
     show_admin_bar(false);
     register_nav_menu('menu-header', 'Main menu');
 
@@ -77,12 +79,13 @@ function increment_post_views()
     }
 }
 
-function my_connection_types() {
-    p2p_register_connection_type( array(
+function my_connection_types()
+{
+    p2p_register_connection_type(array(
         'name' => 'team_to_blog',
         'from' => 'blog',
         'to' => 'team'
-    ) );
+    ));
 }
 
 function translate_and_output($string_key, $group = 'Main Page')
@@ -90,7 +93,7 @@ function translate_and_output($string_key, $group = 'Main Page')
     global $strings_to_translate;
 
     if (function_exists('pll__')) {
-        echo pll__($strings_to_translate[$string_key], $group);
+        return pll__($strings_to_translate[$string_key], $group);
     } else {
         echo $strings_to_translate[$string_key];
     }
@@ -183,8 +186,7 @@ function fix_svg_mime_type($data, $file, $filename, $mimes, $real_mime = '')
 
             $data['ext'] = 'svg';
             $data['type'] = 'image/svg+xml';
-        }
-        else {
+        } else {
             $data['ext'] = false;
             $data['type'] = false;
         }

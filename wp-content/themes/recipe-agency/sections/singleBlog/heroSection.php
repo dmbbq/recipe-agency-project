@@ -1,7 +1,7 @@
 <section class="hero">
     <div class="container d-flex align-items-end h-100">
         <div class="w-100">
-            <h1 class="hero-title section-title">
+            <h1 class="hero-title">
                 <?php the_field('title'); ?>
             </h1>
             <div class="hero-content d-flex justify-content-between align-items-center">
