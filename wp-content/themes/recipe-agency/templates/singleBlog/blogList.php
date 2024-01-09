@@ -1,6 +1,8 @@
 <ul class="blog-list row">
     <?php
     $current_post_id = get_the_ID();
+    $current_post_tags = wp_get_post_tags($current_post_id, array('fields' => 'ids'));
+
     $args = array(
         'post_type'      => 'blog',
         'posts_per_page' => -1,
@@ -14,18 +16,17 @@
     if ($query->have_posts()) :
         while ($query->have_posts()) : $query->the_post();
 
-            $post_categories = get_the_category();
-            $current_post_categories = get_the_category($current_post_id);
+            $post_tags = wp_get_post_tags(get_the_ID(), array('fields' => 'ids'));
 
-            $category_match = false;
-            foreach ($post_categories as $post_category) {
-                if (in_array($post_category, $current_post_categories) && get_the_ID() !== $current_post_id) {
-                    $category_match = true;
+            $tag_match = false;
+            foreach ($post_tags as $post_tag) {
+                if (in_array($post_tag, $current_post_tags) && get_the_ID() !== $current_post_id) {
+                    $tag_match = true;
                     break;
                 }
             }
 
-            if ($category_match) {
+            if ($tag_match) {
                 $matching_posts[] = array(
                     'date'      => get_the_date('d.m.Y'),
                     'image_id'  => get_field('card_image'),
@@ -46,7 +47,7 @@
                             <?= wp_get_attachment_image($post['image_id'], 'full', false, array('class' => 'blog-list__image')); ?>
                         </div>
                         <span class="blog-list__date fw-medium d-inline-block">
-                                <?= date('d.m.Y', strtotime($post['date'])); ?>
+                            <?= date('d.m.Y', strtotime($post['date'])); ?>
                         </span>
                         <h2 class="blog-list__title fw-medium mb-0">
                             <?= $post['title']; ?>

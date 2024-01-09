@@ -5,5 +5,6 @@ import "./utils";
 import "./showMore"
 import "./menu";
 import "./swiper"
+import "./filterPosts"
 
 import "../css/main.scss";

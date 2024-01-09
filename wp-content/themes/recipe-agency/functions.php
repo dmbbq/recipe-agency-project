@@ -8,6 +8,8 @@ add_filter('wp_check_filetype_and_ext', 'fix_svg_mime_type', 10, 5);
 add_action('customize_register', 'additional_logo_customize_register');
 add_action('wp_head', 'increment_post_views');
 add_action('p2p_init', 'my_connection_types');
+add_action('wp_ajax_filter_posts', 'filter_posts');
+add_action('wp_ajax_nopriv_filter_posts', 'filter_posts');
 
 function enqueue_scripts_and_styles()
 {
@@ -19,6 +21,7 @@ function enqueue_scripts_and_styles()
 
     wp_enqueue_script('jquery');
     wp_enqueue_script('main-js', get_template_directory_uri() . '/dist/js/main.bundle.js', array('jquery'), null, true);
+    wp_localize_script('main-js', 'ajaxurl', admin_url('admin-ajax.php'));
 }
 
 function theme_setup()
@@ -73,11 +76,16 @@ function increment_post_views()
         $post_id = get_the_ID();
 
         $views = get_post_meta($post_id, 'post_views', true);
-        $views = 0;
         $views = empty($views) ? 1 : $views + 1;
         update_post_meta($post_id, 'post_views', $views);
     }
 }
+
+function filter_posts()
+{
+    get_template_part('templates/cases/casesList');
+}
+
 
 function my_connection_types()
 {
@@ -119,7 +127,8 @@ $strings_to_translate = array(
     'copyright' => '2019 — 2023 © All rights reserved',
     'privacy_policy' => 'Політика конфіденційності',
     'design' => 'Дизайн сайту',
-    'email' => 'Електронна пошта'
+    'email' => 'Електронна пошта',
+    'all_services' => 'Всі послуги'
 );
 
 if (function_exists('pll_register_string')) {

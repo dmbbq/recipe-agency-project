@@ -46,6 +46,28 @@ main {
   }
 }
 
+.main-section {
+  @media screen and (min-width: 1200px){
+    padding-top: min(13.625rem, 11.3542%);
+  }
+
+  &--padding-mob {
+    @media screen and (max-width: 1199px){
+      padding-top: 7.625rem;
+    }
+  }
+}
+
+.title {
+  margin-bottom: 2.5rem;
+
+  @media screen and (min-width: 992px){
+    margin-bottom: min(5.618%, 6.25rem);
+
+    text-transform: uppercase;
+  }
+}
+
 .wrapper {
   min-height: 100%;
   display: flex;

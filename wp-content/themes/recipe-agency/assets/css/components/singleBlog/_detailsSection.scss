@@ -6,7 +6,7 @@
       border-radius: 2.5rem;
     }
 
-    & .category-list {
+    & .tag-list {
       margin-bottom: 2.19rem;
 
       @media screen and (min-width: 992px){
@@ -14,7 +14,7 @@
       }
     }
 
-    & .category-list__item {
+    & .tag-list__item {
       font-size: clamp(0.813rem, 0.752rem + 0.26vw, 1.063rem);
 
       background-color: $secondary-bg-color;

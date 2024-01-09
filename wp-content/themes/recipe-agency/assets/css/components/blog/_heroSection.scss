@@ -1,22 +1,4 @@
 #blog {
-  padding-top: 7.625rem;
-
-  @media screen and (min-width: 992px) {
-    padding-top: 13.625rem;
-  }
-
-  & .hero-title {
-    margin-bottom: 2.5rem;
-
-    @media screen and (min-width: 992px){
-      text-transform: uppercase;
-    }
-    
-    @media screen and (min-width: 768px) {
-      margin-bottom: min(5.618%, 6.25rem);
-    }
-  }
-
   & .swiper-pagination {
     all: unset;
 

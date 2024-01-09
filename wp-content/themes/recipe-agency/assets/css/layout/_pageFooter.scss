@@ -20,6 +20,11 @@
     }
   }
 
+  & .socials-list__link{
+    @include hover(fill $accent-color $secondary-accent-color);
+  }
+
+
   & .footer-wrapper {
     @media screen and (min-width: 992px) {
       gap: 5rem;
@@ -145,15 +150,17 @@
   margin-bottom: 1.25rem;
 
   font-size: clamp(1.375rem, 0.89rem + 2.07vw, 3.375rem);
-  letter-spacing: -0.15188rem;
 
   line-height: 125%;
+  letter-spacing: -0.06188rem;
 
   color: $white-color;
 
   @media screen and (min-width: 992px) {
     margin-bottom: 1.88rem;
     max-width: 43rem;
+
+    letter-spacing: -0.15188rem;
 
   }
 }

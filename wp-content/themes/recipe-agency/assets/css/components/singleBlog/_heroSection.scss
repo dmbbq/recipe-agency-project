@@ -34,10 +34,7 @@
       fill: $white-color;
     }
 
-    & .category-list__item {
-      font-size: clamp(0.813rem, 0.782rem + 0.13vw, 0.938rem);
-      letter-spacing: -0.04219rem;
-
+    & .tag-list__item {
       color: $primary-text-color;
       background-color: $white-color;
     }
@@ -68,13 +65,14 @@
   }
 }
 
-.category-list {
+.tag-list {
   gap: 0.31rem;
 }
 
-.category-list__item {
+.tag-list__item {
   padding: 0.625rem 0.75rem;
 
+  font-size: clamp(0.813rem, 0.782rem + 0.13vw, 0.938rem);
   letter-spacing: -0.03656rem;
   border-radius: $seventh-radius;
 
@@ -119,7 +117,7 @@
   }
 }
 
-.category-list__item,
+.tag-list__item,
 .info-list__item {
   font-family: "Manrope", sans-serif;
 }

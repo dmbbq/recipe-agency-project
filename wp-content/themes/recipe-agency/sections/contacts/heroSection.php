@@ -10,9 +10,9 @@ $email = get_field('email_link');
 $contacts_image = get_field('info_image');
 ?>
 
-<section class="section">
+<section class="hero main-section main-section--padding-mob">
     <div class="container">
-        <h1>
+        <h1 class="title">
             <?php the_field('contacts_title');?>
         </h1>
         <div class="contacts-wrapper justify-content-between row">
@@ -68,7 +68,7 @@ $contacts_image = get_field('info_image');
                         <?php get_template_part('templates/socialsList'); ?></div>
                 </div>
             </div>
-            <div class="col-lg-5 d-none d-lg-block">
+            <div class="col-lg-5 d-none d-xl-block">
                 <div class="contacts-wrapper__thumb ">
                     <?php echo wp_get_attachment_image($contacts_image, 'full', false, array('class' => '')); ?>
                 </div>

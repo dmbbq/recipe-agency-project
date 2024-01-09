@@ -1,15 +1,4 @@
 #contacts{
-
-  & h1{
-    margin-bottom: 2.5rem;
-    font-size: clamp(2.375rem, 1.586rem + 3.37vw, 5.625rem);
-
-    @media screen and (min-width: 992px) {
-      text-transform: uppercase;
-      margin-bottom: 6.25rem;
-    }
-  }
-
   & .owners-list{
     margin-bottom: 3.75rem;
   }

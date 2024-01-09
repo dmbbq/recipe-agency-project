@@ -17,7 +17,7 @@
                         <span class="details-content__span d-inline-block">
                             <?= translate_and_output('keywords'); ?>
                         </span>
-                        <?= get_template_part('templates/singleBlog/categoryList'); ?>
+                        <?= get_template_part('templates/tagList'); ?>
                         <span class="details-content__span d-inline-block">
                             <?= translate_and_output('share'); ?>
                         </span>

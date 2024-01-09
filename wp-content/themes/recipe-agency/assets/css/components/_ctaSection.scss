@@ -13,29 +13,41 @@
   &.home,
   &.services,
   &.contacts {
-    background-size: 56.3483%;
+    background-size: 100%;
+
+    @media screen and (max-width: 991px){
+      padding: 2.1875rem 1.875rem max(55.3624%, 11.94rem);
+    }
+
+    @media screen and (min-width: 992px){
+      background-size: 56.3483%;
+    }
 
     & h2 {
       & strong {
-        position: relative;
-        z-index: 1;
+        color: $accent-color;
 
-        color: $white-color;
+        @media screen and (min-width: 992px) {
+          position: relative;
+          z-index: 1;
 
-        &::before {
-          content: '';
-          position: absolute;
-          top: calc(50% + 0.3125rem);
-          left: -0.46875rem;
-          transform: translateY(-50%);
-          z-index: -1;
+          color: $white-color;
 
-          height: 100%;
-          width: calc(100% + 1.6875rem);
+          &::before {
+            content: '';
+            position: absolute;
+            top: calc(50% + 0.3125rem);
+            left: -0.46875rem;
+            transform: translateY(-50%);
+            z-index: -1;
 
-          border-radius: $third-radius;
+            height: 100%;
+            width: calc(100% + 1.6875rem);
 
-          background-color: $accent-color;
+            border-radius: $third-radius;
+
+            background-color: $accent-color;
+          }
         }
       }
     }
