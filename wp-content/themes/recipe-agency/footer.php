@@ -96,16 +96,21 @@ $current_lang = pll_current_language();
                             <?php get_template_part('templates/socialsList'); ?>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
 
 
         <div class="footer-bottom d-flex flex-column flex-lg-row">
-            <a class="footer-bottom__info" href="#">Політика конфіденційності</a>
-            <p class="footer-bottom__info">2019 — 2023 © All rights reserved</p>
-            <a class="footer-bottom__info" href="#">Дизайн сайту</a>
+            <a class="footer-bottom__info" href="#">
+                <?= translate_and_output('privacy_policy'); ?>
+            </a>
+            <span class="footer-bottom__info">
+                <?= translate_and_output('copyright'); ?>
+            </span>
+            <a class="footer-bottom__info" href="#">
+                <?= translate_and_output('design'); ?>
+            </a>
         </div>
     </div>
 

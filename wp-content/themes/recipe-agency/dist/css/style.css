@@ -16338,4 +16338,8 @@ form br {
   display: none !important;
 }
 
+body.not-found {
+  background-color: #010101;
+}
+
 /*# sourceMappingURL=style.css.map*/

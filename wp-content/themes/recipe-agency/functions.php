@@ -120,9 +120,6 @@ $strings_to_translate = array(
     'privacy_policy' => 'Політика конфіденційності',
     'design' => 'Дизайн сайту',
     'email' => 'Електронна пошта'
-
-
-
 );
 
 if (function_exists('pll_register_string')) {
