@@ -134,30 +134,64 @@ const blogPageSwiperMob = new Swiper('.blog-page-swiper.mob', {
     }
 });
 
+// const casesPageSwiperMob = new Swiper('.cases-page-swiper.mob', {
+//     spaceBetween: 70,
+//     slidesPerView: 1,
+//     autoHeight: true,
+//     allowTouchMove: false,
+//     navigation: {
+//         prevEl: ".cases-page-swiper.mob .prev",
+//         nextEl: ".cases-page-swiper.mob .next"
+//     },
+//     pagination: {
+//         el: '.cases-page-swiper.mob .swiper-pagination',
+//         renderBullet: renderEllipsisBullet,
+//     },
+//     on: {
+//         slideChange: function () {
+//             this.pagination.render();
+//         },
+//     }
+// });
+
 const handlePaginationClick = (e) => {
-    if (e.target === e.currentTarget || e.target.classList.contains('swiper-pagination-bullet-ellipsis')) {
+    const currentTarget = $(e.currentTarget);
+    console.log(1)
+
+    if ($(e.target) === currentTarget || $(e.target).hasClass('swiper-pagination-bullet-ellipsis')) {
         return;
     }
 
-    const slideIndex = $(e.target).text()
+    const slideIndex = $(e.target).text();
+    const closestSwiper = currentTarget.closest('.swiper');
 
-    if ($(e.currentTarget.closest('.blog-page-swiper')).hasClass('desk')) {
-        blogPageSwiper.slideTo(slideIndex - 1, 0)
+    let swiper;
+    if (closestSwiper.hasClass('blog-page-swiper')) {
+        swiper = closestSwiper.hasClass('desk') ? blogPageSwiper : blogPageSwiperMob;
     } else {
-        blogPageSwiperMob.slideTo(slideIndex - 1, 0)
+        swiper = closestSwiper.hasClass('desk') ? casesPageSwiper : casesPageSwiperMob;
     }
+
+    swiper.slideTo(slideIndex - 1, 0);
 }
 
 const handleNavigationClick = (e) => {
-    if ($(e.currentTarget).hasClass('first')) {
-        blogPageSwiper.slideTo(0, 0);
-    } else if ($(e.currentTarget).hasClass('last')) {
-        blogPageSwiper.slideTo(blogPageSwiper.slides.length - 1, 0);
+    const currentTarget = $(e.currentTarget);
+    const closestSwiper = currentTarget.closest('.swiper')
+
+    const swiper = closestSwiper.hasClass('blog-page-swiper') ? blogPageSwiper : casesPageSwiper;
+    const mobSwiper = closestSwiper.hasClass('blog-page-swiper') ? blogPageSwiperMob : casesPageSwiperMob;
+
+    if (currentTarget.hasClass('first')) {
+        closestSwiper.hasClass('desk') ? swiper.slideTo(0, 0) : mobSwiper.slideTo(0, 0);
+    } else if (currentTarget.hasClass('last')) {
+        const targetSlide = closestSwiper.hasClass('desk') ? swiper.slides.length - 1 : mobSwiper.slides.length - 1;
+        closestSwiper.hasClass('desk') ? swiper.slideTo(targetSlide, 0) : mobSwiper.slideTo(targetSlide, 0);
     }
 };
 
-refs.blogSwiperNavigation.on("click", handleNavigationClick)
-refs.blogSwiperPagination.on("click", handlePaginationClick)
+refs.swiperNavigation.on("click", handleNavigationClick)
+refs.swiperPagination.on("click", handlePaginationClick)
 
 const singleBlogSwiper = new Swiper('.single-blog-swiper', {
     spaceBetween: 35,

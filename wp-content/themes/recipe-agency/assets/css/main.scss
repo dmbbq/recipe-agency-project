@@ -10,6 +10,7 @@
 
 //Vendors
 @import "vendors/hamburgers";
+@import "vendors/skeleton";
 
 //Layouts
 @import "layout/pageHeader";
@@ -21,6 +22,7 @@
 @import "components/partnersSection";
 @import "components/blogSection";
 @import "components/casesSection";
+@import "components/pagination";
 
 //Home page
 @import "components/home/heroSection";
@@ -40,9 +42,6 @@
 
 //Contacts page
 @import "components/contacts/heroSection";
-
-//Blog page
-@import "components/blog/heroSection";
 
 //Single Blog page
 @import "components/singleBlog/heroSection";

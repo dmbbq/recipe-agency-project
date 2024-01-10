@@ -1,7 +1,43 @@
+import {renderEllipsisBullet} from "./utils";
+import Swiper from "swiper/bundle";
+
+let casesPageSwiper
+
+const casesSkeletonList = `
+    <div class="skeleton-list row">
+        ${Array(4).fill(`
+            <div class="skeleton-list__item col-lg-6">
+                <div class="skeleton-list__thumb"></div>
+            </div>`).join('')}
+    </div>`;
+
 $(document).ready(function ($) {
     let categories = ['all'];
+
+    function initializeSwiper() {
+         casesPageSwiper = new Swiper('.cases-page-swiper', {
+            spaceBetween: 70,
+            slidesPerView: 1,
+            autoHeight: true,
+            allowTouchMove: false,
+            navigation: {
+                prevEl: ".cases-page-swiper.desk .prev",
+                nextEl: ".cases-page-swiper.desk .next"
+            },
+            pagination: {
+                el: '.cases-page-swiper.desk .swiper-pagination',
+                renderBullet: renderEllipsisBullet,
+            },
+            on: {
+                slideChange: function () {
+                    this.pagination.render();
+                },
+            }
+        });
+    }
+
     function loadPosts() {
-        $('#cases .hero-content').html('<div class="loading-skeleton">Loading...</div>');
+        $('#cases .hero-content').html(casesSkeletonList);
 
         $.ajax({
             url: ajaxurl,
@@ -12,6 +48,11 @@ $(document).ready(function ($) {
             },
             success: function (response) {
                 $('#cases .hero-content').html(response);
+                if (casesPageSwiper && casesPageSwiper.destroy) {
+                    casesPageSwiper.destroy();
+                }
+
+                initializeSwiper();
             }
         });
     }

@@ -9,16 +9,49 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_index_of_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.index-of.js */ "./node_modules/core-js/modules/es.array.index-of.js");
-/* harmony import */ var core_js_modules_es_array_index_of_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_index_of_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_array_splice_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.splice.js */ "./node_modules/core-js/modules/es.array.splice.js");
-/* harmony import */ var core_js_modules_es_array_splice_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_splice_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_array_join_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.join.js */ "./node_modules/core-js/modules/es.array.join.js");
+/* harmony import */ var core_js_modules_es_array_join_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_join_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_array_fill_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.fill.js */ "./node_modules/core-js/modules/es.array.fill.js");
+/* harmony import */ var core_js_modules_es_array_fill_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_fill_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_array_index_of_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.array.index-of.js */ "./node_modules/core-js/modules/es.array.index-of.js");
+/* harmony import */ var core_js_modules_es_array_index_of_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_index_of_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es_array_splice_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.array.splice.js */ "./node_modules/core-js/modules/es.array.splice.js");
+/* harmony import */ var core_js_modules_es_array_splice_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_splice_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./utils */ "./assets/js/utils.js");
+/* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! swiper/bundle */ "./node_modules/swiper/swiper-bundle.mjs");
 
 
+
+
+
+
+var casesPageSwiper;
+var casesSkeletonList = "\n    <div class=\"skeleton-list row\">\n        ".concat(Array(4).fill("\n            <div class=\"skeleton-list__item col-lg-6\">\n                <div class=\"skeleton-list__thumb\"></div>\n            </div>").join(''), "\n    </div>");
 $(document).ready(function ($) {
   var categories = ['all'];
+  function initializeSwiper() {
+    casesPageSwiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_5__["default"]('.cases-page-swiper', {
+      spaceBetween: 70,
+      slidesPerView: 1,
+      autoHeight: true,
+      allowTouchMove: false,
+      navigation: {
+        prevEl: ".cases-page-swiper.desk .prev",
+        nextEl: ".cases-page-swiper.desk .next"
+      },
+      pagination: {
+        el: '.cases-page-swiper.desk .swiper-pagination',
+        renderBullet: _utils__WEBPACK_IMPORTED_MODULE_4__.renderEllipsisBullet
+      },
+      on: {
+        slideChange: function slideChange() {
+          this.pagination.render();
+        }
+      }
+    });
+  }
   function loadPosts() {
-    $('#cases .hero-content').html('<div class="loading-skeleton">Loading...</div>');
+    $('#cases .hero-content').html(casesSkeletonList);
     $.ajax({
       url: ajaxurl,
       type: 'post',
@@ -28,6 +61,10 @@ $(document).ready(function ($) {
       },
       success: function success(response) {
         $('#cases .hero-content').html(response);
+        if (casesPageSwiper && casesPageSwiper.destroy) {
+          casesPageSwiper.destroy();
+        }
+        initializeSwiper();
       }
     });
   }
@@ -171,8 +208,8 @@ var refs = {
   appBackdrop: $("#appointment"),
   appHideButton: $(".appointment-button"),
   swiperToInit: $(".swiper.init"),
-  blogSwiperPagination: $(".blog-page-swiper .swiper-pagination"),
-  blogSwiperNavigation: $(".blog-page-swiper .blog-ctrl__item")
+  swiperPagination: $(".swiper-pagination"),
+  swiperNavigation: $(".pagination__item")
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (refs);
 
@@ -346,26 +383,57 @@ var blogPageSwiperMob = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"
     }
   }
 });
+
+// const casesPageSwiperMob = new Swiper('.cases-page-swiper.mob', {
+//     spaceBetween: 70,
+//     slidesPerView: 1,
+//     autoHeight: true,
+//     allowTouchMove: false,
+//     navigation: {
+//         prevEl: ".cases-page-swiper.mob .prev",
+//         nextEl: ".cases-page-swiper.mob .next"
+//     },
+//     pagination: {
+//         el: '.cases-page-swiper.mob .swiper-pagination',
+//         renderBullet: renderEllipsisBullet,
+//     },
+//     on: {
+//         slideChange: function () {
+//             this.pagination.render();
+//         },
+//     }
+// });
+
 var handlePaginationClick = function handlePaginationClick(e) {
-  if (e.target === e.currentTarget || e.target.classList.contains('swiper-pagination-bullet-ellipsis')) {
+  var currentTarget = $(e.currentTarget);
+  console.log(1);
+  if ($(e.target) === currentTarget || $(e.target).hasClass('swiper-pagination-bullet-ellipsis')) {
     return;
   }
   var slideIndex = $(e.target).text();
-  if ($(e.currentTarget.closest('.blog-page-swiper')).hasClass('desk')) {
-    blogPageSwiper.slideTo(slideIndex - 1, 0);
+  var closestSwiper = currentTarget.closest('.swiper');
+  var swiper;
+  if (closestSwiper.hasClass('blog-page-swiper')) {
+    swiper = closestSwiper.hasClass('desk') ? blogPageSwiper : blogPageSwiperMob;
   } else {
-    blogPageSwiperMob.slideTo(slideIndex - 1, 0);
+    swiper = closestSwiper.hasClass('desk') ? casesPageSwiper : casesPageSwiperMob;
   }
+  swiper.slideTo(slideIndex - 1, 0);
 };
 var handleNavigationClick = function handleNavigationClick(e) {
-  if ($(e.currentTarget).hasClass('first')) {
-    blogPageSwiper.slideTo(0, 0);
-  } else if ($(e.currentTarget).hasClass('last')) {
-    blogPageSwiper.slideTo(blogPageSwiper.slides.length - 1, 0);
+  var currentTarget = $(e.currentTarget);
+  var closestSwiper = currentTarget.closest('.swiper');
+  var swiper = closestSwiper.hasClass('blog-page-swiper') ? blogPageSwiper : casesPageSwiper;
+  var mobSwiper = closestSwiper.hasClass('blog-page-swiper') ? blogPageSwiperMob : casesPageSwiperMob;
+  if (currentTarget.hasClass('first')) {
+    closestSwiper.hasClass('desk') ? swiper.slideTo(0, 0) : mobSwiper.slideTo(0, 0);
+  } else if (currentTarget.hasClass('last')) {
+    var targetSlide = closestSwiper.hasClass('desk') ? swiper.slides.length - 1 : mobSwiper.slides.length - 1;
+    closestSwiper.hasClass('desk') ? swiper.slideTo(targetSlide, 0) : mobSwiper.slideTo(targetSlide, 0);
   }
 };
-_refs__WEBPACK_IMPORTED_MODULE_3__["default"].blogSwiperNavigation.on("click", handleNavigationClick);
-_refs__WEBPACK_IMPORTED_MODULE_3__["default"].blogSwiperPagination.on("click", handlePaginationClick);
+_refs__WEBPACK_IMPORTED_MODULE_3__["default"].swiperNavigation.on("click", handleNavigationClick);
+_refs__WEBPACK_IMPORTED_MODULE_3__["default"].swiperPagination.on("click", handlePaginationClick);
 var singleBlogSwiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.single-blog-swiper', {
   spaceBetween: 35,
   slidesPerView: 3
@@ -1139,6 +1207,34 @@ var $TypeError = TypeError;
 module.exports = function (argument) {
   if (isObject(argument)) return argument;
   throw new $TypeError($String(argument) + ' is not an object');
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/array-fill.js":
+/*!******************************************************!*\
+  !*** ./node_modules/core-js/internals/array-fill.js ***!
+  \******************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+var toObject = __webpack_require__(/*! ../internals/to-object */ "./node_modules/core-js/internals/to-object.js");
+var toAbsoluteIndex = __webpack_require__(/*! ../internals/to-absolute-index */ "./node_modules/core-js/internals/to-absolute-index.js");
+var lengthOfArrayLike = __webpack_require__(/*! ../internals/length-of-array-like */ "./node_modules/core-js/internals/length-of-array-like.js");
+
+// `Array.prototype.fill` method implementation
+// https://tc39.es/ecma262/#sec-array.prototype.fill
+module.exports = function fill(value /* , start = 0, end = @length */) {
+  var O = toObject(this);
+  var length = lengthOfArrayLike(O);
+  var argumentsLength = arguments.length;
+  var index = toAbsoluteIndex(argumentsLength > 1 ? arguments[1] : undefined, length);
+  var end = argumentsLength > 2 ? arguments[2] : undefined;
+  var endPos = end === undefined ? length : toAbsoluteIndex(end, length);
+  while (endPos > index) O[index++] = value;
+  return O;
 };
 
 
@@ -4998,6 +5094,30 @@ $({ target: 'Array', proto: true, arity: 1, forced: FORCED }, {
 
 /***/ }),
 
+/***/ "./node_modules/core-js/modules/es.array.fill.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/core-js/modules/es.array.fill.js ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+var $ = __webpack_require__(/*! ../internals/export */ "./node_modules/core-js/internals/export.js");
+var fill = __webpack_require__(/*! ../internals/array-fill */ "./node_modules/core-js/internals/array-fill.js");
+var addToUnscopables = __webpack_require__(/*! ../internals/add-to-unscopables */ "./node_modules/core-js/internals/add-to-unscopables.js");
+
+// `Array.prototype.fill` method
+// https://tc39.es/ecma262/#sec-array.prototype.fill
+$({ target: 'Array', proto: true }, {
+  fill: fill
+});
+
+// https://tc39.es/ecma262/#sec-array.prototype-@@unscopables
+addToUnscopables('fill');
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/modules/es.array.find.js":
 /*!*******************************************************!*\
   !*** ./node_modules/core-js/modules/es.array.find.js ***!
@@ -5180,6 +5300,36 @@ addToUnscopables('entries');
 if (!IS_PURE && DESCRIPTORS && values.name !== 'values') try {
   defineProperty(values, 'name', { value: 'values' });
 } catch (error) { /* empty */ }
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/es.array.join.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/core-js/modules/es.array.join.js ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+var $ = __webpack_require__(/*! ../internals/export */ "./node_modules/core-js/internals/export.js");
+var uncurryThis = __webpack_require__(/*! ../internals/function-uncurry-this */ "./node_modules/core-js/internals/function-uncurry-this.js");
+var IndexedObject = __webpack_require__(/*! ../internals/indexed-object */ "./node_modules/core-js/internals/indexed-object.js");
+var toIndexedObject = __webpack_require__(/*! ../internals/to-indexed-object */ "./node_modules/core-js/internals/to-indexed-object.js");
+var arrayMethodIsStrict = __webpack_require__(/*! ../internals/array-method-is-strict */ "./node_modules/core-js/internals/array-method-is-strict.js");
+
+var nativeJoin = uncurryThis([].join);
+
+var ES3_STRINGS = IndexedObject !== Object;
+var FORCED = ES3_STRINGS || !arrayMethodIsStrict('join', ',');
+
+// `Array.prototype.join` method
+// https://tc39.es/ecma262/#sec-array.prototype.join
+$({ target: 'Array', proto: true, forced: FORCED }, {
+  join: function join(separator) {
+    return nativeJoin(toIndexedObject(this), separator === undefined ? ',' : separator);
+  }
+});
 
 
 /***/ }),

@@ -71,9 +71,9 @@ if ($query->have_posts()) {
         </ul>
 
         <?php
-        //            $blogCtrlClass = ($lists_count > 1) ? 'd-flex justify-content-center' : 'd-none';
-        //            $ctrl_visibility = ($lists_count > 4) ? '' : 'd-none';
-        //            get_template_part('templates/blogCtrl', null, array('class' => $blogCtrlClass, 'ctrl' => $ctrl_visibility));
+                    $paginationClass = ($lists_count > 1) ? 'd-flex justify-content-center' : 'd-none';
+                    $pagination_visibility = ($lists_count > 4) ? '' : 'd-none';
+                    get_template_part('templates/pagination', null, array('class' => $paginationClass, 'ctrl' => $pagination_visibility));
         ?>
     </div>
 

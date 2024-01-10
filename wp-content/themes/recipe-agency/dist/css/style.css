@@ -14097,6 +14097,27 @@ form br {
   transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
+.skeleton-list {
+  --bs-gutter-x: 2.5rem;
+  row-gap: 2.5rem;
+}
+
+.skeleton-list__thumb {
+  aspect-ratio: 1/0.7045977011;
+  background-image: linear-gradient(90deg, #EEEEEE 25%, #DEDEDE 50%, #EEEEEE 75%);
+  background-size: 200% 100%;
+  animation: loading 2s infinite ease-in-out;
+  border-radius: 0.9375rem;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
 .header {
   position: absolute;
   width: 100%;
@@ -14951,6 +14972,79 @@ form br {
     margin-bottom: 0.75rem;
     letter-spacing: -0.02031rem;
     opacity: 0.4;
+  }
+}
+
+.swiper-pagination {
+  all: unset !important;
+}
+.swiper-pagination span:not(:last-child) {
+  margin-right: 0.44rem;
+}
+
+.swiper-pagination-bullet {
+  all: unset;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  border-color: #72AFFF;
+  background-color: #72AFFF;
+  color: #FFF;
+}
+
+.swiper-pagination-bullet,
+.pagination__item {
+  border-radius: 0.5rem;
+  border: 1px solid #E9E9E9;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-ellipsis,
+.pagination__item {
+  width: 2.8125rem;
+  height: 2.8125rem;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(0.938rem, 0.862rem + 0.32vw, 1.25rem);
+  line-height: 1.25;
+}
+@media screen and (min-width: 992px) {
+  .swiper-pagination-bullet,
+  .swiper-pagination-bullet-ellipsis,
+  .pagination__item {
+    width: 3.625rem;
+    height: 3.625rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .swiper-pagination-bullet,
+  .swiper-pagination-bullet-ellipsis,
+  .pagination__item {
+    width: 4.375rem;
+    height: 4.375rem;
+  }
+}
+
+.swiper-pagination-bullet:not(.swiper-pagination-bullet-active),
+.pagination__item {
+  background-color: transparent;
+  transition: background-color 200ms ease-in-out;
+  stroke: #000;
+  fill: #000;
+}
+.swiper-pagination-bullet:not(.swiper-pagination-bullet-active):hover, .swiper-pagination-bullet:not(.swiper-pagination-bullet-active):focus,
+.pagination__item:hover,
+.pagination__item:focus {
+  background-color: #F9F9F9;
+}
+
+.pagination {
+  gap: 0.44rem;
+  margin-top: 3.125rem;
+}
+@media screen and (min-width: 768px) {
+  .pagination {
+    margin-top: min(7.5rem, 6.7416%);
   }
 }
 
@@ -16019,64 +16113,6 @@ form br {
 }
 #contacts .contacts-wrapper__thumb {
   aspect-ratio: 1/0.9794520548;
-}
-
-#blog .swiper-pagination {
-  all: unset;
-}
-#blog .swiper-pagination span:not(:last-child) {
-  margin-right: 0.44rem;
-}
-#blog .swiper-pagination-bullet {
-  all: unset;
-}
-#blog .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  border-color: #72AFFF;
-  background-color: #72AFFF;
-  color: #FFF;
-}
-#blog .swiper-pagination-bullet, #blog .blog-ctrl__item {
-  border-radius: 0.5rem;
-  border: 1px solid #E9E9E9;
-  background-color: transparent;
-  cursor: pointer;
-}
-#blog .swiper-pagination-bullet, #blog .swiper-pagination-bullet-ellipsis, #blog .blog-ctrl__item {
-  width: 2.8125rem;
-  height: 2.8125rem;
-  font-family: "Manrope", sans-serif;
-  font-size: clamp(0.938rem, 0.862rem + 0.32vw, 1.25rem);
-  line-height: 1.25;
-}
-@media screen and (min-width: 992px) {
-  #blog .swiper-pagination-bullet, #blog .swiper-pagination-bullet-ellipsis, #blog .blog-ctrl__item {
-    width: 3.625rem;
-    height: 3.625rem;
-  }
-}
-@media screen and (min-width: 1200px) {
-  #blog .swiper-pagination-bullet, #blog .swiper-pagination-bullet-ellipsis, #blog .blog-ctrl__item {
-    width: 4.375rem;
-    height: 4.375rem;
-  }
-}
-#blog .swiper-pagination-bullet:not(.swiper-pagination-bullet-active), #blog .blog-ctrl__item {
-  background-color: transparent;
-  transition: background-color 200ms ease-in-out;
-  stroke: #000;
-  fill: #000;
-}
-#blog .swiper-pagination-bullet:not(.swiper-pagination-bullet-active):hover, #blog .swiper-pagination-bullet:not(.swiper-pagination-bullet-active):focus, #blog .blog-ctrl__item:hover, #blog .blog-ctrl__item:focus {
-  background-color: #F9F9F9;
-}
-#blog .blog-ctrl {
-  gap: 0.44rem;
-  margin-top: 3.125rem;
-}
-@media screen and (min-width: 768px) {
-  #blog .blog-ctrl {
-    margin-top: min(7.5rem, 6.7416%);
-  }
 }
 
 #single-blog .hero {
