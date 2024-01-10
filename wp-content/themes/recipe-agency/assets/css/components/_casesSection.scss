@@ -1,12 +1,19 @@
 #cases {
   & .tag-list__item {
-    color: $primary-text-color;
+    color: $white-color;
     background-color: $white-color;
 
-    @media screen and (max-width: 991px) {
+    @media screen and (max-width: 767px) {
       padding: 0.72rem 0.88rem;
 
       background-color: $accent-color;
+    }
+
+    @media screen and (min-width: 768px){
+      padding: 0.94rem 1.25rem;
+      letter-spacing: -0.04219rem;
+
+      color: $primary-text-color;
     }
   }
 }
@@ -49,26 +56,26 @@
 .cases-list {
   row-gap: 1.56rem;
 
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 1920px) {
     row-gap: 2.5rem;
   }
 
   &.row {
-    --bs-gutter-x: 2.5rem;
+    @media screen and (min-width: 1920px) {
+      --bs-gutter-x: 2.5rem;
+    }
   }
 }
 
 .cases-list__link {
-  padding: 2.1875rem;
-
-  color: $white-color;
-
   @media screen and (max-width: 991px) {
     background-image: initial;
   }
 
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 768px) {
     aspect-ratio: 1 / calc(38.3125 / 54.375);
+
+    padding: min(2.1875rem, 4.023%);
 
     background-repeat: no-repeat;
     background-position: center;
@@ -76,24 +83,23 @@
 
     border-radius: $fourth-radius;
     overflow: hidden;
-  }
-}
 
-.cases-list__wrapper {
-  & > ul {
+    color: $white-color;
+  }
+
+  & .cases-list__thumb ul,
+  & .cases-list__wrapper > ul{
     display: flex;
     justify-content: flex-end;
-    gap: 0.1875rem;
+    width: 100%;
 
     & li {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
 
-      width: 7.5rem;
-      height: 6.875rem;
+      padding: 0.44rem;
 
-      padding: 0.94rem 0.56rem 0.94rem 0.94rem;
       border: 1px solid $sixth-bg-color;
       border-radius: $secondary-radius;
 
@@ -101,6 +107,7 @@
       backdrop-filter: blur(8.5px);
 
       font-family: 'Manrope', sans-serif;
+      color: $white-color;
 
       & h4 {
         margin-bottom: 0;
@@ -110,7 +117,7 @@
         font-weight: 500;
         letter-spacing: -0.03938rem;
 
-        @media screen and (min-width: 992px) {
+        @media screen and (min-width: 768px) {
           letter-spacing: -0.06188rem;
         }
       }
@@ -121,9 +128,67 @@
         font-size: clamp(0.563rem, 0.487rem + 0.32vw, 0.875rem);
         letter-spacing: -0.01406rem;
 
-        @media screen and (min-width: 992px) {
+        @media screen and (min-width: 768px) {
           letter-spacing: -0.03938rem;
         }
+      }
+    }
+  }
+}
+
+.cases-list__thumb {
+  padding: 0.75rem 0.63rem;
+  margin-bottom: 0.94rem;
+
+  aspect-ratio: 1 / calc(14.375 / 21.5625);
+  border-radius: $third-radius;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  & ul {
+    gap: 0.0625rem;
+
+    & li {
+      aspect-ratio: 1 / calc(3.875 / 4.375);
+
+      width: 21.55%;
+      max-width: 5.625rem;
+    }
+  }
+}
+
+.cases-list__wrapper {
+  & > div {
+    flex-shrink: 0;
+  }
+
+  & > ul {
+    gap: 0.1875rem;
+
+    @media screen and (max-width: 767px){
+      display: none !important;
+    }
+
+    @media screen and (min-width: 992px) and (max-width: 1439px){
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    & li {
+      aspect-ratio: 1 / calc(6.875 / 7.5);
+      width: 100%;
+      max-width: 7.5rem;
+
+      padding: 0.94rem 0.56rem 0.94rem 0.94rem;
+
+      @media screen and (max-width: 1439px){
+        max-width: 6.25rem;
+      }
+
+      @media screen and (min-width: 992px) and (max-width: 1199px){
+        width: 5rem;
       }
     }
   }
@@ -135,7 +200,7 @@
   font-size: clamp(1.313rem, 1.146rem + 0.71vw, 2rem);
   letter-spacing: -0.05906rem;
 
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 768px) {
     letter-spacing: -0.09rem;
   }
 }
@@ -146,7 +211,7 @@
   font-family: "Manrope", sans-serif;
   font-size: clamp(0.813rem, 0.752rem + 0.26vw, 1.063rem);
 
-  @media screen and (max-width: 991px) {
+  @media screen and (max-width: 767px) {
     margin-bottom: 0.75rem;
 
     letter-spacing: -0.02031rem;

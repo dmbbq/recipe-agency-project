@@ -9,7 +9,7 @@ $args = array(
 $categories = get_categories($args);
 ?>
 
-<ul class="filter-list d-flex flex-wrap">
+<ul class="filter-list flex-wrap d-none d-lg-flex">
     <li class="filter-list__item">
         <input type="checkbox" id="all" class="filter-list__input" value="all" checked>
         <label for="all" class="filter-list__label">

@@ -1,40 +1,14 @@
-import {renderEllipsisBullet} from "./utils";
-import Swiper from "swiper/bundle";
-
-let casesPageSwiper
-
 const casesSkeletonList = `
     <div class="skeleton-list row">
-        ${Array(4).fill(`
+        ${Array(2).fill(`
             <div class="skeleton-list__item col-lg-6">
                 <div class="skeleton-list__thumb"></div>
             </div>`).join('')}
     </div>`;
 
 $(document).ready(function ($) {
+    let page = 1;
     let categories = ['all'];
-
-    function initializeSwiper() {
-         casesPageSwiper = new Swiper('.cases-page-swiper', {
-            spaceBetween: 70,
-            slidesPerView: 1,
-            autoHeight: true,
-            allowTouchMove: false,
-            navigation: {
-                prevEl: ".cases-page-swiper.desk .prev",
-                nextEl: ".cases-page-swiper.desk .next"
-            },
-            pagination: {
-                el: '.cases-page-swiper.desk .swiper-pagination',
-                renderBullet: renderEllipsisBullet,
-            },
-            on: {
-                slideChange: function () {
-                    this.pagination.render();
-                },
-            }
-        });
-    }
 
     function loadPosts() {
         $('#cases .hero-content').html(casesSkeletonList);
@@ -44,15 +18,11 @@ $(document).ready(function ($) {
             type: 'post',
             data: {
                 action: 'filter_posts',
+                page: page,
                 categories: categories
             },
             success: function (response) {
                 $('#cases .hero-content').html(response);
-                if (casesPageSwiper && casesPageSwiper.destroy) {
-                    casesPageSwiper.destroy();
-                }
-
-                initializeSwiper();
             }
         });
     }
@@ -60,6 +30,7 @@ $(document).ready(function ($) {
     loadPosts();
 
     $('.filter-list input[type="checkbox"]').on('change', function () {
+        page = 1;
         const category = $(this).val();
         const index = categories.indexOf(category);
 
@@ -84,6 +55,23 @@ $(document).ready(function ($) {
             $('#all').prop('checked', true);
         }
 
+        loadPosts();
+    });
+
+    $(document).on('click', '.pagination button', function (e) {
+        e.preventDefault();
+        const action = $(this).attr('data-action');
+        if (action === 'next') {
+            page++;
+        } else if (action === 'prev') {
+            page--;
+        } else if (action === 'first') {
+            page = 1;
+        } else if (action === 'last') {
+            page = $(this).attr('data-last-page');
+        } else {
+            page = $(this).attr('data-page');
+        }
         loadPosts();
     });
 });

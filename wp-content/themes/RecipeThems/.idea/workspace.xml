@@ -5,23 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d9b00336-d57f-4bcf-ab54-a00826f04c0b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../recipe-agency/templates/pagination.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/components/singleService/_heroSection.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../recipe-agency/sections/servicesSection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../recipe-agency/sections/singleService/heroSection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../recipe-agency/single-services.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../recipe-agency/templates/casesPagination.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/css/base/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/base/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/css/components/blog/_heroSection.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/css/components/home/_aboutSection.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/components/home/_aboutSection.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/css/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/js/filterPosts.js" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/js/filterPosts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/js/refs.js" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/js/refs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/js/swiper.js" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/js/swiper.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../recipe-agency/dist/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/dist/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../recipe-agency/dist/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/dist/css/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../recipe-agency/dist/js/main.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/dist/js/main.bundle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../recipe-agency/dist/js/main.bundle.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/dist/js/main.bundle.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/templates/blog/blogList.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/templates/blog/blogList.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/templates/blogCtrl.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/sections/services/heroSection.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../recipe-agency/templates/cases/casesList.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/templates/cases/casesList.php" afterDir="false" />
     </list>
-    <list id="4d1a8957-bea8-4a10-b9af-bda5b05ba84b" name="Changes by eduardbrugos" comment="" />
+    <list id="4d1a8957-bea8-4a10-b9af-bda5b05ba84b" name="Changes by eduardbrugos" comment="">
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/css/components/_casesSection.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/components/_casesSection.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/css/components/_pagination.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/components/_pagination.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/js/filterPosts.js" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/js/filterPosts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/pages/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/pages/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/pages/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/pages/services.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/sections/cases/filter.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/sections/cases/filter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/sections/home/heroSection.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/sections/home/heroSection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/templates/cases/casesList.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/templates/cases/casesList.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,6 +41,18 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/../recipe-agency/templates/cases/casesList.php">
+      <ranges>
+        <range start1="2" end1="2" start2="2" end2="4" changelist="4d1a8957-bea8-4a10-b9af-bda5b05ba84b" />
+        <range start1="4" end1="5" start2="6" end2="8" changelist="d9b00336-d57f-4bcf-ab54-a00826f04c0b" />
+        <range start1="22" end1="29" start2="25" end2="25" changelist="d9b00336-d57f-4bcf-ab54-a00826f04c0b" />
+        <range start1="30" end1="123" start2="26" end2="63" changelist="d9b00336-d57f-4bcf-ab54-a00826f04c0b" />
+        <range start1="124" end1="126" start2="64" end2="64" changelist="d9b00336-d57f-4bcf-ab54-a00826f04c0b" />
+        <range start1="130" end1="130" start2="68" end2="69" changelist="d9b00336-d57f-4bcf-ab54-a00826f04c0b" />
+      </ranges>
+    </file>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/usr/local/Cellar/php/8.3.1/bin/php" />
   <component name="ProjectId" id="2aVF9H4Hmn53B0fA8NT1IU9IUuD" />

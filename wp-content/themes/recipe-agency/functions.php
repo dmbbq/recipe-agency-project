@@ -128,7 +128,8 @@ $strings_to_translate = array(
     'privacy_policy' => 'Політика конфіденційності',
     'design' => 'Дизайн сайту',
     'email' => 'Електронна пошта',
-    'all_services' => 'Всі послуги'
+    'all_services' => 'Всі послуги',
+    'no_cases' => "Кейси обраної категорії з'являться згодом."
 );
 
 if (function_exists('pll_register_string')) {

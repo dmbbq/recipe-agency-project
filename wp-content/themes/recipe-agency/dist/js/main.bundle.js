@@ -17,39 +17,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_array_index_of_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_index_of_js__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var core_js_modules_es_array_splice_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.array.splice.js */ "./node_modules/core-js/modules/es.array.splice.js");
 /* harmony import */ var core_js_modules_es_array_splice_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_splice_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./utils */ "./assets/js/utils.js");
-/* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! swiper/bundle */ "./node_modules/swiper/swiper-bundle.mjs");
 
 
 
 
-
-
-var casesPageSwiper;
-var casesSkeletonList = "\n    <div class=\"skeleton-list row\">\n        ".concat(Array(4).fill("\n            <div class=\"skeleton-list__item col-lg-6\">\n                <div class=\"skeleton-list__thumb\"></div>\n            </div>").join(''), "\n    </div>");
+var casesSkeletonList = "\n    <div class=\"skeleton-list row\">\n        ".concat(Array(2).fill("\n            <div class=\"skeleton-list__item col-lg-6\">\n                <div class=\"skeleton-list__thumb\"></div>\n            </div>").join(''), "\n    </div>");
 $(document).ready(function ($) {
+  var page = 1;
   var categories = ['all'];
-  function initializeSwiper() {
-    casesPageSwiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_5__["default"]('.cases-page-swiper', {
-      spaceBetween: 70,
-      slidesPerView: 1,
-      autoHeight: true,
-      allowTouchMove: false,
-      navigation: {
-        prevEl: ".cases-page-swiper.desk .prev",
-        nextEl: ".cases-page-swiper.desk .next"
-      },
-      pagination: {
-        el: '.cases-page-swiper.desk .swiper-pagination',
-        renderBullet: _utils__WEBPACK_IMPORTED_MODULE_4__.renderEllipsisBullet
-      },
-      on: {
-        slideChange: function slideChange() {
-          this.pagination.render();
-        }
-      }
-    });
-  }
   function loadPosts() {
     $('#cases .hero-content').html(casesSkeletonList);
     $.ajax({
@@ -57,19 +32,17 @@ $(document).ready(function ($) {
       type: 'post',
       data: {
         action: 'filter_posts',
+        page: page,
         categories: categories
       },
       success: function success(response) {
         $('#cases .hero-content').html(response);
-        if (casesPageSwiper && casesPageSwiper.destroy) {
-          casesPageSwiper.destroy();
-        }
-        initializeSwiper();
       }
     });
   }
   loadPosts();
   $('.filter-list input[type="checkbox"]').on('change', function () {
+    page = 1;
     var category = $(this).val();
     var index = categories.indexOf(category);
     if (category === 'all' && $(this).prop('checked')) {
@@ -89,6 +62,22 @@ $(document).ready(function ($) {
     if (categories.length === 0) {
       categories.push('all');
       $('#all').prop('checked', true);
+    }
+    loadPosts();
+  });
+  $(document).on('click', '.pagination button', function (e) {
+    e.preventDefault();
+    var action = $(this).attr('data-action');
+    if (action === 'next') {
+      page++;
+    } else if (action === 'prev') {
+      page--;
+    } else if (action === 'first') {
+      page = 1;
+    } else if (action === 'last') {
+      page = $(this).attr('data-last-page');
+    } else {
+      page = $(this).attr('data-page');
     }
     loadPosts();
   });

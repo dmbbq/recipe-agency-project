@@ -2,7 +2,7 @@
     <div class="container">
         <div class="hero-content-wrapper d-lg-flex justify-content-between align-items-center">
 
-            <h1 class="title hero-title">
+            <h1 class="hero-title">
                 <?php the_field('hero_title');?>
             </h1>
             <p class="hero-uppertitle">

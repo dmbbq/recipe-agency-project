@@ -18,6 +18,14 @@
   }
 }
 
+.pagination__item {
+  &.current {
+    border-color: $accent-color;
+    background-color: $accent-color;
+    color: $white-color;
+  }
+}
+
 .swiper-pagination-bullet,
 .pagination__item {
   border-radius: 0.5rem;
@@ -48,7 +56,7 @@
 }
 
 .swiper-pagination-bullet:not(.swiper-pagination-bullet-active),
-.pagination__item {
+.pagination__item:not(.current) {
   @include hover(background-color transparent $secondary-bg-color);
 
   stroke: $black-color;

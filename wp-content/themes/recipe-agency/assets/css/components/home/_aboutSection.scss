@@ -1,7 +1,11 @@
 #home {
   & .about-section {
-    border-top: 1px solid white;
     border-radius: 2.5rem;
+    background-color: $white-color;
+  }
+
+  & .hero{
+    //margin-bottom: max(-2.0834%, -2.5rem);
   }
 
   & .owners-list {
