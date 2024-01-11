@@ -6,7 +6,7 @@ $image_url_mob = get_field('single_hero_image_mob');
 <section class="hero">
     <div class="container d-flex align-items-end h-100">
         <div class="w-100">
-            <h1 class="title">
+            <h1 class="hero-title">
                 <?php the_field('title'); ?>
             </h1>
             <div class="hero-content d-md-flex justify-content-md-between align-items-md-center">

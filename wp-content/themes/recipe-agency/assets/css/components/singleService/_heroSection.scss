@@ -48,7 +48,9 @@
 
   & .hero-wrapper__content{
 
-    @media screen and (min-width: 992px) {
+    @media screen and (max-width: 991px) {
+
+      margin-bottom: 1.56rem;
 
     }
     & p{

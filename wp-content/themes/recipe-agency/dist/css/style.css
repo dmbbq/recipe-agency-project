@@ -13697,6 +13697,11 @@ h1 {
     max-width: 33.75rem;
   }
 }
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 71.25rem;
+  }
+}
 @media screen and (min-width: 1440px) {
   .container {
     max-width: 120rem;
@@ -15032,6 +15037,16 @@ form br {
   }
 }
 
+.all-cases-link {
+  margin-top: 2.5rem;
+  height: 3.5rem;
+}
+@media screen and (min-width: 992px) {
+  .all-cases-link {
+    margin-top: 5rem;
+  }
+}
+
 .swiper-pagination {
   all: unset !important;
 }
@@ -15115,38 +15130,51 @@ form br {
   position: relative;
   display: flex;
   align-items: flex-end;
-  aspect-ratio: 1/2.0106666667;
-  padding-bottom: 4.37rem;
+  padding-bottom: 5.375rem;
+  margin-bottom: -1rem;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-@media screen and (min-width: 1440px) {
+@media screen and (max-width: 991px) {
   #home .hero {
-    aspect-ratio: 1/0.5485714286;
+    height: 48.125rem;
   }
 }
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 992px) {
   #home .hero {
-    aspect-ratio: 1/0.5625;
-    padding-bottom: 5.31rem;
+    aspect-ratio: 1/0.5833333333;
+    padding-bottom: min(9.5625rem, 7.969%);
+    margin-bottom: -2.5rem;
   }
 }
 #home .hero-title {
   margin-bottom: 1.25rem;
+  font-size: clamp(2.125rem, 1.275rem + 3.62vw, 5.625rem);
   line-height: 1.13;
   color: #FFF;
 }
 @media screen and (min-width: 992px) {
   #home .hero-title {
-    max-width: 81.9375rem;
-    margin: 0;
     line-height: 1.25;
   }
 }
+@media screen and (min-width: 1200px) {
+  #home .hero-title {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 1440px) {
+  #home .hero-title {
+    flex: 0 0 auto;
+    width: 83.3333333%;
+  }
+}
 #home .hero-title strong {
+  font-size: clamp(2.125rem, 1.275rem + 3.62vw, 5.625rem);
   line-height: 1.13;
   color: #72AFFF;
+  display: inline-block;
 }
 @media screen and (min-width: 992px) {
   #home .hero-title strong {
@@ -15168,25 +15196,37 @@ form br {
   }
 }
 #home .hero-button {
-  margin-bottom: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.31rem;
   padding: 0 1.25rem;
-  font-size: 0.8125rem;
+  height: 3.25rem;
+  font-size: clamp(0.813rem, 0.706rem + 0.45vw, 1.25rem);
   line-height: 1.2500061538;
   letter-spacing: -0.02031rem;
+  border-radius: 0.3125rem;
   color: #FFF;
   background-color: #72AFFF;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
+  #home .hero-button {
+    width: 12.875rem;
+    height: 12.875rem;
+    flex-shrink: 0;
+    padding: 4.375rem 1.9375rem;
+    margin: 0;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 1.25;
+    letter-spacing: -0.03125rem;
+  }
+}
+@media screen and (min-width: 1920px) {
   #home .hero-button {
     width: 15.875rem;
     height: 15.875rem;
     padding: 6.375rem 2.9375rem;
-    margin: 0;
-    text-align: center;
-    font-size: 1.25rem;
-    border-radius: 50%;
-    line-height: 1.25;
-    letter-spacing: -0.03125rem;
   }
 }
 #home .hero-button::after {
@@ -15213,16 +15253,29 @@ form br {
     max-width: 26.0058rem;
     margin: 0;
     right: 12.441%;
-    top: 50%;
+    top: 30.09%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #home .hero-uppertitle {
+    top: 40.09%;
   }
 }
 #home .pre-title_icon {
   flex-shrink: 0;
 }
 
+#home .section {
+  overflow: visible;
+}
 #home .about-section {
-  border-radius: 2.5rem;
+  border-radius: 0.9375rem;
   background-color: #FFF;
+}
+@media screen and (min-width: 992px) {
+  #home .about-section {
+    border-radius: 2.5rem;
+  }
 }
 #home .owners-list {
   margin-bottom: 2.19rem;
@@ -15236,7 +15289,6 @@ form br {
   justify-content: center;
 }
 #home .about-title {
-  max-width: 21.5625rem;
   margin-bottom: 2.19rem;
   font-size: clamp(1.625rem, 1.2rem + 1.81vw, 3.375rem);
   line-height: 1.25;
@@ -15251,24 +15303,14 @@ form br {
   }
 }
 #home .about-title strong {
-  font-size: 1.625rem;
-  line-height: 1.25;
-  letter-spacing: -0.07313rem;
   color: #72AFFF;
-}
-@media screen and (min-width: 992px) {
-  #home .about-title strong {
-    font-size: 3.375rem;
-    line-height: 1.25;
-    letter-spacing: -0.15188rem;
-  }
 }
 #home .benefits-wrapper ul {
   display: flex;
-  flex-direction: column;
   gap: 0.63rem;
+  flex-direction: column;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
   #home .benefits-wrapper ul {
     flex-direction: row;
     gap: 1.25rem;
@@ -15277,15 +15319,25 @@ form br {
 #home .benefits-wrapper ul li {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
   padding: 1.56rem;
   font-family: "Manrope", sans-serif;
   background-color: #F9F9F9;
   border-radius: 0.625rem;
 }
+@media screen and (min-width: 768px) {
+  #home .benefits-wrapper ul li {
+    flex-basis: calc((100% - 1.25rem) / 2);
+  }
+}
 @media screen and (min-width: 992px) {
   #home .benefits-wrapper ul li {
-    padding: 3.125rem 0 2.94rem 3.15rem;
+    padding: 3.125rem 3.15rem 2.94rem 3.15rem;
+    border-radius: 0.9375rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  #home .benefits-wrapper ul li {
+    padding: 2.125rem 3.81rem 1.94rem 2.15rem;
     border-radius: 0.9375rem;
   }
 }
@@ -15300,42 +15352,41 @@ form br {
     max-width: 12.625rem;
   }
 }
-#home .benefits-wrapper ul li h2 {
+#home .benefits-wrapper ul li h3 {
   margin-top: 1.87rem;
   margin-bottom: 0.94rem;
-  font-size: 1.25rem;
+  font-size: clamp(1.25rem, 1.068rem + 0.78vw, 2rem);
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: -0.0125rem;
 }
 @media screen and (min-width: 992px) {
-  #home .benefits-wrapper ul li h2 {
+  #home .benefits-wrapper ul li h3 {
     margin-top: 6.06rem;
     margin-bottom: 1.56rem;
-    font-size: 2rem;
     line-height: 1.25;
     font-weight: 600;
     letter-spacing: -0.04rem;
   }
 }
-#home .benefits-wrapper ul li h2 strong {
-  font-size: 1.25rem;
-  font-weight: 500;
-  line-height: 1.2;
-  letter-spacing: -0.0125rem;
+#home .benefits-wrapper ul li h3 strong {
+  font-weight: inherit;
   color: #72AFFF;
 }
-@media screen and (min-width: 992px) {
-  #home .benefits-wrapper ul li h2 strong {
-    font-size: 2rem;
-    font-weight: 600;
-    letter-spacing: -0.04rem;
+@media screen and (max-width: 575px) {
+  #home .benefits-wrapper ul li h3 br {
+    display: none;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1439px) {
+  #home .benefits-wrapper ul li h3 br {
+    display: none;
   }
 }
 #home .benefits-wrapper ul li p {
   margin: 0;
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1919px) {
   #home .benefits-wrapper ul li p br {
     display: none;
   }
@@ -15346,15 +15397,15 @@ form br {
 #home .benefits-link {
   display: flex;
   height: 3.3125rem;
-  font-size: 0.8125rem;
+  font-size: clamp(0.813rem, 0.585rem + 0.97vw, 1.75rem);
   letter-spacing: -0.02031rem;
   border-radius: 0.3125rem;
   color: #FFF;
   background-color: #72AFFF;
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1399px) {
   #home .benefits-link {
-    margin-top: 0.62rem;
+    margin-top: 1.25rem;
     align-items: center;
     justify-content: center;
     background-image: url(../f86ae4ba0245da2dc8c8.svg);
@@ -15363,7 +15414,7 @@ form br {
     background-size: 1.5rem;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1400px) {
   #home .benefits-link {
     align-items: flex-end;
     justify-content: flex-start;
@@ -15374,7 +15425,6 @@ form br {
     padding-left: 2.81rem;
     padding-bottom: 2.81rem;
     height: 100%;
-    font-size: 1.75rem;
     line-height: 1.75rem;
     letter-spacing: -0.07875rem;
     border-radius: 0.9375rem;
@@ -15405,7 +15455,7 @@ form br {
 }
 @media screen and (min-width: 992px) {
   #home .processes-wrapper__content {
-    padding: 4.38rem;
+    padding: min(4.375rem, 7.2165%);
   }
 }
 #home .processes-wrapper__content h3 {
@@ -15424,6 +15474,7 @@ form br {
 #home .processes-wrapper__content h3 strong {
   position: relative;
   z-index: 1;
+  display: inline-block;
   font-size: clamp(1.875rem, 1.42rem + 1.94vw, 3.75rem);
   font-weight: 400;
   letter-spacing: -0.08438rem;
@@ -15468,7 +15519,6 @@ form br {
 #home .processes-wrapper__link {
   height: 3.3125rem;
   position: relative;
-  margin-top: auto;
   font-size: clamp(0.813rem, 0.737rem + 0.32vw, 1.125rem);
   letter-spacing: -0.02031rem;
   border: 1px solid transparent;
@@ -15567,8 +15617,8 @@ form br {
 }
 @media screen and (min-width: 1440px) {
   .services-list__item {
-    flex-basis: calc((100% - 1.25rem) / 2);
-    padding: 2.56rem 5.06rem 2.81rem 2.81rem;
+    flex-basis: calc((100% - 2.5rem) / 3);
+    padding: 1.56rem 3.06rem 1.81rem 1.81rem;
   }
 }
 @media screen and (min-width: 1920px) {
@@ -16132,7 +16182,18 @@ form br {
 }
 
 #contacts .owners-list {
-  margin-bottom: 3.75rem;
+  margin-bottom: 1.875rem;
+}
+@media screen and (min-width: 1440px) {
+  #contacts .owners-list {
+    margin-bottom: 3.75rem;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #contacts .contacts-content-wrapper {
+    flex: 0 0 auto;
+    width: 50%;
+  }
 }
 #contacts .contacts-list {
   gap: 1.56rem 0;
@@ -16141,7 +16202,12 @@ form br {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 992px) and (max-width: 1919px) {
+  #contacts .contacts-list {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 1920px) {
   #contacts .contacts-list {
     gap: 3.75rem 0;
     margin-bottom: 3.75rem;
@@ -16172,6 +16238,12 @@ form br {
     max-width: 27.3125rem;
     line-height: 1.55;
     letter-spacing: -0.06188rem;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #contacts .contacts-thumb-wrapper {
+    flex: 0 0 auto;
+    width: 41.66666667%;
   }
 }
 #contacts .contacts-wrapper__thumb {
@@ -16627,6 +16699,11 @@ form br {
     border-radius: 1.5625rem;
     border: 1px solid #F9F9F9;
     background-color: #F9F9F9;
+  }
+}
+@media screen and (max-width: 991px) {
+  #single-service .hero-wrapper__content {
+    margin-bottom: 1.56rem;
   }
 }
 #single-service .hero-wrapper__content p {

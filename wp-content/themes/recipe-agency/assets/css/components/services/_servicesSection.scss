@@ -28,6 +28,8 @@
         line-height: calc(1.4875 / 0.875);
         letter-spacing: -0.02188rem;
       }
+
+
     }
   }
 }
@@ -49,8 +51,8 @@
 
   @media screen and (min-width: 1440px) {
 
-    flex-basis: calc((100% - 1.25rem) / 2);
-    padding: 2.56rem 5.06rem 2.81rem 2.81rem;
+    flex-basis: calc((100% - 2.5rem) / 3);
+    padding: 1.56rem 3.06rem 1.81rem 1.81rem;
   }
   @media screen and (min-width: 1920px) {
 

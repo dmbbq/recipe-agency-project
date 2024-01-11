@@ -1,17 +1,22 @@
 #home {
-  & .about-section {
-    border-radius: 2.5rem;
-    background-color: $white-color;
+
+  & .section {
+    overflow: visible;
   }
 
-  & .hero{
-    //margin-bottom: max(-2.0834%, -2.5rem);
+  & .about-section {
+    border-radius: 0.9375rem;
+    background-color: $white-color;
+
+    @media screen and (min-width: 992px) {
+      border-radius: 2.5rem;
+    }
   }
 
   & .owners-list {
     margin-bottom: 2.19rem;
 
-    @media screen and (min-width: 992px){
+    @media screen and (min-width: 992px) {
       margin-bottom: 4.06rem
     }
 
@@ -21,10 +26,7 @@
   }
 
   & .about-title {
-    max-width: 21.5625rem;
-
     margin-bottom: 2.19rem;
-
 
     font-size: clamp(1.625rem, 1.2rem + 1.81vw, 3.375rem);
     line-height: calc(2.03125 / 1.625);
@@ -40,39 +42,24 @@
     }
 
     & strong {
-      font-size: 1.625rem;
-      line-height: calc(2.03125 / 1.625);
-      letter-spacing: -0.07313rem;
-
       color: $accent-color;
-
-      @media screen and (min-width: 992px) {
-        font-size: 3.375rem;
-
-        line-height: calc(4.21875 / 3.375);
-
-        letter-spacing: -0.15188rem;
-      }
     }
   }
 
   & .benefits-wrapper {
     & ul {
       display: flex;
-      flex-direction: column;
       gap: 0.63rem;
+      flex-direction: column;
 
-
-      @media screen and (min-width: 992px) {
+      @media screen and (min-width: 768px) {
         flex-direction: row;
         gap: 1.25rem;
-
       }
 
       & li {
         display: flex;
         flex-direction: column;
-        flex-grow: 1;
 
         padding: 1.56rem;
 
@@ -81,8 +68,17 @@
         background-color: $secondary-bg-color;
         border-radius: $fourth-radius;
 
+        @media screen and (min-width: 768px) {
+          flex-basis: calc((100% - 1.25rem) / 2);
+        }
+
         @media screen and (min-width: 992px) {
-          padding: 3.125rem 0 2.94rem 3.15rem;
+          padding: 3.125rem 3.15rem 2.94rem 3.15rem;
+          border-radius: $primary-radius;
+        }
+
+        @media screen and (min-width: 1440px) {
+          padding: 2.125rem 3.81rem 1.94rem 2.15rem;
           border-radius: $primary-radius;
         }
 
@@ -99,40 +95,36 @@
           }
         }
 
-        & h2 {
+        & h3 {
           margin-top: 1.87rem;
-
-
           margin-bottom: 0.94rem;
 
-          font-size: 1.25rem;
+          font-size: clamp(1.25rem, 1.068rem + 0.78vw, 2rem);
           font-weight: 500;
           line-height: calc(1.5 / 1.25);
           letter-spacing: -0.0125rem;
 
           @media screen and (min-width: 992px) {
             margin-top: 6.06rem;
-
             margin-bottom: 1.56rem;
 
-            font-size: 2rem;
             line-height: calc(2.5 / 2);
             font-weight: 600;
             letter-spacing: -0.04rem;
           }
 
           & strong {
-            font-size: 1.25rem;
-            font-weight: 500;
-            line-height: calc(1.5 / 1.25);
-            letter-spacing: -0.0125rem;
-
+            font-weight: inherit;
             color: $accent-color;
+          }
 
-            @media screen and (min-width: 992px) {
-              font-size: 2rem;
-              font-weight: 600;
-              letter-spacing: -0.04rem;
+          & br {
+            @media screen and (max-width: 575px) {
+              display: none;
+            }
+
+            @media screen and (min-width: 992px) and (max-width: 1439px){
+              display: none;
             }
           }
         }
@@ -141,7 +133,7 @@
           margin: 0;
 
           & br {
-            @media screen and (max-width: 991px){
+            @media screen and (max-width: 1919px) {
               display: none;
             }
           }
@@ -159,15 +151,15 @@
 
     height: 3.3125rem;
 
-    font-size: 0.8125rem;
+    font-size: clamp(0.813rem, 0.585rem + 0.97vw, 1.75rem);
     letter-spacing: -0.02031rem;
     border-radius: 0.3125rem;
 
     color: $white-color;
     background-color: $accent-color;
 
-    @media screen and (max-width: 991px) {
-      margin-top: 0.62rem;
+    @media screen and (max-width: 1399px) {
+      margin-top: 1.25rem;
 
       align-items: center;
       justify-content: center;
@@ -179,7 +171,7 @@
 
     }
 
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: 1400px) {
       align-items: flex-end;
       justify-content: flex-start;
 
@@ -193,7 +185,6 @@
 
       height: 100%;
 
-      font-size: 1.75rem;
       line-height: 1.75rem;
       letter-spacing: -0.07875rem;
 

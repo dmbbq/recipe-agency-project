@@ -17,6 +17,8 @@
 
 <main id="single-service">
     <?php get_template_part('sections/singleService/heroSection'); ?>
+    <?php get_template_part('sections/singleService/advertSection'); ?>
+
 </main>
 
 <?= get_footer(); ?>

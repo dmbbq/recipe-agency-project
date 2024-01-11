@@ -33,7 +33,7 @@ $is_black_theme = in_array($page_id, array(132, 129, 140, 138, 124, 121, 136, 13
 
                 <?php get_template_part('templates/languagesList'); ?>
 
-                <button class="button-primary d-none d-lg-flex">
+                <button class="button-primary d-none d-xl-flex">
                     <?= translate_and_output('write_us'); ?>
                 </button>
 

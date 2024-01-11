@@ -11,7 +11,7 @@ $processes_image = get_field('processes_image');
                     <p>
                         <?php the_field('processes_text'); ?>
                     </p>
-                    <a class="processes-wrapper__link d-flex align-items-center justify-content-center" href="#">
+                    <a class="processes-wrapper__link mt-auto d-flex align-items-center justify-content-center" href="#">
                         <?= translate_and_output('leave_statement'); ?>
                     </a>
                 </div>

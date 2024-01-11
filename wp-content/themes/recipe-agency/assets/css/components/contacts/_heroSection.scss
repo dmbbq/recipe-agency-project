@@ -1,6 +1,17 @@
 #contacts{
   & .owners-list{
-    margin-bottom: 3.75rem;
+    margin-bottom: 1.875rem;
+
+    @media screen and (min-width: 1440px){
+      margin-bottom: 3.75rem;
+    }
+  }
+
+  & .contacts-content-wrapper {
+    @media screen and (min-width: 1920px){
+      flex: 0 0 auto;
+      width: 50%;
+    }
   }
 
   & .contacts-list{
@@ -11,10 +22,13 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: 992px) and (max-width: 1919px){
+      flex-direction: column;
+    }
+
+    @media screen and (min-width: 1920px) {
       gap: 3.75rem 0;
       margin-bottom: 3.75rem;
-
     }
   }
 
@@ -46,6 +60,13 @@
 
       line-height: calc(2.13125 / 1.375);
       letter-spacing: -0.06188rem;
+    }
+  }
+
+  & .contacts-thumb-wrapper {
+    @media screen and (min-width: 1920px){
+      flex: 0 0 auto;
+      width: 41.66666667%;
     }
   }
 

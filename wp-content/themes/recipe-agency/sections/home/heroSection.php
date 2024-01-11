@@ -1,8 +1,8 @@
 <section class="hero">
     <div class="container">
-        <div class="hero-content-wrapper d-lg-flex justify-content-between align-items-center">
+        <div class="hero-content-wrapper d-xl-flex justify-content-between align-items-center">
 
-            <h1 class="hero-title">
+            <h1 class="hero-title col-xl-7">
                 <?php the_field('hero_title');?>
             </h1>
             <p class="hero-uppertitle">

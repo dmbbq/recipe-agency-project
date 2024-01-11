@@ -28,7 +28,7 @@
     padding: 2.19rem 1rem;
 
     @media screen and (min-width: 992px) {
-      padding: 4.38rem;
+      padding: min(4.375rem, 7.2165%);
     }
 
     & h3 {
@@ -50,6 +50,7 @@
       & strong {
         position: relative;
         z-index: 1;
+        display: inline-block;
 
         font-size: clamp(1.875rem, 1.42rem + 1.94vw, 3.75rem);
         font-weight: 400;
@@ -101,8 +102,6 @@
   & .processes-wrapper__link {
     height: 3.3125rem;
     position: relative;
-
-    margin-top: auto;
 
     font-size: clamp(0.813rem, 0.737rem + 0.32vw, 1.125rem);
     letter-spacing: -0.02031rem;

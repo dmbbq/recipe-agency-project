@@ -16,7 +16,7 @@ $contacts_image = get_field('info_image');
             <?php the_field('contacts_title');?>
         </h1>
         <div class="contacts-wrapper justify-content-between row">
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-xl-5 contacts-content-wrapper">
                 <div class="contacts-wrapper__content">
                     <?php get_template_part('templates/ownersList'); ?>
                     <ul class="contacts-list">
@@ -68,7 +68,7 @@ $contacts_image = get_field('info_image');
                         <?php get_template_part('templates/socialsList'); ?></div>
                 </div>
             </div>
-            <div class="col-lg-5 d-none d-xl-block">
+            <div class="col-lg-6 col-xl-6 d-none d-lg-block contacts-thumb-wrapper">
                 <div class="contacts-wrapper__thumb ">
                     <?php echo wp_get_attachment_image($contacts_image, 'full', false, array('class' => '')); ?>
                 </div>
