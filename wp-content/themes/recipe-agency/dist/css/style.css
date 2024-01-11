@@ -16727,6 +16727,126 @@ form br {
   }
 }
 
+#question h2 {
+  margin-bottom: 2.19rem;
+  font-size: clamp(1.625rem, 1.443rem + 0.78vw, 2.375rem);
+  letter-spacing: -0.07313rem;
+}
+@media screen and (min-width: 992px) {
+  #question h2 {
+    max-width: 64.0625rem;
+    margin-bottom: 5rem;
+    letter-spacing: -0.16875rem;
+  }
+}
+#question h2 strong {
+  color: #72AFFF;
+}
+#question ul {
+  display: flex;
+  gap: 0.31rem;
+  flex-direction: column;
+}
+@media screen and (min-width: 1200px) {
+  #question ul {
+    flex-direction: row;
+    gap: 0.75rem;
+  }
+}
+#question ul li {
+  display: flex;
+  flex-direction: column;
+  padding: 1.56rem;
+  background-color: #F9F9F9;
+  border-radius: 0.625rem;
+}
+@media screen and (min-width: 1200px) {
+  #question ul li {
+    flex-basis: calc((100% - 1.5rem) / 3);
+  }
+}
+@media screen and (min-width: 992px) {
+  #question ul li {
+    padding: 3.125rem 3.15rem 2.94rem 3.15rem;
+    border-radius: 0.9375rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #question ul li {
+    padding: 2.125rem 2.15rem 1.94rem 2.15rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  #question ul li {
+    padding: 3.13rem;
+    border-radius: 0.9375rem;
+  }
+}
+#question ul li img {
+  aspect-ratio: 1/1;
+  max-width: 7.1875rem;
+  margin-bottom: auto;
+}
+@media screen and (min-width: 992px) {
+  #question ul li img {
+    aspect-ratio: 1/1;
+    max-width: 12.625rem;
+  }
+}
+#question ul li h3 {
+  margin-top: 1.87rem;
+  margin-bottom: 0.94rem;
+  font-family: "Unbounded", sans-serif;
+  font-size: clamp(1.25rem, 1.068rem + 0.78vw, 2rem);
+  line-height: 1.2;
+  letter-spacing: -0.05906rem;
+}
+@media screen and (min-width: 992px) {
+  #question ul li h3 {
+    margin-top: 4.25rem;
+    margin-bottom: 1.56rem;
+    line-height: 1.25;
+    letter-spacing: -0.04rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  #question ul li h3 {
+    margin-top: 6.25rem;
+  }
+}
+#question ul li h3 strong {
+  font-weight: inherit;
+  color: #72AFFF;
+}
+@media screen and (max-width: 575px) {
+  #question ul li h3 br {
+    display: none;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1439px) {
+  #question ul li h3 br {
+    display: none;
+  }
+}
+#question ul li p {
+  margin: 0;
+  opacity: 0.7;
+  font-family: "Manrope", sans-serif;
+}
+@media screen and (min-width: 992px) {
+  #question ul li p {
+    letter-spacing: -0.02656rem;
+  }
+}
+@media screen and (max-width: 1919px) {
+  #question ul li p br {
+    display: none;
+  }
+}
+#question ul li > br {
+  display: none;
+}
+
 body.not-found {
   background-color: #010101;
 }

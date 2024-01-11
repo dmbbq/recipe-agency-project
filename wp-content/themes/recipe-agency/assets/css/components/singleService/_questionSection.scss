@@ -1,0 +1,140 @@
+#question {
+  h2 {
+    margin-bottom: 2.19rem;
+    font-size: clamp(1.625rem, 1.443rem + 0.78vw, 2.375rem);
+    letter-spacing: -0.07313rem;
+
+    @media screen and (min-width: 992px) {
+      max-width: 64.0625rem;
+
+      margin-bottom: 5rem;
+
+      letter-spacing: -0.16875rem;
+
+    }
+
+    & strong {
+      color: $accent-color;
+    }
+  }
+
+  & ul {
+    display: flex;
+    gap: 0.31rem;
+    flex-direction: column;
+
+    @media screen and (min-width: 1200px) {
+      flex-direction: row;
+      gap: 0.75rem;
+    }
+
+    & li {
+      display: flex;
+      flex-direction: column;
+
+      padding: 1.56rem;
+
+
+
+      background-color: $secondary-bg-color;
+      border-radius: $fourth-radius;
+
+
+
+      @media screen and (min-width: 1200px) {
+        flex-basis: calc((100% - 1.5rem) / 3);
+      }
+
+      @media screen and (min-width: 992px) {
+        padding: 3.125rem 3.15rem 2.94rem 3.15rem;
+        border-radius: $primary-radius;
+      }
+
+      @media screen and (min-width: 1200px) {
+        padding: 2.125rem 2.15rem 1.94rem 2.15rem;
+      }
+
+      @media screen and (min-width: 1440px) {
+        padding: 3.13rem;
+        border-radius: $primary-radius;
+      }
+
+      & img {
+        aspect-ratio: 1 / calc(7.1875 / 7.1875);
+        max-width: 7.1875rem;
+
+        margin-bottom: auto;
+
+        @media screen and (min-width: 992px) {
+          aspect-ratio: 1 / calc(11.625 / 11.625);
+
+          max-width: 12.625rem;
+        }
+      }
+
+      & h3 {
+        margin-top: 1.87rem;
+        margin-bottom: 0.94rem;
+
+        font-family: 'Unbounded', sans-serif;
+        font-size: clamp(1.25rem, 1.068rem + 0.78vw, 2rem);
+        line-height: calc(1.5 / 1.25);
+        letter-spacing: -0.05906rem;
+
+        @media screen and (min-width: 992px) {
+          margin-top: 4.25rem;
+          margin-bottom: 1.56rem;
+
+          line-height: calc(2.5 / 2);
+          letter-spacing: -0.04rem;
+        }
+
+        @media screen and (min-width: 1440px) {
+          margin-top: 6.25rem;
+
+        }
+
+        & strong {
+          font-weight: inherit;
+          color: $accent-color;
+        }
+
+        & br {
+          @media screen and (max-width: 575px) {
+            display: none;
+          }
+
+          @media screen and (min-width: 992px) and (max-width: 1439px){
+            display: none;
+          }
+        }
+      }
+
+      & p {
+        margin: 0;
+        opacity: 0.7;
+
+        font-family: 'Manrope', sans-serif;
+
+        @media screen and (min-width: 992px){
+          letter-spacing: -0.02656rem;
+        }
+
+
+        & br {
+          @media screen and (max-width: 1919px) {
+            display: none;
+          }
+        }
+      }
+
+      & > br {
+        display: none;
+      }
+    }
+  }
+}
+
+
+
+

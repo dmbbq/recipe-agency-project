@@ -5,32 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d9b00336-d57f-4bcf-ab54-a00826f04c0b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../recipe-agency/sections/home/casesSection.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../recipe-agency/sections/singleService/advertSection.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../recipe-agency/templates/home/casesList.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/components/singleService/_questionSection.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../recipe-agency/sections/singleService/questionSection.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/css/base/_common.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/base/_common.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/css/components/_casesSection.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/components/_casesSection.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/css/components/contacts/_heroSection.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/components/contacts/_heroSection.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/css/components/home/_aboutSection.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/components/home/_aboutSection.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/css/components/home/_heroSection.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/components/home/_heroSection.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/css/components/home/_processesSection.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/components/home/_processesSection.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/css/components/singleService/_heroSection.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/components/singleService/_heroSection.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/css/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/main.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../recipe-agency/dist/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/dist/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../recipe-agency/dist/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/dist/css/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/pages/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/pages/home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/sections/contacts/heroSection.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/sections/contacts/heroSection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/sections/home/aboutSection.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/sections/home/aboutSection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/sections/home/heroSection.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/sections/home/heroSection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/sections/home/processesSection.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/sections/home/processesSection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/sections/singleService/heroSection.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/sections/singleService/heroSection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/sections/singleService/advertSection.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/sections/singleService/advertSection.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../recipe-agency/single-services.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/single-services.php" afterDir="false" />
     </list>
-    <list id="4d1a8957-bea8-4a10-b9af-bda5b05ba84b" name="Changes by eduardbrugos" comment="">
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/sections/singleBlog/heroSection.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/sections/singleBlog/heroSection.php" afterDir="false" />
-    </list>
+    <list id="4d1a8957-bea8-4a10-b9af-bda5b05ba84b" name="Changes by eduardbrugos" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -96,7 +80,7 @@
       <workItem from="1704706605006" duration="4394000" />
       <workItem from="1704791768670" duration="455000" />
       <workItem from="1704836543731" duration="398000" />
-      <workItem from="1704964292516" duration="13143000" />
+      <workItem from="1704964292516" duration="19679000" />
     </task>
     <servers />
   </component>
