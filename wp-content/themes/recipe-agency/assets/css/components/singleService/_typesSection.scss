@@ -1,0 +1,104 @@
+#tos {
+  background-color: $secondary-bg-color;
+
+  h2 {
+    margin-bottom: 2.19rem;
+
+    font-size: clamp(1.875rem, 1.42rem + 1.94vw, 3.75rem);
+    letter-spacing: -0.07313rem;
+
+    @media screen and (min-width: 992px) {
+      max-width: 64.0625rem;
+
+      margin-bottom: 5rem;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+
+      letter-spacing: -0.16875rem;
+
+    }
+
+    & strong {
+      color: $accent-color;
+    }
+  }
+}
+
+.service-types-list {
+  gap: 2.19rem;
+
+  @media screen and (min-width: 992px) {
+    gap: 0.94rem;
+    width: 82.36%;
+  }
+}
+
+.service-types-list__item {
+  border-radius: $primary-radius;
+
+  background-color: $white-color;
+
+  @media screen and (min-width: 992px) {
+    border-radius: $tenth-radius;
+  }
+
+  &:not(:first-child) {
+    box-shadow: 0px -15px 20px 0px rgba(0, 0, 0, 0.08);
+
+    @media screen and (min-width: 992px) {
+      box-shadow: 0px -20px 25px 0px rgba(0, 0, 0, 0.04);
+    }
+  }
+
+  & h3 {
+    margin-bottom: 1rem;
+    font-size: clamp(1.313rem, 1.146rem + 0.71vw, 2rem);
+    letter-spacing: -0.05906rem;
+
+    @media screen and (min-width: 992px) {
+      letter-spacing: -0.09rem;
+    }
+  }
+
+  & p {
+    margin-bottom: 1.25rem;
+
+    font-family: 'Manrope', sans-serif;
+    opacity: 0.8;
+  }
+
+  & h3,
+  & p {
+    @media screen and (min-width: 992px) {
+      margin-bottom: min(8.0322%, 2.5rem);
+    }
+  }
+}
+
+.service-types-list__content {
+  padding: 1.56rem 1.25rem;
+
+  @media screen and (min-width: 992px) {
+    box-sizing: content-box;
+    max-width: 31.125rem;
+    padding: min(7.5rem, 8.186%) 1.25rem min(7.5rem, 8.186%) min(6.3437%, 5.8125rem);
+  }
+}
+
+.service-types-list__thumb {
+  aspect-ratio: 1 / calc(13.4375 / 21.5625);
+  border-radius: $primary-radius;
+
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    aspect-ratio: initial;
+    height: 20rem;
+  }
+
+  @media screen and (min-width: 992px) {
+    aspect-ratio: 1 / calc(36.625 / 44.375);
+
+    width: 48.43%;
+    border-radius: $tenth-radius;
+  }
+}

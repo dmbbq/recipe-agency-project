@@ -23,6 +23,25 @@ const aboutSwiper = new Swiper('.about-swiper', {
     }
 })
 
+const advertingSwiper = new Swiper('.adverting-swiper', {
+    centeredSlides: true,
+    spaceBetween: 5,
+    slidesPerView: 1,
+    grabCursor: true,
+    loop: true,
+    breakpoints: {
+        992: {
+            centeredSlides: false,
+            slidesPerView: 3,
+        },
+        1440: {
+            slidesPerView: 4,
+            centeredSlides: false,
+            spaceBetween: 10
+        }
+    }
+})
+
 const partnersSwiperTop = new Swiper('.partners-swiper-top', {
     loop: true,
     allowTouchMove: false,
@@ -197,6 +216,8 @@ const singleBlogSwiper = new Swiper('.single-blog-swiper', {
     spaceBetween: 35,
     slidesPerView: 3
 })
+
+
 
 
 

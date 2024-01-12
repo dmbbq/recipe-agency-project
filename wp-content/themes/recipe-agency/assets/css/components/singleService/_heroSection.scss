@@ -1,6 +1,8 @@
 
 #single-service {
 
+
+
   & h1 {
 
     margin-bottom: 1.25rem;
@@ -37,10 +39,12 @@
 
     @media screen and (min-width: 992px) {
 
+      margin-top: 7.37rem;
+
       padding-left: min(5.618% , 6.25rem);
 
       border-radius: 1.5625rem;
-      border: 1px solid $secondary-bg-color;
+      border: 1px solid $fourth-bg-color;
 
       background-color: $secondary-bg-color;
     }

@@ -93,9 +93,9 @@ const initSwiperClasses = () => {
             });
         };
 
+        currentElement.find('div.gallery').addClass('swiper-wrapper');
         replaceWithDiv('dl', 'swiper-slide');
         currentElement.find('style, br').remove();
-        currentElement.find('div').addClass('swiper-wrapper');
     });
 }
 

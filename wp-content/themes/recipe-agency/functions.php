@@ -94,6 +94,12 @@ function my_connection_types()
         'from' => 'blog',
         'to' => 'team'
     ));
+
+    p2p_register_connection_type(array(
+        'name' => 'service_types_to_services',
+        'from' => 'services',
+        'to' => 'service_types'
+    ));
 }
 
 function translate_and_output($string_key, $group = 'Main Page')

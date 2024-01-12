@@ -5,13 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d9b00336-d57f-4bcf-ab54-a00826f04c0b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/components/singleService/_questionSection.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../recipe-agency/sections/singleService/questionSection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/components/singleService/_advertSection.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/components/singleService/_resultsSection.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/components/singleService/_typesSection.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../recipe-agency/sections/singleService/advertingSection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../recipe-agency/sections/singleService/resultsSection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../recipe-agency/sections/singleService/typesSection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../recipe-agency/templates/singleService/casesList.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../recipe-agency/templates/singleService/serviceTypesList.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/css/base/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/base/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/css/components/singleService/_heroSection.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/components/singleService/_heroSection.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/css/components/singleService/_questionSection.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/components/singleService/_questionSection.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/css/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/js/swiper.js" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/js/swiper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/js/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/js/utils.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../recipe-agency/dist/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/dist/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../recipe-agency/dist/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/dist/css/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/sections/singleService/advertSection.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/sections/singleService/advertSection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/dist/js/main.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/dist/js/main.bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/dist/js/main.bundle.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/dist/js/main.bundle.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/sections/singleService/advertSection.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/sections/singleService/heroSection.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/sections/singleService/heroSection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/sections/singleService/questionSection.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/sections/singleService/questionSection.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../recipe-agency/single-services.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/single-services.php" afterDir="false" />
     </list>
     <list id="4d1a8957-bea8-4a10-b9af-bda5b05ba84b" name="Changes by eduardbrugos" comment="" />
@@ -27,9 +43,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/usr/local/Cellar/php/8.3.1/bin/php" />
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2aVF9H4Hmn53B0fA8NT1IU9IUuD" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -81,6 +97,8 @@
       <workItem from="1704791768670" duration="455000" />
       <workItem from="1704836543731" duration="398000" />
       <workItem from="1704964292516" duration="19679000" />
+      <workItem from="1704996462650" duration="88000" />
+      <workItem from="1705049356614" duration="26050000" />
     </task>
     <servers />
   </component>

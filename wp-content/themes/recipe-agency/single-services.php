@@ -17,8 +17,16 @@
 
 <main id="single-service">
     <?php get_template_part('sections/singleService/heroSection'); ?>
-    <?php get_template_part('sections/singleService/advertSection'); ?>
+
+    <?php get_template_part('sections/singleService/advertingSection'); ?>
+
     <?php get_template_part('sections/singleService/questionSection'); ?>
+
+    <?php get_template_part('sections/singleService/typesSection'); ?>
+
+    <?php get_template_part('sections/partnersSection'); ?>
+
+    <?php get_template_part('sections/singleService/resultsSection'); ?>
 
 
 </main>

@@ -266,6 +266,24 @@ var aboutSwiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.ab
     }
   }
 });
+var advertingSwiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.adverting-swiper', {
+  centeredSlides: true,
+  spaceBetween: 5,
+  slidesPerView: 1,
+  grabCursor: true,
+  loop: true,
+  breakpoints: {
+    992: {
+      centeredSlides: false,
+      slidesPerView: 3
+    },
+    1440: {
+      slidesPerView: 4,
+      centeredSlides: false,
+      spaceBetween: 10
+    }
+  }
+});
 var partnersSwiperTop = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.partners-swiper-top', {
   loop: true,
   allowTouchMove: false,
@@ -541,9 +559,9 @@ var initSwiperClasses = function initSwiperClasses() {
         });
       });
     };
+    currentElement.find('div.gallery').addClass('swiper-wrapper');
     replaceWithDiv('dl', 'swiper-slide');
     currentElement.find('style, br').remove();
-    currentElement.find('div').addClass('swiper-wrapper');
   });
 };
 initSwiperClasses();
