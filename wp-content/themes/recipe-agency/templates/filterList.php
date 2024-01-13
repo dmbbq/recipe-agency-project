@@ -1,4 +1,6 @@
 <?php
+$id_type = $args['type'] ?? 'id';
+
 $args = array(
     'post_type' => 'cases',
     'taxonomy' => 'category',
@@ -9,7 +11,7 @@ $args = array(
 $categories = get_categories($args);
 ?>
 
-<ul class="filter-list flex-wrap d-none d-lg-flex">
+<ul class="filter-list">
     <li class="filter-list__item">
         <input type="checkbox" id="all" class="filter-list__input" value="all" checked>
         <label for="all" class="filter-list__label">
@@ -20,8 +22,11 @@ $categories = get_categories($args);
     foreach ($categories as $category) {
         ?>
         <li class="filter-list__item">
-            <input id="<?= $category->term_id; ?>" type="checkbox" class="filter-list__input" value="<?= $category->term_id; ?>">
-            <label for="<?= $category->term_id; ?>" class="filter-list__label">
+            <?php
+            $checkbox_id = ($id_type === 'slug') ? $category->slug : $category->term_id;
+            ?>
+            <input id="<?= $checkbox_id; ?>" type="checkbox" class="filter-list__input" value="<?= $category->term_id; ?>">
+            <label for="<?= $checkbox_id; ?>" class="filter-list__label">
                 <?= $category->name; ?>
             </label>
         </li>

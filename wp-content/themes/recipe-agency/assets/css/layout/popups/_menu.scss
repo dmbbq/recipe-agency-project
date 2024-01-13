@@ -1,0 +1,36 @@
+#menu {
+  & .menu {
+    padding: 1.81rem 1.69rem 4.375rem;
+  }
+
+  & .custom-logo-link {
+    display: inline-block;
+
+    width: 6.375rem;
+    height: 2.75rem;
+  }
+
+  & .nav-list {
+    padding-bottom: 2.03rem;
+
+    & li {
+      text-align: center;
+
+      &:not(:last-child){
+        margin-bottom: 1.875rem;
+      }
+    }
+
+    & a {
+      font-size: 1.5rem;
+      line-height: calc(1.875 / 1.5);
+
+      letter-spacing: -0.0675rem;
+
+      &:active,
+      &:focus {
+        color: $accent-color;
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
-import refs from "./refs";
-import { showBackdrop, hideBackdrop } from "./utils";
+import refs from "../refs";
+import { showBackdrop, hideBackdrop } from "../utils";
 import throttle from "lodash.throttle";
 
 const { menuBackdrop, menuButton, menuNavLinks } = refs;

@@ -136,7 +136,9 @@ $strings_to_translate = array(
     'email' => 'Електронна пошта',
     'all_services' => 'Всі послуги',
     'all_cases' => 'Переглянути всі кейси',
-    'no_cases' => "Кейси обраної категорії з'являться згодом."
+    'no_cases' => "Кейси обраної категорії з'являться згодом.",
+    'clean' => 'Очистити',
+    'apply' => 'Застосувати'
 );
 
 if (function_exists('pll_register_string')) {

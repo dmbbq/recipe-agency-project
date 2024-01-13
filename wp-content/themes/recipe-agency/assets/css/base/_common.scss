@@ -5,7 +5,7 @@
     max-width: 33.75rem;
   }
 
-  @media screen and (min-width: 1200px){
+  @media screen and (min-width: 1200px) {
     max-width: 71.25rem;
   }
 
@@ -120,7 +120,7 @@
   &::placeholder {
     opacity: 0.3;
   }
-  
+
   &.wpcf7-not-valid {
     border-color: $invalid-text-color;
   }
@@ -129,7 +129,7 @@
 .cf7-button {
   height: 3.5rem;
 
-  @media screen and (min-width: 768px){
+  @media screen and (min-width: 768px) {
     height: 3.75rem;
   }
 
@@ -294,4 +294,23 @@ $owner-list-length: 8;
   }
 }
 
+.backdrop {
+  &.is-hidden {
+    & .popup {
+      transform: translateX(100%);
+    }
+  }
+}
+
+.popup {
+  @include transition(transform);
+
+  width: 21.875rem;
+  height: 100dvh;
+  background-color: $white-color;
+
+  & .hamburger-inner {
+    background-color: $primary-text-color;
+  }
+}
 

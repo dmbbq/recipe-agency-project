@@ -25,6 +25,9 @@ if ($connected->have_posts()) :
                     </p>
                     <button class="button-secondary ">
                         <?= translate_and_output('leave_statement'); ?>
+                        <svg class="button-secondary__icon flex-shrink-0" width="12" height="11">
+                            <use href="<?php get_image('sprite.svg#icon-second-carret-right'); ?>"></use>
+                        </svg>
                     </button>
                 </div>
             </li>

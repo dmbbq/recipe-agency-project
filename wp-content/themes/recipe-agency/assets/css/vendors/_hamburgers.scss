@@ -31,12 +31,6 @@
   z-index: 999;
 }
 
-.hamburger.is-active .hamburger-inner,
-.hamburger.is-active .hamburger-inner::before,
-.hamburger.is-active .hamburger-inner::after {
-  background-color: $white-color;
-}
-
 .hamburger-box {
   width: 31px;
   height: 16px;
@@ -54,7 +48,6 @@
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
   width: 31px;
   height: 2px;
-  background-color: $white-color;
   border-radius: 4px;
   position: absolute;
   transition-property: transform;
@@ -65,6 +58,8 @@
 .hamburger-inner::before, .hamburger-inner::after {
   content: "";
   display: block;
+
+  background-color: inherit;
 }
 
 .hamburger-inner::before {
@@ -96,7 +91,7 @@
 }
 
 .hamburger--collapse.is-active .hamburger-inner {
-  transform: translate3d(0, -10px, 0) rotate(-45deg);
+  transform: translate3d(0, -6px, 0) rotate(-45deg);
   transition-delay: 0.22s;
   transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 }

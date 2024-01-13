@@ -1,4 +1,71 @@
 #cases {
+  & .main-section {
+    & .filter-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.31rem;
+
+      margin-bottom: min(3.75rem, 3.371%);
+
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
+    }
+
+    & .filter-list__label {
+      @include transition(color, background-color, border-color);
+
+      padding: min(1.5rem, 1.25vw) min(1.5104vw, 1.8125rem);
+      border: 1px solid $fourth-bg-color;
+      border-radius: $seventh-radius;
+
+      font-family: 'Manrope', sans-serif;
+      font-size: clamp(0.938rem, 0.907rem + 0.13vw, 1.063rem);
+
+      cursor: pointer;
+
+      @media screen and (max-width: 991px) {
+        letter-spacing: -0.02344rem;
+      }
+    }
+
+    & .filter-list__input {
+      all: unset;
+
+      &:checked {
+        & + .filter-list__label {
+          color: $white-color;
+          background-color: $accent-color;
+          border-color: $accent-color;
+        }
+      }
+    }
+  }
+
+  & .cases-wrapper {
+    margin-bottom: 2.375rem;
+
+    @media screen and (min-width: 992px) {
+      margin-bottom: min(5.618%, 6.25rem);
+    }
+  }
+
+  & h1 {
+    @media screen and (min-width: 992px) {
+      text-transform: uppercase;
+    }
+  }
+
+  & .filter-button {
+    @include hover(fill $primary-text-color $accent-color);
+
+    all: unset;
+  }
+
+  & .filter-button__icon {
+    @include transition(fill);
+  }
+
   & .tag-list__item {
     color: $white-color;
     background-color: $white-color;
@@ -9,46 +76,11 @@
       background-color: $accent-color;
     }
 
-    @media screen and (min-width: 768px){
+    @media screen and (min-width: 768px) {
       padding: 0.94rem 1.25rem;
       letter-spacing: -0.04219rem;
 
       color: $primary-text-color;
-    }
-  }
-}
-
-.filter-list {
-  gap: 0.31rem;
-
-  margin-bottom: 3.75rem;
-}
-
-.filter-list__label {
-  @include transition(color, background-color, border-color);
-
-  padding: 1.5rem 1.8125rem;
-  border: 1px solid $fourth-bg-color;
-  border-radius: $seventh-radius;
-
-  font-family: 'Manrope', sans-serif;
-  font-size: clamp(0.938rem, 0.907rem + 0.13vw, 1.063rem);
-
-  cursor: pointer;
-
-  @media screen and (max-width: 991px){
-    letter-spacing: -0.02344rem;
-  }
-}
-
-.filter-list__input {
-  all: unset;
-
-  &:checked {
-    & + .filter-list__label {
-      color: $white-color;
-      background-color: $accent-color;
-      border-color: $accent-color;
     }
   }
 }
@@ -88,7 +120,7 @@
   }
 
   & .cases-list__thumb ul,
-  & .cases-list__wrapper > ul{
+  & .cases-list__wrapper > ul {
     display: flex;
     justify-content: flex-end;
     width: 100%;
@@ -167,11 +199,11 @@
   & > ul {
     gap: 0.1875rem;
 
-    @media screen and (max-width: 767px){
+    @media screen and (max-width: 767px) {
       display: none !important;
     }
 
-    @media screen and (min-width: 992px) and (max-width: 1439px){
+    @media screen and (min-width: 992px) and (max-width: 1439px) {
       flex-direction: column;
       align-items: flex-end;
     }
@@ -183,11 +215,11 @@
 
       padding: 0.94rem 0.56rem 0.94rem 0.94rem;
 
-      @media screen and (max-width: 1439px){
+      @media screen and (max-width: 1439px) {
         max-width: 6.25rem;
       }
 
-      @media screen and (min-width: 992px) and (max-width: 1199px){
+      @media screen and (min-width: 992px) and (max-width: 1199px) {
         width: 5rem;
       }
     }
@@ -219,7 +251,7 @@
   }
 }
 
-.all-cases-link{
+.all-cases-link {
 
   margin-top: 2.5rem;
   height: 3.5rem;

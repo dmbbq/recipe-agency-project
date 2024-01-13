@@ -8,7 +8,9 @@ const refs = {
   appHideButton: $(".appointment-button"),
   swiperToInit: $(".swiper.init"),
   swiperPagination: $(".swiper-pagination"),
-  swiperNavigation: $(".pagination__item")
+  swiperNavigation: $(".pagination__item"),
+  filterButton: $('.filter-button'),
+  filterBackdrop: $("#filter"),
 };
 
 export default refs;

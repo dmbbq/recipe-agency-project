@@ -1,47 +1,42 @@
-
 #single-service {
-
-
+  & section:first-child {
+    @media screen and (min-width: 992px) {
+      padding-top: 7.375rem;
+    }
+  }
 
   & h1 {
-
     margin-bottom: 1.25rem;
 
     font-size: clamp(1.875rem, 1.42rem + 1.94vw, 3.75rem);
 
     font-weight: 400;
     letter-spacing: -0.08438rem;
+
     @media screen and (min-width: 992px) {
-
       margin-bottom: 2.19rem;
-
       max-width: 50.4375rem;
 
       letter-spacing: -0.16875rem;
     }
 
     & strong {
-
       font-size: clamp(1.875rem, 1.42rem + 1.94vw, 3.75rem);
 
       font-weight: 400;
       letter-spacing: -0.08438rem;
 
       color: $accent-color;
-      @media screen and (min-width: 992px) {
 
+      @media screen and (min-width: 992px) {
         letter-spacing: -0.16875rem;
       }
     }
   }
 
   & .hero-wrapper--services {
-
     @media screen and (min-width: 992px) {
-
-      margin-top: 7.37rem;
-
-      padding-left: min(5.618% , 6.25rem);
+      padding-left: min(5.618%, 6.25rem);
 
       border-radius: 1.5625rem;
       border: 1px solid $fourth-bg-color;
@@ -50,17 +45,18 @@
     }
   }
 
-  & .hero-wrapper__content{
+  & .hero-wrapper__content {
 
     @media screen and (max-width: 991px) {
 
       margin-bottom: 1.56rem;
 
     }
-    & p{
+
+    & p {
       margin-bottom: 1.25rem;
 
-      font-family: 'Manrope' , sans-serif;
+      font-family: 'Manrope', sans-serif;
       letter-spacing: -0.00875rem;
 
       opacity: 0.9;
@@ -75,7 +71,7 @@
     }
   }
 
-  .hero-image-thumb{
+  .hero-image-thumb {
 
     @media screen and (min-width: 992px) {
       aspect-ratio: 1 / 1;

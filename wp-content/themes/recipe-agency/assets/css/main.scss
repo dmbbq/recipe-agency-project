@@ -15,7 +15,10 @@
 //Layouts
 @import "layout/pageHeader";
 @import "layout/pageFooter";
-@import "layout/menu";
+
+//Popups
+@import "layout/popups/menu";
+@import "layout/popups/filter";
 
 //Common components
 @import "components/ctaSection";

@@ -54,11 +54,11 @@ if ($query->have_posts()) {
     </ul>
     <?php
     if ($query->max_num_pages > 1) {
-        get_template_part('templates/casesPagination', null, array('page' => $page, 'query' => $query));
+        get_template_part('templates/cases/pagination', null, array('page' => $page, 'query' => $query));
     }
 } else {
     ?>
-    <h2 class="section-title mb-0">
+    <h2 class="section-title-secondary mb-0">
         <?= translate_and_output('no_cases'); ?>
     </h2>
     <?php

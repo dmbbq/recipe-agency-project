@@ -23,7 +23,7 @@ $is_black_theme = in_array($page_id, array(132, 129, 140, 138, 124, 121, 136, 13
 <div class="wrapper">
     <header class="header <?php echo $is_black_theme ? "black-theme" : "white-theme"; ?>">
         <div class="container">
-            <div class="header-wrapper d-flex align-items-center justify-content-between">
+            <div class="header-wrapper d-flex align-items-center justify-content-md-between">
 
                 <?php $is_black_theme ? custom_theme_logo() : the_custom_logo(); ?>
 
@@ -37,11 +37,11 @@ $is_black_theme = in_array($page_id, array(132, 129, 140, 138, 124, 121, 136, 13
                     <?= translate_and_output('write_us'); ?>
                 </button>
 
-                <button class="hamburger hamburger--collapse d-flex align-items-center justify-content-center menu-button p-0 border-0 d-md-none"
-                type="button">
-                <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                  </span>
+                <button class="hamburger hamburger--collapse menu-button p-0 d-md-none"
+                        type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
                 </button>
             </div>
 
