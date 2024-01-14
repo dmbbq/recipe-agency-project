@@ -1,17 +1,8 @@
 #single-service {
-  & .results {
-    & .all-cases-link {
-      @media screen and (max-width: 575px) {
-        max-width: fit-content;
-      }
-    }
-  }
-
   & .results-title {
     margin-bottom: 2.19rem;
     @media screen and (min-width: 992px) {
       margin-bottom: 5rem;
     }
   }
-
 }

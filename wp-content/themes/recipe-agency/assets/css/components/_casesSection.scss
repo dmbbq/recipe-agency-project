@@ -252,11 +252,23 @@
 }
 
 .all-cases-link {
-
   margin-top: 2.5rem;
-  height: 3.5rem;
+
+  font-size: clamp(0.813rem, 0.737rem + 0.32vw, 1.125rem);
+  letter-spacing: -0.02031rem;
+
+  @media screen and (max-width: 575px) {
+    max-width: fit-content;
+  }
 
   @media screen and (min-width: 992px) {
-    margin-top: 5rem;
+    margin-top: min(5rem, 4.494%);
+    height: 4rem;
+
+    letter-spacing: -0.02813rem;
+  }
+
+  @media screen and (min-width: 1440px) {
+    height: 5.8125rem;
   }
 }

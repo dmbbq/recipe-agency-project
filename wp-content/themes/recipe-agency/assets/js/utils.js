@@ -127,6 +127,13 @@ export function renderEllipsisBullet(index, className) {
     return '';
 }
 
+$('#single-case .hero-content__button').on("click", function () {
+    const textToCopy = $('#single-case .hero-content__link a').attr('href');
+
+    navigator.clipboard.writeText(textToCopy)
+});
+
+
 $("document").ready(function () {
     bodyEl.css("visibility", "visible");
 

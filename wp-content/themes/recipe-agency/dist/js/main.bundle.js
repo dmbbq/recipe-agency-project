@@ -727,6 +727,10 @@ function renderEllipsisBullet(index, className) {
   }
   return '';
 }
+$('#single-case .hero-content__button').on("click", function () {
+  var textToCopy = $('#single-case .hero-content__link a').attr('href');
+  navigator.clipboard.writeText(textToCopy);
+});
 $("document").ready(function () {
   bodyEl.css("visibility", "visible");
   new wowjs_dist_wow_min__WEBPACK_IMPORTED_MODULE_6__.WOW().init();

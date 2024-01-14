@@ -24,7 +24,7 @@ $query = new WP_Query($args);
 
 $matching_posts_count = $query->post_count;
 
-if (is_singular('blog') && $matching_posts_count > 1 || !is_singular('blog')) {
+if (is_singular('blog') && $matching_posts_count !== 0 || !is_singular('blog')) {
     ?>
     <section
             class="<?= (is_page(pll_get_post(128, $current_lang)) ? 'section--padding ' : '') . (is_singular('blog') ? 'section' : ''); ?>">

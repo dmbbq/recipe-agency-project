@@ -54,14 +54,15 @@
   }
 
   &.about,
-  &.blog {
+  &.blog,
+  &.single-case,
+  &.single-service{
     @media screen and (min-width: 992px) {
       padding: 6.25rem;
     }
   }
 
   &.about {
-    background-position: right bottom;
     background-size: 21.0625rem;
 
     @media screen and (min-width: 992px) {
@@ -131,6 +132,34 @@
             min-width: 12rem;
           }
         }
+      }
+    }
+  }
+
+  &.single-case {
+    background-size: 93.623%;
+
+    @media screen and (min-width: 992px) {
+      background-size: 47.36%;
+    }
+
+    & h2 {
+      & strong {
+        color: $accent-color
+      }
+    }
+  }
+
+  &.single-service {
+    background-size: 70.435%;
+
+    @media screen and (min-width: 992px) {
+      background-size: 45%;
+    }
+
+    & h2 {
+      & strong {
+        color: $accent-color
       }
     }
   }

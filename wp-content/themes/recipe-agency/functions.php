@@ -138,7 +138,12 @@ $strings_to_translate = array(
     'all_cases' => 'Переглянути всі кейси',
     'no_cases' => "Кейси обраної категорії з'являться згодом.",
     'clean' => 'Очистити',
-    'apply' => 'Застосувати'
+    'apply' => 'Застосувати',
+    'site_link' => 'Посилання на сайт',
+    'project_info' => 'Інформація про проєкт:',
+    'watch_site' => 'Переглянути сайт',
+    'results' => 'Результати наших клієнтів',
+    'other_cases' => 'Інші кейси'
 );
 
 if (function_exists('pll_register_string')) {

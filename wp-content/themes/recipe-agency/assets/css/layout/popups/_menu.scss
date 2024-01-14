@@ -16,21 +16,21 @@
     & li {
       text-align: center;
 
-      &:not(:last-child){
+      &:not(:last-child) {
         margin-bottom: 1.875rem;
       }
     }
 
     & a {
+      @include hover(color $primary-text-color $accent-color);
+
+      display: inline-block;
+      width: 100%;
+
       font-size: 1.5rem;
       line-height: calc(1.875 / 1.5);
 
       letter-spacing: -0.0675rem;
-
-      &:active,
-      &:focus {
-        color: $accent-color;
-      }
     }
   }
 }

@@ -15,7 +15,7 @@
 
 <?php
 $page_id = get_the_ID();
-$is_black_theme = in_array($page_id, array(132, 129, 140, 138, 124, 121, 136, 134, 128, 126)) || is_singular('services') || is_singular('cases') ? true : false;
+$is_black_theme = in_array($page_id, array(132, 129, 140, 138, 124, 121, 136, 134, 128, 126)) || is_singular('services') ? true : false;
 ?>
 
 <body style="visibility: hidden" class="<?= is_404() ? 'not-found' : ''; ?>">
