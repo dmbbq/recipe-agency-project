@@ -1,8 +1,15 @@
 #feedback {
   & .modal {
+    max-width: 44.375rem;
+
      & h2 {
        margin-bottom: clamp(2.19rem, 2.04rem + 0.64vw, 2.81rem);
 
+       @media screen and (max-width: 575px){
+         max-width: 17.8125rem;
+         margin-left: auto;
+         margin-right: auto;
+       }
      }
   }
 
@@ -17,7 +24,11 @@
       display: flex;
 
       &:not(:first-of-type){
-        margin-top: 0.94rem;
+        margin-top: 0.44rem;
+
+        @media screen and (min-width: 992px){
+          margin-top: 0.94rem;
+        }
       }
     }
 

@@ -57,7 +57,7 @@ $current_lang = pll_current_language();
                         <p class="upper-nav">
                             <?= translate_and_output('services'); ?>
                         </p>
-                        <?php get_template_part('templates/footerServices.php'); ?>
+                        <?php get_template_part('templates/footer/servicesList'); ?>
                     </div>
                     <div class="d-flex justify-content-between justify-content-lg-around justify-content-xl-between flex-lg-column footer-info">
                         <div class="">
@@ -121,6 +121,7 @@ $current_lang = pll_current_language();
 <?php get_template_part('templates/popups/filter'); ?>
 <?php get_template_part('templates/popups/feedback'); ?>
 <?php get_template_part('templates/popups/appointment'); ?>
+<?php get_template_part('templates/popups/thankYou'); ?>
 
 <?php wp_footer(); ?>
 

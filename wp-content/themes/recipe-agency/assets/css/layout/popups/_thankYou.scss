@@ -1,0 +1,45 @@
+#thank-you {
+  & .modal {
+    max-width: 44.375rem;
+
+    padding-left: clamp(0.94rem, -0.106rem + 4.46vw, 5.25rem);
+    padding-right: clamp(0.94rem, -0.106rem + 4.46vw, 5.25rem);
+
+    @media screen and (min-width: 992px){
+      padding-top: 8.44rem;
+      padding-bottom: 8.44rem;
+    }
+
+    & .thank-you__thumb {
+      margin: 0 auto clamp(2.19rem, 2.115rem + 0.32vw, 2.5rem);
+
+      width: 6.25rem;
+      height: 6.25rem;
+
+      background-image: url(../images/victory.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      @media screen and (min-width: 992px){
+        width: 7.625rem;
+        height: 7.625rem;
+      }
+    }
+
+    & h2 {
+      margin-bottom: clamp(1.25rem, 1.098rem + 0.65vw, 1.875rem);
+
+      font-size: clamp(2.125rem, 1.973rem + 0.65vw, 2.75rem);
+      letter-spacing: -0.09563rem;
+
+      @media screen and (max-width: 991px){
+        line-height: 1.15;
+      }
+
+      @media screen and (min-width: 992px){
+        letter-spacing: -0.0275rem;
+      }
+    }
+  }
+}

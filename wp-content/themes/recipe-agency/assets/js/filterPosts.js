@@ -63,6 +63,7 @@ const updateCategories = (category, isChecked) => {
     if (categories.length === 0) {
         categories.push('all');
         $('.filter-list input[value="all"]').prop('checked', true);
+        $('.buttons-list__button.clean').hide();
     }
 };
 

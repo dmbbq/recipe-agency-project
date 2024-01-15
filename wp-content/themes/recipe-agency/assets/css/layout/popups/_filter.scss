@@ -64,6 +64,7 @@
     &:first-child {
       & .buttons-list__button {
         display: none;
+        color: $primary-text-color;
         padding: 0 1.875rem 0 2.19rem;
 
         background-color: $secondary-bg-color;

@@ -133,6 +133,8 @@ $('#single-case .hero-content__button').on("click", function () {
     navigator.clipboard.writeText(textToCopy)
 });
 
+$('.cf7-acceptance').prop('checked', true);
+
 $('a[href="[privacy_policy_url]"]').attr('href', custom_vars.privacy_policy_url);
 
 $("document").ready(function () {

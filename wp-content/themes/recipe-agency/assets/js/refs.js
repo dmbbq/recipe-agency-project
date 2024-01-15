@@ -14,7 +14,11 @@ const refs = {
   feedbackBackdrop: $('#feedback'),
   feedbackButtons: $('.feedback-js'),
   appointmentButtons: $('.appointment-js'),
-  appointmentBackdrop: $('#appointment')
+  appointmentBackdrop: $('#appointment'),
+  appointmentCloseButton: $('#appointment .modal-button'),
+  feedbackCloseButton: $('#feedback .modal-button'),
+  thankYouCloseButton: $('#thank-you .modal-button'),
+  thankYouBackdrop: $('#thank-you')
 };
 
 export default refs;

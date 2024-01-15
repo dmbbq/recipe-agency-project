@@ -5,66 +5,395 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d9b00336-d57f-4bcf-ab54-a00826f04c0b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/components/_breadCrumbs.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/components/privacyPolicy/_mainSection.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/layout/popups/_appointment.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/layout/popups/_feedback.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../recipe-agency/assets/images/bchome.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../recipe-agency/assets/images/bchomegrey.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../recipe-agency/assets/images/carret-rigth-grey.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../recipe-agency/assets/images/separatorsb.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../recipe-agency/assets/js/popups/appointment.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../recipe-agency/assets/js/popups/feedback.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../recipe-agency/pages/privacyPolicy.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../recipe-agency/sections/privacyPolicy/mainSection.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../recipe-agency/templates/breadCrumbs.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../recipe-agency/templates/popups/appointment.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../recipe-agency/templates/popups/feedback.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/layout/popups/_thankYou.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../recipe-agency/assets/images/victory.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../recipe-agency/assets/js/popups/thankYou.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../recipe-agency/templates/popups/thankYou.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../autoptimize_404_handler.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/.htaccess" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_00d295139e69302a6f08b9eeaf7b6513.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_01fb46e73b9b651b9b8b7061a0ede495.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_0227343bd718dcf114940a86e388a9ef.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_02d227ee7d5143cd067994261a68dc49.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_033ca10c61a2ed0ec3b27e05e9df4210.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_0457a67b4859ace1e42acd421a6b78c2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_04f5ff446a7150980acbf1ed973eb561.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_056fd434cf511b7ef7cef7cb6a45d3b7.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_06d688e9ee250070af2cdeeada61fa69.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_06e2fc4d50bcdd4e089d4884158de4b9.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_07c54b48b8ead1e6851acded0db94b8f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_0802ba8e8b00c1df157cb572d887d641.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_09beb7af2efa8ad7174781bc558de996.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_0a031d88e6be7bafbb4a13a0894c65ac.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_0b5259a319dd5e9552e04b65dae4c4d8.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_0d54164226b68180f2b622b41bd2ec73.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_0f8e1aff783d959d5d2b7972b0741755.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_108bd62ffb9fb1a05d59ba5ef6a5ed76.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_1191bfdb297c76d9e2feecb16434053e.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_1215c630a6de6458b1456a215b6c707b.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_127a28b28c3fc31d61d1f38ccd09f401.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_12953db30fa9f27c700d4c215e9b240c.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_12ec229ee70b602ce409861596db3a36.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_12ff3014b02df9970fc1a816a51d4b77.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_14ab5e9db6bc1970c8f804d8ed4179df.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_16f3f1431425b79c2ff849a0b27f8476.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_1804724d77e1dcfb8a5c0d62b4ef2963.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_18c1f51822ae52630fb9d49d2d68ff4a.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_191a94649332732ef289e1bbb09e933b.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_1ace283ce2ef697ff137faa57a11f3aa.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_1c09c50ec3c47607e0bdaa0685712d11.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_1c6f4e967a219283f02f4fe73f7c85d8.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_1e98f5a6227ed97a2e697309902b88f3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_1ef2b3a5a775c4318fbfb5af254d7c52.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_1f1f108ca76ccc13b054acce60ea27f0.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_1fe7787f1a90d88c9d31ade7a87551d2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_208d30eafa4a7a7de5f0211584038fd9.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_219e867c36f42414fe3b66eb977d1c04.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_21f739e99fc9b0edc083ae65a3d7caa7.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_2373cee659ede00a68225fd4a3e13916.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_23ae0840f9edbf8ee71da9cfb136e226.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_263106c37912be0496b206cd8416c10e.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_265f613910a62658cdfeebbf6b613b88.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_26dc042c9aa57fb2be257f3ea7568074.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_28ff5d281931f4c471dc98a57aa006df.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_290d61c78475f3302b6b0a8e00c2721d.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_2a3d7c405b80b5b7d6a64cd20ed9f59d.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_2adf3d2d207d433263ea0c4931df0b52.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_2af5c21eef0d5dcdcfcd7988fa32c5e9.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_2b84751ff7ca8839aefdcb53142c3997.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_2c1c9860fff298d3e5e790d11c86d1ba.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_2c6bd022b4dc8ec6a0ab249fc45f5cb8.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_2c7c587d187cfac5edd910a1fb2258d8.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_2dbfd0260abc90b269d05c9dcc011c7a.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_2eadaea14de2d4000503a5887bc1e194.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_2f07de7b88b395c3f0774a92e0ca2dcd.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_2fa0566e68d328a0939ca3da2e33c701.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_3343d9d9ab338e2c5c33738b314fe23a.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_334f85ef157388debd3dbd7a6ac14042.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_339e8e70256ca85707d9d71d4f702729.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_343dfcfb252778f47290051d4c383f96.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_35bf5e816d729d758149a8857ef7eb58.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_35fee97d09eb23b02c5654cfaa7901bb.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_365d4aa2217167c100c8b551f21c373c.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_365e119041e2ddeec120e15a24f98d75.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_36f801f60cbaea414f6833701b7d0790.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_37b22a55225e7225f3f06368b00381a2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_37b64952c7e808ca13aaea130f52cff0.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_37c1f80709225d1c9fc31714b580a855.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_382dda08496360a72efb03a210db0a09.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_387a41f7bf6dcea28b3f074529a0b23c.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_389325c9ae4ec244c53b60226e578597.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_39c9fb97b7d0b705e92d00f8dc03e1e5.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_3a68b17f4009ba4c11a42cd6c147fac8.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_3b05d09b8ceefb10c99163f628d1fe57.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_3cb9dfee4c39d607b2b210f41067c962.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_3d08aa537e97a550e84aa025cab83e4d.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_3d43948cca94b0e459d868238808a5eb.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_3d9b5c66c022fb9af22b95717ce9548d.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_3f945f4f947ca8cf5e4ff33cb29a8c98.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_3fd2afa98866679439097f4ab102fe0a.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_4021c12176c7b162abf671466cce993c.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_40e141da78cdc42022d12e3850006343.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_4198e973794116f2e9c6dfb161fe0807.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_41bb1a54c5837503c444c4c59fab2d36.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_41ef3115b88afe35ee3feb407a58d22e.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_425c972bf57bd7d3118f92f01291c69a.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_433059cd796332c18c7f56ef2e1c6525.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_451c5b3aa6e718f869f3313a331d294d.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_4556e72397da80e31f04df1266d8ff5a.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_467f31cf0fca9df2b0882453d04dca6f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_468dc77470b1d10ffb211de1535fdc99.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_46d948f1d2b8711a7c6b2193dcb3e60c.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_473abe904245d7ba81521c251afec880.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_47a7f7b72cb78a8bda96bc2affa1dded.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_47e62ec18135cfbb692ab12cbd433a0c.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_496daad61eab8233f696c5e2131729b9.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_4bfc8c183c2eb34c37fdf4cceec68233.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_4c48b6c13778deeddec7a92f37099ca7.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_4c9d4d60b3dc1d9a39617ff898b0955b.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_4e12888a208beae0c0e2ebc10abbef66.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_4ed1f272c3cdf365016928af0e079834.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_4f8b0df3863e4b5a3f53978bf8190741.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_5128e3c667e679bd85444f906f1a7ad8.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_52038a5db22dc7daeca0679cf09e23df.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_521000b78195905141d4f610e90309e0.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_52104c9699879762eafce2000130d301.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_527d403e6cf3a04e6392572c581bac7e.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_545fb2f6f16160cf33d2eb04a31bde1e.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_5542daa14f8008303bfe002630d307ef.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_55b47555e2ed579bfec2f0dd46665d50.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_568a402f5af4f1262a111a99dc3b29d9.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_58513c43f50e44608ebf64fecb998afe.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_5c15fb698f33f6ef1e4ab043d3a78359.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_5f9a1a260a309d8a85ac05c9b252b0b4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_5fe2716ce2c2ea31a33c542c33f4fbce.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_60c2e47fb5371c7c6bd4601fd39ed2f7.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_60c302fc70f1c67adf87dd3868c82e6d.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_60e53f43c317222654f4c1c7da826f7e.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_6397215b1ef7a86c6aa236c42abc5b5a.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_647f3ab75a10e2bc69756c0f2e080066.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_658c49c1fce4590601c8550ed710814a.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_65a15c9318368be16182c3ae8401cdd7.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_67cd70e0293e7cc3c87841f8d744c330.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_6880083842ab32c5fa379d9301e78de9.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_69bffdcaf403bb05bd29410cf297d523.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_6a14afa70781276d4af0814beff51492.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_6a1d40cb72048cccd66f596ca9a9bf79.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_6ec16756ead8a40c8d8519715e7371f1.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_70ce721d066f318480315b14d393690d.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_7134627eeaf7d66bb93e1ef37c4e604b.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_71438e109be167c939ec496faa4a5aab.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_72badcd9821fa7c51bec4a9620971449.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_72fc1365af4cf30b779afd834477a56c.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_736fc5c84d9176adcd478e6feef29929.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_743fe21fdb033ce4135ea62194e906e3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_753a50b05a4c06190becd35657a12a07.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_75bd9f443622d6e7e16a476b1cfef9b8.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_7637fea4f39212d334cdd0b99b366abb.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_766ce0a6afa354f402218cb935180da7.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_76c86e06ead426296c5d550c4a3cd002.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_76dc082b72706832e1fbb10ce90e0a11.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_772977877d01c9ee28edb844cde5b970.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_77cfde3bf5c69785e555fb3fc128d2d2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_77f9333f426c096697f2a4819caea446.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_7867da62ea65561af3e4bdbe8e53b0c6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_797f4e20e77b154c5bc4aa9f4a1442ea.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_7a8e04e568249ae87303ae2ce675569e.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_7bdcd1f5773360ad6a2db9db71171877.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_7c46023aec8b7f0536561d34866ec4f8.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_7c8dcc4ff6e82e75487dc966f36c6cf4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_7d806a01ee1ad31864e7769e517e3b0f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_7db0ad5b67489627b35461b626dbfaa1.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_8076c723d0bfb6f7c78d37e99d50b4c3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_81dd13f7916814d041a44419ebe1f4d4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_82b28d2cc93e86661e367603bf5851c6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_82bf85fd567b33765085c213a917ff3a.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_82de2ec4766c9dff96ed9c5ee5a4e68f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_82fbeb2285747213b6db3d9324c94989.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_83219a11c3487ead5d3d975d57a32d02.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_83529792117dde91ca0e38235729c0fa.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_84a81082981d1ec013d95aebeb047ca6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_862c0a78153328587c69bce7b2ba943b.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_874ee85b3be0fbae02a26dab839470ba.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_88518ecce526377eb10130efde0749a1.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_88f7e8e53d7a93912d18038686a85d01.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_8af28e92c7a236d74a3f5c5fb01505b1.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_8b55c9c2cf10d479127f5b77b318ed8b.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_8b8dde1f9384bb9cfe9ce236f76735d8.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_8d3829ab2a6f35fcbca93c607cfd85ba.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_8d4be16c677c4133b829dd6ddaa6b811.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_8e4016fae4b66ff2085506f96e527b74.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_8ff3cc0b32a650763df619df5dc0d723.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_901a2e562c385e05fdd8771949b05941.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_920ab37f87f4e181d322b4c21ea4a412.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_938a42e22334d97a884193d1224faa34.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_93dd0a828f0850771f7888c10719cd4e.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_940772ecadcfca05725c556ccb63e3ff.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_945178d2acbf2f62302a3ff12f148ed6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_94fa40d3c33457230c1fa0e6ab5e573d.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_960fb7fb07bfc960d3e8a2fdb52e4a5d.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_96d92bb68b15effe0230b1493cfe1f07.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_9751fceba214d7dab70c20fccbb44713.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_97683a7863e37b2430c237df30180317.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_993c45e59e322ad844a1dafe243360b5.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_99537471290183949637370b7995c14b.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_99afea33573f81882d0319f75294f487.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_9a12b694732dc491d76eeeea983b9a45.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_9a2a944ef214cdc031f38e06ef55c512.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_9a88420e365464a3db8db23068b46abe.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_9aa0583adb1588ad101a8f3e84a21aa1.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_9abfc232e8e7508b3f12ab61fd0c079e.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_9b9a575ad183efface5c04b629f50ca1.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_9ce01bdde7f66e32eaab06c957b569fd.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_9e0ec243da9ddae48455c1b6fc0da9ec.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_9f9ccb3d838aafe5f411aa68f5c5d617.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_a0f43d4bd6557d065e046ca4160b1e1c.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_a16814e1cf37e1d0e2dd7c730c511cdb.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_a1a899b7a9b6ada146c7b4e71676139e.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_a218578170fc4fcdf5f3b8143e01be5f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_a2925afcce6f849e522b553c6b5bf1c3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_a523d18ef9c37d4fece59fee528140f0.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_a56a8464e73187727a42f536d198010c.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_a59402a82694e808e701ea9cb05dd0a4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_a5df93b359da402bd5068bd503365a51.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_a69ce4cb4168c9c92f9e1998a6306b79.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_a7661668ee327225ef10db2156f61bc3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_a7c55b5849fb3c8b2d86ad1f219600b9.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_a88b32cb40fb05a68ff08b5186c5cdb2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_a9bf8adf17a6bf2f2066e5198887fed5.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_aa23544141a090b8f89dbe73f6710039.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_aa9bab8fa2713c1cc33cf490d687f235.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_ac06454daa074743734659a7f44bc36e.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_ae4edf49c3537582553e9c316e670604.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_aec1fc3189fc04b46f9d862f76bbf3f0.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_aedbfa7f8871610833b83ad21269208c.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_aee618a0a0238b731c8cc71b84126b96.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_b008dd2f334ef5382eda960bfaa13a2c.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_b01d9a71f887e6940413dd73be1db7f7.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_b0b517691ff3252beb46c5975f08dc8a.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_b0c03ebc198e4788ec828a1d06f7b6af.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_b1043a2eafbb3173c214430ee958cdf9.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_b17cc1afa2fe6af54c72eafa05800b8f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_b26a217ecd78c43b88cb81acba2d8d81.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_b31eeaacb2cd7e9e92b28d96fadd105e.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_b5fb5cb58d436441b5e4cac56cc71897.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_b70c659d1577007521abaf20d745b882.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_b8204794264c391e7bb8c52c7d673e63.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_b87dd69053e257129aca58b1b758aa8c.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_b99cb9b10be113a04a338573b208bf03.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_baf607cb130cfec7de90feea06792d28.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_bb2ca7b9b0e5bf12d8ca0855f2776faf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_bc4248b63bf2ea1a9d1a80cf73cec7d9.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_bdbb343cd542cd32d09c52c0d6646373.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_be9a61cc6ba4d876b5ca3828dd393100.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_bfd35c901e6908d7b8fc784e6b966733.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_c18ccde811fa52e839724f5de80d355f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_c24ae2326178213225d3daae32ba5f7d.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_c2a46397946ae06149f6b76be4ac81b5.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_c2ca718ce9d638bfcdac581dc052c558.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_c2d93b1951fc86558f9ae0bc23321873.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_c35a3896e052b3a44c98659449966c62.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_c4625233517f192e9acfeb508f934cd1.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_c48c663602bd6688bfb388f1c93a701f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_c515672d219721b66bebdea2235f61ce.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_c58e3ab256b9a825b0bdcc03859afcd9.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_c635e2a56db2925343ac4099e9767567.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_c84b6490e553022a35f610399eedfc00.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_c8c4f445f113788c9589b74e35b38ab3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_c90df95963ce5ad1f1fa8a7322eeaced.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_c9bb3dab2b97ff75a7defd20f28c691a.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_ca9a1fef52d7253220a278c40bf92c02.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_cb33195eb6d8141bd6317e7249c8d048.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_ce03f2ee36d6a990987dd3cd68cb5f9d.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_d06378e5f6bcac8404677ae437108d48.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_d09418495a611a7c25c66414e7f80f1a.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_d216a9fe322a91a190aa86faaeffe69f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_d28d3780603f71b3f6da3c10aec0b168.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_d300d2ea70856cb1477805bbf60da7f2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_d40c970afc89ccef30bad257d425bf44.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_d417a13f5ab0798dc472d539e9f0d324.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_d735ffae3a45e3d074fa7e7c66cb783e.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_d7d44fa56aea108cff625ac2ae815b5f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_d893ee8cb4c679b4ede9b6f6cfbfc5dc.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_d9383721fdecba073bf3df13ccd50b01.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_d9c8901553b6618f6bd9e3c5cfd6ccca.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_db3d4d9d6927b697d483d8c1c1bf05f8.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_dbf70903cc1d66d69d001a1e9eebbb1f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_dd1b33f4944a54385b725b4225cdabcb.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_dd2690e4387c7207a55af8c27a54754f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_dd9016a92c5c49a0e2b6bc2d4cccb5f6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_df7cb882df9c7b24d00bb9b13a69f10c.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_dfc1acc6a51e1be1e07007a37afb3198.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_e341bd202a211015629815e56f88fe5b.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_e36d656aae1493e8614314f17fa89fbc.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_e3f658bdc36296b44821b3e3e0900cdb.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_e5535f8bdec837afe61fd3505bae965d.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_e5bcc6ff0d303c7114efe41289508cd0.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_e708d74704fda78d4ffd927c6efdb55a.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_e833d6e0925304dc655568d021834816.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_e8937f17b2cbf86ce88eb410e710b6c0.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_e9246d701ef04fea7468e2798e6b3ec9.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_e96455bd0035a0ef3d945c7502a9eae2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_ece02621f0d0fbdbc759330162026186.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_eda38976fcec0b62601d14f868ccd3ff.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_f2250b408940bd3e8d4b7684b4e529b0.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_f2a85c5e9cf631ee3e7207c00c1027df.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_f3af170286f333f349cd7b41d371981b.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_f4d59122a3f6196305d4f4006174d283.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_f4f000d710f4dc29d2b4f46ef4987e96.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_f512c270c818f8f3c091946683ca0945.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_f7787794d6bea6592816f21ef9aa0ebc.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_f78f3fe047dcca76673638f7d80533c7.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_f866a4f9ed1beebd46595b95128ce825.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_f8f8299b36a91976ea67046863637760.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_f914e84e49162c8ca119c4d744a80235.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_fa238de74104f9644dda7734179ce806.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_fa9fdc8f5e671587db1119567a85bc02.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_fabf13c882017d1ee8e88e28db659784.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_fb35566eea3d04b4444aa7d32397f97b.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_fbd39f1e6ba366eda0fa9ffe906efeea.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_feb2794a5645cee94431436a631bc638.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_fef352b37eddc21d8cdf15fff07df921.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/css/autoptimize_single_ffac4bc0a802e6205c104322361993df.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/js/autoptimize_d41d8cd98f00b204e9800998ecf8427e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/js/autoptimize_fallback.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/js/autoptimize_single_0f7346b58d61d2c36d7fe6a7166c46d1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/js/autoptimize_single_126af8c4e8da36d621b2fef592be017b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/js/autoptimize_single_14f09eda1e8dd308f85d1a274cc6910c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/js/autoptimize_single_15b3900976d4e88d954e96c4b7a00e85.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/js/autoptimize_single_1a30f8147c61028d5fea592ee6233d56.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/js/autoptimize_single_243c7a9ad6f5b8ad274d2702882d6cf6.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/js/autoptimize_single_2e16bda3b75420ba7ee4427e9d184c9c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/js/autoptimize_single_3c16e185a45c9ca8669535e844846ccc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/js/autoptimize_single_3f0bd04397504fddb009f29fc5dbdc2b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/js/autoptimize_single_45f21ca3b068d4f7669a0f2c787c16d4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/js/autoptimize_single_46f3d019d91fd5e822833fa2d56dfe7b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/js/autoptimize_single_4d215da484438030e774dbc99b6e6df9.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/js/autoptimize_single_58878e6b1f7d30f556a1b8a141d2a665.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/js/autoptimize_single_60e9e71ae8f94f68b409e517647823b8.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/js/autoptimize_single_71ada6f20388740e73cd9dd4eb6e5a88.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/js/autoptimize_single_76b1850df42ade514e14f35310136112.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/js/autoptimize_single_7e2016f01aa1d50963dda1035a6a662a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/js/autoptimize_single_7ff7abc3e10dff45ccf8e70b91625907.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/js/autoptimize_single_8026c4ebecbaf069baccea62aa203cd6.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/js/autoptimize_single_83a062cf6545b990c13b4398035a29d0.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/js/autoptimize_single_84b2ba246f653926d924d08cec7d45d8.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/js/autoptimize_single_a53a916adf48efefd5a2aa0861ebbc07.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/js/autoptimize_single_a631a6a96892ff3756dcded5a07d21a2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/js/autoptimize_single_a9c61ad3ac4361328ab5e9523566f088.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/js/autoptimize_single_ad177b8f3e4c33b49c00f73148b0ad2f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/js/autoptimize_single_b1231649556978393d3e64e17f1e6044.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/js/autoptimize_single_b21bb9073df9553d9dca59b4babedd0f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/js/autoptimize_single_b44ee14337635cc57fd10550498aeeac.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/js/autoptimize_single_b50ccbace774e0b2911d7f452126ac81.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/js/autoptimize_single_b674a6eb6e420531c086615da319d35d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/js/autoptimize_single_c95e59d7c4e31339a068d6c354dfd042.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/js/autoptimize_single_d4d3f50d77b726c886e4d1073dceab09.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/js/autoptimize_single_d52a92e31cd06b02f228c5dd0a565c4f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/js/autoptimize_single_debfc1b2275cd4d153b718ece4b06387.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/js/autoptimize_single_e14a98d0af70b6bf58cf2d87a25eb7a6.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/js/autoptimize_single_e448ad57b31118c447943d988a5e206a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/js/autoptimize_single_f200e49c9c55a485637b51ff376e68af.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/js/autoptimize_single_f206b214fa40f67419d113f62243103e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/js/autoptimize_single_f5ca8d4da460ec71b8ef3f0090a40a81.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cache/autoptimize/js/autoptimize_single_f5edceefb5058d661d1189197b715d44.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/404.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/404.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/css/components/about/_heroSection.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/components/about/_heroSection.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/css/components/_breadCrumbs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/components/_breadCrumbs.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/css/components/home/_aboutSection.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/components/home/_aboutSection.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/css/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/css/layout/popups/_appointment.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/layout/popups/_appointment.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../recipe-agency/dist/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/dist/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../recipe-agency/dist/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/dist/css/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../recipe-agency/dist/js/main.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/dist/js/main.bundle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../recipe-agency/dist/js/main.bundle.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/dist/js/main.bundle.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../recipe-agency/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../recipe-agency/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/pages/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/pages/services.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/sections/about/aboutSection.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/sections/about/aboutSection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/sections/about/heroSection.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/sections/about/heroSection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/sections/blog/heroSection.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/sections/blog/heroSection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/sections/cases/heroSection.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/sections/cases/heroSection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/sections/contacts/heroSection.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/sections/contacts/heroSection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/screenshot.png" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/screenshot.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../recipe-agency/sections/home/casesSection.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/sections/home/casesSection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/sections/home/processesSection.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/sections/home/processesSection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/sections/servicesSection.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/sections/servicesSection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/sections/singleBlog/heroSection.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/sections/singleBlog/heroSection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/sections/singleService/heroSection.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/sections/singleService/heroSection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/templates/popups/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/templates/popups/menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/templates/singleBlog/asideCta.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/templates/singleBlog/asideCta.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/sections/singleCase/detailsSection.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/sections/singleCase/detailsSection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/sections/singleCase/heroSection.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/sections/singleCase/heroSection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/style.css" afterDir="false" />
     </list>
     <list id="4d1a8957-bea8-4a10-b9af-bda5b05ba84b" name="Changes by eduardbrugos" comment="">
       <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/css/base/_common.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/base/_common.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/css/base/_utils.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/base/_utils.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/css/components/_404.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/components/_404.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/css/components/_ctaSection.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/components/_ctaSection.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/css/components/_casesSection.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/components/_casesSection.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/css/components/singleCase/_detailsSection.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/components/singleCase/_detailsSection.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/css/components/singleCase/_heroSection.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/components/singleCase/_heroSection.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/css/layout/_pageFooter.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/layout/_pageFooter.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/css/layout/popups/_appointment.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/layout/popups/_appointment.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/css/layout/popups/_feedback.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/layout/popups/_feedback.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/css/layout/popups/_filter.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/layout/popups/_filter.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/css/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/css/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/images/sprite.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/images/sprite.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/js/filterPosts.js" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/js/filterPosts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/js/popups/appointment.js" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/js/popups/appointment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/js/popups/feedback.js" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/js/popups/feedback.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/js/popups/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/js/popups/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/js/refs.js" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/js/refs.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../recipe-agency/assets/js/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/assets/js/utils.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../recipe-agency/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/sections/home/heroSection.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/sections/home/heroSection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/sections/singleCase/detailsSection.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/sections/singleCase/detailsSection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recipe-agency/single-services.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/single-services.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/sections/home/aboutSection.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/sections/home/aboutSection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/sections/home/casesSection.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/sections/home/casesSection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/templates/popups/appointment.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/templates/popups/appointment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe-agency/templates/popups/feedback.php" beforeDir="false" afterPath="$PROJECT_DIR$/../recipe-agency/templates/popups/feedback.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,36 +407,25 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/../recipe-agency/functions.php">
-      <ranges>
-        <range start1="23" end1="24" start2="23" end2="30" changelist="4d1a8957-bea8-4a10-b9af-bda5b05ba84b" />
-        <range start1="87" end1="88" start2="93" end2="93" changelist="4d1a8957-bea8-4a10-b9af-bda5b05ba84b" />
-        <range start1="145" end1="146" start2="150" end2="153" changelist="d9b00336-d57f-4bcf-ab54-a00826f04c0b" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/../recipe-agency/assets/css/main.scss">
-      <ranges>
-        <range start1="21" end1="21" start2="21" end2="24" changelist="4d1a8957-bea8-4a10-b9af-bda5b05ba84b" />
-        <range start1="63" end1="63" start2="66" end2="69" changelist="d9b00336-d57f-4bcf-ab54-a00826f04c0b" />
-        <range start1="65" end1="65" start2="71" end2="74" changelist="d9b00336-d57f-4bcf-ab54-a00826f04c0b" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/../recipe-agency/header.php">
-      <ranges>
-        <range start1="17" end1="18" start2="17" end2="18" changelist="d9b00336-d57f-4bcf-ab54-a00826f04c0b" />
-        <range start1="21" end1="22" start2="21" end2="21" changelist="4d1a8957-bea8-4a10-b9af-bda5b05ba84b" />
-        <range start1="35" end1="36" start2="34" end2="35" changelist="4d1a8957-bea8-4a10-b9af-bda5b05ba84b" />
-      </ranges>
-    </file>
     <file path="$PROJECT_DIR$/../recipe-agency/footer.php">
       <ranges>
-        <range start1="8" end1="9" start2="8" end2="8" changelist="4d1a8957-bea8-4a10-b9af-bda5b05ba84b" />
-        <range start1="16" end1="17" start2="15" end2="15" changelist="4d1a8957-bea8-4a10-b9af-bda5b05ba84b" />
-        <range start1="52" end1="53" start2="50" end2="51" changelist="d9b00336-d57f-4bcf-ab54-a00826f04c0b" />
-        <range start1="103" end1="103" start2="101" end2="104" changelist="d9b00336-d57f-4bcf-ab54-a00826f04c0b" />
-        <range start1="104" end1="105" start2="105" end2="106" changelist="d9b00336-d57f-4bcf-ab54-a00826f04c0b" />
-        <range start1="115" end1="118" start2="116" end2="116" changelist="4d1a8957-bea8-4a10-b9af-bda5b05ba84b" />
-        <range start1="123" end1="123" start2="121" end2="123" changelist="4d1a8957-bea8-4a10-b9af-bda5b05ba84b" />
+        <range start1="59" end1="60" start2="59" end2="60" changelist="d9b00336-d57f-4bcf-ab54-a00826f04c0b" />
+        <range start1="123" end1="123" start2="123" end2="124" changelist="4d1a8957-bea8-4a10-b9af-bda5b05ba84b" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/../recipe-agency/sections/home/casesSection.php">
+      <ranges>
+        <range start1="0" end1="1" start2="0" end2="1" changelist="d9b00336-d57f-4bcf-ab54-a00826f04c0b" />
+        <range start1="2" end1="2" start2="2" end2="5" changelist="d9b00336-d57f-4bcf-ab54-a00826f04c0b" />
+        <range start1="3" end1="4" start2="6" end2="7" changelist="4d1a8957-bea8-4a10-b9af-bda5b05ba84b" />
+        <range start1="5" end1="5" start2="8" end2="11" changelist="d9b00336-d57f-4bcf-ab54-a00826f04c0b" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/../recipe-agency/assets/css/layout/popups/_appointment.scss">
+      <ranges>
+        <range start1="2" end1="3" start2="2" end2="4" changelist="4d1a8957-bea8-4a10-b9af-bda5b05ba84b" />
+        <range start1="5" end1="6" start2="6" end2="6" changelist="4d1a8957-bea8-4a10-b9af-bda5b05ba84b" />
+        <range start1="26" end1="27" start2="26" end2="26" changelist="d9b00336-d57f-4bcf-ab54-a00826f04c0b" />
       </ranges>
     </file>
   </component>
@@ -130,7 +448,7 @@
     "WebServerToolWindowFactoryState": "false",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Applications/MAMP/htdocs/Recipe/wp-content/themes/recipe-agency/assets/images",
+    "last_opened_file_path": "/Applications/MAMP/htdocs/Recipe/wp-content/themes/recipe-agency",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -142,6 +460,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../recipe-agency" />
       <recent name="$PROJECT_DIR$/../recipe-agency/assets/images" />
       <recent name="$PROJECT_DIR$/assets/images" />
     </key>
@@ -169,7 +488,7 @@
       <workItem from="1704964292516" duration="19679000" />
       <workItem from="1704996462650" duration="88000" />
       <workItem from="1705049356614" duration="26292000" />
-      <workItem from="1705241394789" duration="33011000" />
+      <workItem from="1705241394789" duration="40716000" />
     </task>
     <servers />
   </component>

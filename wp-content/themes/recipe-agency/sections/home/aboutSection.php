@@ -2,7 +2,7 @@
 $current_lang = pll_current_language();
 ?>
 
-<section class="section about-section position-relative">
+<section class="section section--padding about-section position-relative">
     <div class="container">
         <?php get_template_part('templates/ownersList'); ?>
         <h2 class="about-title text-center mx-auto">

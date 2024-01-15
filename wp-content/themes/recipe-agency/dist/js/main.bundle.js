@@ -79,6 +79,7 @@ var updateCategories = function updateCategories(category, isChecked) {
   if (categories.length === 0) {
     categories.push('all');
     $('.filter-list input[value="all"]').prop('checked', true);
+    $('.buttons-list__button.clean').hide();
   }
 };
 $('.filter-list input[type="checkbox"]').on('change', function () {
@@ -133,15 +134,18 @@ __webpack_require__.r(__webpack_exports__);
 
 var appointmentButtons = _refs__WEBPACK_IMPORTED_MODULE_0__["default"].appointmentButtons,
   appointmentBackdrop = _refs__WEBPACK_IMPORTED_MODULE_0__["default"].appointmentBackdrop,
-  menuBackdrop = _refs__WEBPACK_IMPORTED_MODULE_0__["default"].menuBackdrop;
+  menuBackdrop = _refs__WEBPACK_IMPORTED_MODULE_0__["default"].menuBackdrop,
+  appointmentCloseButton = _refs__WEBPACK_IMPORTED_MODULE_0__["default"].appointmentCloseButton;
 var handleClick = function handleClick() {
   if (!menuBackdrop.hasClass('is-hidden')) {
     (0,_utils__WEBPACK_IMPORTED_MODULE_1__.hideBackdrop)(menuBackdrop);
   }
-  console.log(appointmentBackdrop);
   (0,_utils__WEBPACK_IMPORTED_MODULE_1__.showBackdrop)(appointmentBackdrop);
 };
 appointmentButtons.on('click', handleClick);
+appointmentCloseButton.on("click", function () {
+  return (0,_utils__WEBPACK_IMPORTED_MODULE_1__.hideBackdrop)(appointmentBackdrop);
+});
 
 /***/ }),
 
@@ -159,7 +163,8 @@ __webpack_require__.r(__webpack_exports__);
 
 var feedbackButtons = _refs__WEBPACK_IMPORTED_MODULE_0__["default"].feedbackButtons,
   feedbackBackdrop = _refs__WEBPACK_IMPORTED_MODULE_0__["default"].feedbackBackdrop,
-  menuBackdrop = _refs__WEBPACK_IMPORTED_MODULE_0__["default"].menuBackdrop;
+  menuBackdrop = _refs__WEBPACK_IMPORTED_MODULE_0__["default"].menuBackdrop,
+  feedbackCloseButton = _refs__WEBPACK_IMPORTED_MODULE_0__["default"].feedbackCloseButton;
 var handleClick = function handleClick() {
   if (!menuBackdrop.hasClass('is-hidden')) {
     (0,_utils__WEBPACK_IMPORTED_MODULE_1__.hideBackdrop)(menuBackdrop);
@@ -167,6 +172,9 @@ var handleClick = function handleClick() {
   (0,_utils__WEBPACK_IMPORTED_MODULE_1__.showBackdrop)(feedbackBackdrop);
 };
 feedbackButtons.on('click', handleClick);
+feedbackCloseButton.on("click", function () {
+  return (0,_utils__WEBPACK_IMPORTED_MODULE_1__.hideBackdrop)(feedbackBackdrop);
+});
 
 /***/ }),
 
@@ -275,6 +283,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _filter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./filter */ "./assets/js/popups/filter.js");
 /* harmony import */ var _feedback__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./feedback */ "./assets/js/popups/feedback.js");
 /* harmony import */ var _appointment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./appointment */ "./assets/js/popups/appointment.js");
+/* harmony import */ var _thankYou__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./thankYou */ "./assets/js/popups/thankYou.js");
+
 
 
 
@@ -374,6 +384,39 @@ observer.observe(menuBackdrop[0], {
 
 /***/ }),
 
+/***/ "./assets/js/popups/thankYou.js":
+/*!**************************************!*\
+  !*** ./assets/js/popups/thankYou.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _refs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../refs */ "./assets/js/refs.js");
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils */ "./assets/js/utils.js");
+
+
+var thankYouBackdrop = _refs__WEBPACK_IMPORTED_MODULE_0__["default"].thankYouBackdrop,
+  thankYouCloseButton = _refs__WEBPACK_IMPORTED_MODULE_0__["default"].thankYouCloseButton,
+  appointmentBackdrop = _refs__WEBPACK_IMPORTED_MODULE_0__["default"].appointmentBackdrop,
+  feedbackBackdrop = _refs__WEBPACK_IMPORTED_MODULE_0__["default"].feedbackBackdrop;
+var handleSubmit = function handleSubmit() {
+  if (!appointmentBackdrop.hasClass('is-hidden')) {
+    (0,_utils__WEBPACK_IMPORTED_MODULE_1__.hideBackdrop)(appointmentBackdrop);
+  }
+  if (!feedbackBackdrop.hasClass('is-hidden')) {
+    (0,_utils__WEBPACK_IMPORTED_MODULE_1__.hideBackdrop)(feedbackBackdrop);
+  }
+  console.log(1);
+  (0,_utils__WEBPACK_IMPORTED_MODULE_1__.showBackdrop)(thankYouBackdrop);
+};
+document.addEventListener("wpcf7mailsent", handleSubmit);
+thankYouCloseButton.on("click", function () {
+  return (0,_utils__WEBPACK_IMPORTED_MODULE_1__.hideBackdrop)(thankYouBackdrop);
+});
+
+/***/ }),
+
 /***/ "./assets/js/refs.js":
 /*!***************************!*\
   !*** ./assets/js/refs.js ***!
@@ -401,7 +444,11 @@ var refs = {
   feedbackBackdrop: $('#feedback'),
   feedbackButtons: $('.feedback-js'),
   appointmentButtons: $('.appointment-js'),
-  appointmentBackdrop: $('#appointment')
+  appointmentBackdrop: $('#appointment'),
+  appointmentCloseButton: $('#appointment .modal-button'),
+  feedbackCloseButton: $('#feedback .modal-button'),
+  thankYouCloseButton: $('#thank-you .modal-button'),
+  thankYouBackdrop: $('#thank-you')
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (refs);
 
@@ -790,6 +837,7 @@ $('#single-case .hero-content__button').on("click", function () {
   var textToCopy = $('#single-case .hero-content__link a').attr('href');
   navigator.clipboard.writeText(textToCopy);
 });
+$('.cf7-acceptance').prop('checked', true);
 $('a[href="[privacy_policy_url]"]').attr('href', custom_vars.privacy_policy_url);
 $("document").ready(function () {
   bodyEl.css("visibility", "visible");

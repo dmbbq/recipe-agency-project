@@ -139,6 +139,8 @@ img {
   pointer-events: initial;
   transition: opacity 250ms linear, visibility 250ms linear;
 
+  overflow-y: scroll;
+
   &.is-hidden {
     opacity: 0;
     visibility: hidden;
@@ -149,17 +151,11 @@ img {
 .modal {
   all: unset;
 
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
   box-sizing: border-box;
 
   display: block;
 
   width: 100%;
-  max-width: 44.375rem;
   padding: 6.375rem clamp(1.69rem, 0.583rem + 4.72vw, 6.25rem);
 
   overflow-x: hidden;
@@ -167,9 +163,24 @@ img {
 
   background-color: $white-color;
 
+  @media screen and (max-width: 575px){
+    height: 48.125rem;
+  }
+
+  @media screen and (min-width: 768px){
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
   @media screen and (min-width: 992px){
-    padding-top: 5.62rem;
-    padding-bottom: 5.62rem;
+    padding-top: 5.625rem;
+    padding-bottom: 5.625rem;
+
+    overflow: visible;
+
+    border-radius: 0.9375rem;
   }
 
   & h2 {
@@ -188,6 +199,29 @@ img {
 
     & strong {
       color: $accent-color;
+    }
+  }
+
+  & .modal-button {
+    all: unset;
+
+    top: 2.44rem;
+    right: 1.69rem;
+
+    @media screen and (min-width: 992px){
+      top: initial;
+      right: initial;
+      left: calc(100% + 0.625rem);
+      bottom: calc(100% + 0.625rem);
+    }
+  }
+
+  & .modal-button__icon {
+    @media screen and (min-width: 992px){
+      fill: $white-color;
+
+      width: 2.375rem;
+      height: 2.375rem;
     }
   }
 }

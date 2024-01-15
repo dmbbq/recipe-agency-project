@@ -272,3 +272,14 @@
     height: 5.8125rem;
   }
 }
+
+#home {
+  & .cases {
+    border-radius: 1.5625rem;
+    background-color: $secondary-bg-color;
+
+    & h2 {
+
+    }
+  }
+}

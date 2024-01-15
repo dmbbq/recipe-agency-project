@@ -162,11 +162,22 @@ if (function_exists('pll_register_string')) {
 function send_message_to_telegram($contact_form)
 {
     $form_id = $contact_form->id();
-    $telegram_token = '';
-    $chat_id = '';
+    $telegram_token = '6980991397:AAG0bapfE7xNxcxEdIAjVYH0E_ru0X478B8';
+    $chat_id = '-4163052008';
     $message = '';
+//Feedback form [UA]
+    if ($form_id === '771') {
 
-    if ($form_id === 'formId') {
+        $submission = WPCF7_Submission::get_instance();
+        if ($submission) {
+            $posted_data = $submission->get_posted_data();
+            $message .= '<b>Контактные данные клиента:</b>' . PHP_EOL;
+            $message .= PHP_EOL;
+            $message .= '<b>Номер телефона:</b> ' . $posted_data['number'] . PHP_EOL;
+            $message .= PHP_EOL;
+        }
+//Feedback form [END]
+    } elseif ($form_id === 791) {
 
         $submission = WPCF7_Submission::get_instance();
         if ($submission) {
@@ -176,7 +187,41 @@ function send_message_to_telegram($contact_form)
             $message .= '<b>Номер телфона:</b> ' . $posted_data['number'] . PHP_EOL;
             $message .= PHP_EOL;
         }
-    } elseif ($form_id === 'formId') {
+//Appointment form [UA]
+    } elseif ($form_id === 472) {
+
+        $submission = WPCF7_Submission::get_instance();
+        if ($submission) {
+            $posted_data = $submission->get_posted_data();
+            $message .= '<b>Контактные данные клиента:</b>' . PHP_EOL;
+            $message .= PHP_EOL;
+            $message .= '<b>Номер телфона:</b> ' . $posted_data['number'] . PHP_EOL;
+            $message .= PHP_EOL;
+        }
+//Appointment form [ENG]
+    } elseif ($form_id === 203) {
+
+        $submission = WPCF7_Submission::get_instance();
+        if ($submission) {
+            $posted_data = $submission->get_posted_data();
+            $message .= '<b>Контактные данные клиента:</b>' . PHP_EOL;
+            $message .= PHP_EOL;
+            $message .= '<b>Номер телфона:</b> ' . $posted_data['number'] . PHP_EOL;
+            $message .= PHP_EOL;
+        }
+//Mailing form [UA]
+    } elseif ($form_id === 467) {
+
+        $submission = WPCF7_Submission::get_instance();
+        if ($submission) {
+            $posted_data = $submission->get_posted_data();
+            $message .= '<b>Контактные данные клиента:</b>' . PHP_EOL;
+            $message .= PHP_EOL;
+            $message .= '<b>Номер телфона:</b> ' . $posted_data['number'] . PHP_EOL;
+            $message .= PHP_EOL;
+        }
+//Mailing form [ENG]
+    } elseif ($form_id === 541) {
 
         $submission = WPCF7_Submission::get_instance();
         if ($submission) {

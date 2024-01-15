@@ -43,7 +43,7 @@ $results_visibility = get_field('single_results_visibility');
 
                 <div class="single-case-cta-wrapper d-lg-flex align-items-lg-center justify-content-lg-between">
                     <?php the_field('single_cta_title'); ?>
-                    <button type="button" class="button-primary">
+                    <button type="button" class="button-primary feedback-js">
                         <?= translate_and_output('write_us'); ?>
                     </button>
                 </div>

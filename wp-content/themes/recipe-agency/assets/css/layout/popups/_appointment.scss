@@ -1,9 +1,9 @@
 #appointment {
   & .modal {
-    border-radius: 0.9375rem;
+    max-width: 43rem;
+
     @media screen and (min-width: 1200px) {
       overflow-y: visible;
-
     }
 
     & h2 {
@@ -24,5 +24,4 @@
       }
     }
   }
-
 }

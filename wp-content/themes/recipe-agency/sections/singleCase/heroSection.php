@@ -7,6 +7,7 @@ $stats = get_field('stats');
     <div class="container d-flex align-items-end h-100 d-lg-block">
         <div class="d-lg-flex flex-lg-column justify-content-lg-between">
             <div>
+                <?php get_template_part('templates/breadCrumbs');?>
                 <h1 class="hero-title">
                     <?php the_field('single_title'); ?>
                 </h1>
