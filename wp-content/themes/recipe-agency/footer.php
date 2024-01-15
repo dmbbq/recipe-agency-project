@@ -6,7 +6,6 @@ $tel_valik = get_field('number_valik', 136);
 $email = get_field('email_link', 136);
 
 $current_lang = pll_current_language();
-
 ?>
 
 <footer class="footer">
@@ -14,7 +13,6 @@ $current_lang = pll_current_language();
 
         <div class="d-lg-flex justify-content-between footer-wrapper">
             <div class="footer-wrapper-one">
-
                 <div class="d-flex footer-thumb--mob">
                     <?php the_custom_logo(); ?>
 
@@ -50,7 +48,7 @@ $current_lang = pll_current_language();
                 <p class="footer-content__text">
                     <?php the_field('footer_text', pll_get_post(119, $current_lang)); ?>
                 </p>
-                <button class="button-primary ">
+                <button class="button-primary feedback-js">
                     <?= translate_and_output('write_us'); ?>
                 </button>
 
@@ -101,8 +99,11 @@ $current_lang = pll_current_language();
         </div>
 
 
+        <?php
+        $current_lang = pll_current_language();
+        ?>
         <div class="footer-bottom d-flex flex-column flex-lg-row">
-            <a class="footer-bottom__info" href="#">
+            <a class="footer-bottom__info" href="<?= get_permalink(pll_get_post(283, $current_lang)); ?>">
                 <?= translate_and_output('privacy_policy'); ?>
             </a>
             <span class="footer-bottom__info">
@@ -113,14 +114,13 @@ $current_lang = pll_current_language();
             </a>
         </div>
     </div>
-
-
-    </div>
 </footer>
 </div>
 
 <?php get_template_part('templates/popups/menu'); ?>
 <?php get_template_part('templates/popups/filter'); ?>
+<?php get_template_part('templates/popups/feedback'); ?>
+<?php get_template_part('templates/popups/appointment'); ?>
 
 <?php wp_footer(); ?>
 

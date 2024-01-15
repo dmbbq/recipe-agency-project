@@ -10,7 +10,7 @@
             </button>
         </div>
         <?php get_template_part('templates/navigation'); ?>
-        <button class="button-primary flex-shrink-0">
+        <button class="button-primary flex-shrink-0 feedback-js">
             <?= translate_and_output('write_us'); ?>
         </button>
     </div>

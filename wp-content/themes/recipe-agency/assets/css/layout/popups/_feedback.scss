@@ -1,0 +1,28 @@
+#feedback {
+  & .modal {
+     & h2 {
+       margin-bottom: clamp(2.19rem, 2.04rem + 0.64vw, 2.81rem);
+
+     }
+  }
+
+  & form {
+    & p {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+    }
+
+    & .wpcf7-form-control-wrap {
+      display: flex;
+
+      &:not(:first-of-type){
+        margin-top: 0.94rem;
+      }
+    }
+
+    & textarea {
+
+    }
+  }
+}

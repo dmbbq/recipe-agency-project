@@ -3,3 +3,92 @@ body {
     background-color: $primary-text-color;
   }
 }
+#not-found{
+  & .button-primary,
+  & .button-secondary{
+    max-width: fit-content;
+  }
+  & .button-primary{
+    @media screen and (max-width: 991px){
+      margin-bottom: 0.75rem;
+    }
+  }
+
+  & .section{
+    background-size: 88%;
+
+    background-position: top right;
+    background-repeat: no-repeat;
+
+    padding-top: 23.25rem;
+
+    @media screen and (min-width: 992px){
+      background-size: 53.75%;
+
+      padding-top: min(13.177%, 15.8125rem);
+      padding-bottom: min(17.604%, 21.125rem);
+    }
+  }
+}
+
+.not-found-accent {
+  font-size: clamp(0.688rem, 0.627rem + 0.26vw, 0.938rem);
+  letter-spacing: -0.03094rem;
+
+  color: $accent-color;
+
+  @media screen and (min-width: 992px) {
+    letter-spacing: -0.04219rem;
+  }
+}
+
+.not-found-title {
+  font-size: clamp(2.375rem, 1.708rem + 2.85vw, 5.125rem);
+  letter-spacing: -0.10688rem;
+
+  @media screen and (min-width: 992px) {
+    letter-spacing: -0.23063rem;
+    text-transform: uppercase;
+  }
+}
+
+.not-found-text {
+  margin-bottom: 1.25rem;
+
+  font-family: 'Manrope' , sans-serif;
+  font-size: clamp(0.875rem, 0.829rem + 0.19vw, 1.063rem);
+  letter-spacing: -0.00875rem;
+
+  @media screen and (max-width: 767px) {
+    max-width: 18.8125rem;
+  }
+
+  @media screen and (min-width: 992px) {
+    margin-bottom: 2.81rem;
+
+    letter-spacing: -0.02656rem;
+  }
+
+  & br {
+    @media screen and (max-width: 767px){
+      display: none;
+    }
+  }
+}
+
+.not-found-text,
+.not-found-title {
+  color: $white-color;
+}
+
+.not-found-accent,
+.not-found-title {
+  margin-bottom: 1.25rem;
+
+  @media screen and (min-width: 992px) {
+    margin-bottom: 2.19rem;
+  }
+}
+.button-wrapper{
+  gap: 0.94rem;
+}

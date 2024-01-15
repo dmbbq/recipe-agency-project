@@ -35,7 +35,7 @@ var categories = ['all'];
 var loadPosts = function loadPosts() {
   $('#cases .hero-content').html(casesSkeletonList);
   $.ajax({
-    url: ajaxurl,
+    url: custom_vars.ajaxurl,
     type: 'post',
     data: {
       action: 'filter_posts',
@@ -116,6 +116,57 @@ $('.buttons-list__button').not('.clean').on('click', function () {
   loadPosts();
   (0,_utils__WEBPACK_IMPORTED_MODULE_5__.hideBackdrop)(_refs__WEBPACK_IMPORTED_MODULE_4__["default"].filterBackdrop);
 });
+
+/***/ }),
+
+/***/ "./assets/js/popups/appointment.js":
+/*!*****************************************!*\
+  !*** ./assets/js/popups/appointment.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _refs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../refs */ "./assets/js/refs.js");
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils */ "./assets/js/utils.js");
+
+
+var appointmentButtons = _refs__WEBPACK_IMPORTED_MODULE_0__["default"].appointmentButtons,
+  appointmentBackdrop = _refs__WEBPACK_IMPORTED_MODULE_0__["default"].appointmentBackdrop,
+  menuBackdrop = _refs__WEBPACK_IMPORTED_MODULE_0__["default"].menuBackdrop;
+var handleClick = function handleClick() {
+  if (!menuBackdrop.hasClass('is-hidden')) {
+    (0,_utils__WEBPACK_IMPORTED_MODULE_1__.hideBackdrop)(menuBackdrop);
+  }
+  console.log(appointmentBackdrop);
+  (0,_utils__WEBPACK_IMPORTED_MODULE_1__.showBackdrop)(appointmentBackdrop);
+};
+appointmentButtons.on('click', handleClick);
+
+/***/ }),
+
+/***/ "./assets/js/popups/feedback.js":
+/*!**************************************!*\
+  !*** ./assets/js/popups/feedback.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _refs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../refs */ "./assets/js/refs.js");
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils */ "./assets/js/utils.js");
+
+
+var feedbackButtons = _refs__WEBPACK_IMPORTED_MODULE_0__["default"].feedbackButtons,
+  feedbackBackdrop = _refs__WEBPACK_IMPORTED_MODULE_0__["default"].feedbackBackdrop,
+  menuBackdrop = _refs__WEBPACK_IMPORTED_MODULE_0__["default"].menuBackdrop;
+var handleClick = function handleClick() {
+  if (!menuBackdrop.hasClass('is-hidden')) {
+    (0,_utils__WEBPACK_IMPORTED_MODULE_1__.hideBackdrop)(menuBackdrop);
+  }
+  (0,_utils__WEBPACK_IMPORTED_MODULE_1__.showBackdrop)(feedbackBackdrop);
+};
+feedbackButtons.on('click', handleClick);
 
 /***/ }),
 
@@ -222,6 +273,10 @@ observer.observe(filterBackdrop[0], {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./menu */ "./assets/js/popups/menu.js");
 /* harmony import */ var _filter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./filter */ "./assets/js/popups/filter.js");
+/* harmony import */ var _feedback__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./feedback */ "./assets/js/popups/feedback.js");
+/* harmony import */ var _appointment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./appointment */ "./assets/js/popups/appointment.js");
+
+
 
 
 
@@ -342,7 +397,11 @@ var refs = {
   swiperPagination: $(".swiper-pagination"),
   swiperNavigation: $(".pagination__item"),
   filterButton: $('.filter-button'),
-  filterBackdrop: $("#filter")
+  filterBackdrop: $("#filter"),
+  feedbackBackdrop: $('#feedback'),
+  feedbackButtons: $('.feedback-js'),
+  appointmentButtons: $('.appointment-js'),
+  appointmentBackdrop: $('#appointment')
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (refs);
 
@@ -731,6 +790,7 @@ $('#single-case .hero-content__button').on("click", function () {
   var textToCopy = $('#single-case .hero-content__link a').attr('href');
   navigator.clipboard.writeText(textToCopy);
 });
+$('a[href="[privacy_policy_url]"]').attr('href', custom_vars.privacy_policy_url);
 $("document").ready(function () {
   bodyEl.css("visibility", "visible");
   new wowjs_dist_wow_min__WEBPACK_IMPORTED_MODULE_6__.WOW().init();

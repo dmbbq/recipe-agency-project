@@ -1,4 +1,4 @@
-<section class="section">
+<section class="section ">
     <div class="container">
         <?php get_template_part('templates/home/casesList'); ?>
         <a class="button-secondary d-inline-flex d-md-flex all-cases-link" href="">

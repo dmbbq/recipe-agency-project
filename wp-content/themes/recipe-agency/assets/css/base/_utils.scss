@@ -31,18 +31,10 @@ main {
 .section{
   overflow-x: hidden;
 
-  padding-top: 4.6875rem;
-
-  @media screen and (min-width: 992px){
-    padding-top: min(13.0209%, 15.625rem);
-  }
+  padding-top: clamp(4.688rem, 2.033rem + 11.33vw, 15.625rem);
 
   &--padding{
-    padding-bottom: 4.6875rem;
-
-    @media screen and (min-width: 992px){
-      padding-bottom: min(13.0209%, 15.625rem);
-    }
+    padding-bottom: clamp(4.688rem, 2.033rem + 11.33vw, 15.625rem);
   }
 }
 
@@ -59,11 +51,9 @@ main {
 }
 
 .title {
-  margin-bottom: 2.5rem;
+  margin-bottom: clamp(2.5rem, 1.59rem + 3.88vw, 6.25rem);
 
   @media screen and (min-width: 992px){
-    margin-bottom: min(5.618%, 6.25rem);
-
     text-transform: uppercase;
   }
 }
@@ -157,15 +147,49 @@ img {
 }
 
 .modal {
+  all: unset;
+
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 
+  box-sizing: border-box;
+
   display: block;
+
+  width: 100%;
+  max-width: 44.375rem;
+  padding: 6.375rem clamp(1.69rem, 0.583rem + 4.72vw, 6.25rem);
 
   overflow-x: hidden;
   overflow-y: scroll;
+
+  background-color: $white-color;
+
+  @media screen and (min-width: 992px){
+    padding-top: 5.62rem;
+    padding-bottom: 5.62rem;
+  }
+
+  & h2 {
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: -0.09rem;
+
+    @media screen and (max-width: 991px){
+      line-height: 1.15;
+    }
+
+    @media screen and (min-width: 992px){
+      font-size: 3rem;
+      letter-spacing: -0.135rem;
+    }
+
+    & strong {
+      color: $accent-color;
+    }
+  }
 }
 
 .row {

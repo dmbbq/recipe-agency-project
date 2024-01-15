@@ -96,14 +96,13 @@
   line-height: 1.25;
 }
 
-.cf7-input {
+.cf7-input,
+.cf7-textarea {
   all: unset;
   box-sizing: border-box;
 
   width: 100%;
-  height: 3.75rem;
 
-  padding-left: 1.5rem;
   border-radius: $secondary-radius;
   border: 1px solid $fourth-bg-color;
 
@@ -111,18 +110,38 @@
 
   background-color: $white-color;
 
-  @media screen and (min-width: 992px) {
-    height: 4.5rem;
-
-    padding-left: 1.75rem;
-  }
-
   &::placeholder {
     opacity: 0.3;
   }
 
   &.wpcf7-not-valid {
     border-color: $invalid-text-color;
+  }
+}
+
+.cf7-input {
+  height: 3.75rem;
+
+  padding-left: 1.5rem;
+
+  @media screen and (min-width: 992px) {
+    height: 4.5rem;
+
+    padding-left: 1.75rem;
+  }
+}
+
+.cf7-textarea {
+  width: 100%;
+  height: 11.25rem;
+
+  padding: 1.25rem 1.5rem;
+
+  resize: none;
+
+  @media screen and (min-width: 992px){
+    height: 10.8125rem;
+    padding: 1.5rem 1.75rem;
   }
 }
 
@@ -136,6 +155,48 @@
   @media screen and (min-width: 992px) {
     height: 4.5rem;
     padding: 0 2.875rem;
+  }
+}
+
+.cf7-link {
+  display: flex;
+  align-items:center;
+  gap: 0.94rem;
+
+  margin-top: clamp(1.25rem, 1.175rem + 0.32vw, 1.56rem);
+  margin-bottom: clamp(1.25rem, 1.175rem + 0.32vw, 1.56rem);
+
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(0.875rem, 0.875rem + 0.05vw, 0.938rem);
+
+  @media screen and (max-width: 991px){
+    align-items: flex-start;
+    line-height: 1.35;
+  }
+
+  & .wpcf7-list-item {
+    margin: 0;
+  }
+
+  & a {
+    text-decoration: underline;
+  }
+
+  .cf7-acceptance {
+    all: unset;
+    display: inline-block;
+
+    width: 1.875rem;
+    height: 1.875rem;
+
+    background-image: url(../images/checkbox.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:checked {
+      background-image: url(../images/checkbox-checked.svg);
+    }
   }
 }
 

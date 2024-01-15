@@ -16,7 +16,7 @@ export const loadPosts = () => {
     $('#cases .hero-content').html(casesSkeletonList);
 
     $.ajax({
-        url: ajaxurl,
+        url: custom_vars.ajaxurl,
         type: 'post',
         data: {action: 'filter_posts', page, categories},
         success: (response) => {

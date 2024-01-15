@@ -6,6 +6,7 @@ $image_url_mob = get_field('single_hero_image_mob');
 <section class="hero">
     <div class="container d-flex align-items-end h-100">
         <div class="w-100">
+            <?php get_template_part('templates/breadCrumbs');?>
             <h1 class="hero-title">
                 <?php the_field('title'); ?>
             </h1>

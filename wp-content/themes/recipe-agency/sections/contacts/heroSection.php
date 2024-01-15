@@ -12,6 +12,7 @@ $contacts_image = get_field('info_image');
 
 <section class="hero main-section main-section--padding-mob">
     <div class="container">
+        <?php get_template_part('templates/breadCrumbs'); ?>
         <h1 class="title">
             <?php the_field('contacts_title');?>
         </h1>

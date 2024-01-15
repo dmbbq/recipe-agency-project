@@ -1,0 +1,72 @@
+.breadcrumb {
+  margin-bottom: clamp(1.25rem, 1.097rem + 0.65vw, 1.88rem);
+  align-items: center;
+  gap: 0.62rem;
+
+  @media screen and (min-width: 992px){
+    gap: 0.75rem;
+
+  }
+
+  & > span:first-child {
+    & a {
+      display: block;
+      background-image: url("../images/bchomegrey.svg");
+      width: 1.4375rem;
+      height: 1.4375rem;
+    }
+
+    & span {
+      display: none;
+    }
+  }
+
+  & > span{
+    opacity: 0.4;
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(0.813rem, 0.782rem + 0.13vw, 0.938rem);
+
+    &:last-child{
+       opacity: 1;
+      
+    }
+  }
+
+  & .separator{
+    display: inline-block;
+
+    width: 0.75rem;
+    height: 0.6875rem;
+
+    background-image: url("../images/carret-rigth-grey.svg");
+  }
+}
+
+#single-blog{
+  & .breadcrumb{
+    & > span:first-child {
+      & a {
+        display: block;
+        background-image: url("../images/bchome.svg");
+        width: 1.4375rem;
+        height: 1.4375rem;
+      }
+
+      & span {
+        display: none;
+      }
+    }
+
+    & .separator{
+      display: inline-block;
+
+      width: 0.75rem;
+      height: 0.6875rem;
+
+      background-image: url("../images/separatorsb.svg");
+    }
+  }
+}
+
+
+

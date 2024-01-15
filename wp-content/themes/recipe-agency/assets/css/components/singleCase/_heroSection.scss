@@ -25,6 +25,15 @@
         }
       }
     }
+
+    & .tag-list__item {
+      color: $primary-text-color;
+      background-color: $white-color;
+
+      @media screen and (max-width: 991px) {
+        padding: 0.625rem 0.75rem;
+      }
+    }
   }
 
   & .hero-title {
@@ -124,15 +133,6 @@
   & .hero-info {
     @media screen and (min-width: 992px) {
       gap: 2.5rem;
-    }
-  }
-
-  & .tag-list__item {
-    color: $primary-text-color;
-    background-color: $white-color;
-
-    @media screen and (max-width: 991px) {
-      padding: 0.625rem 0.75rem;
     }
   }
 

@@ -5,8 +5,8 @@
   background-color: $primary-text-color;
 
   @media screen and (min-width: 992px) {
-    padding-top: 7.5rem;
-    padding-bottom: 4.12rem;
+    padding-top: min(6.25%, 7.5rem);
+    padding-bottom: min(3.438%, 4.125rem);
 
     background-position: left center;
     background-repeat: no-repeat;

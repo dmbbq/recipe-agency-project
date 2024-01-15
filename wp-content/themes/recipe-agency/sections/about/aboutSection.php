@@ -6,7 +6,7 @@
                     <?php the_field('about_title'); ?>
                 </h2>
                 <?php the_field('about_text'); ?>
-                <button class="button-primary">
+                <button class="button-primary feedback-js">
                     <?= translate_and_output('write_us'); ?>
                 </button>
             </div>

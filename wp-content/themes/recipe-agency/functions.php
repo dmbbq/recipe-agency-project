@@ -21,7 +21,13 @@ function enqueue_scripts_and_styles()
 
     wp_enqueue_script('jquery');
     wp_enqueue_script('main-js', get_template_directory_uri() . '/dist/js/main.bundle.js', array('jquery'), null, true);
-    wp_localize_script('main-js', 'ajaxurl', admin_url('admin-ajax.php'));
+
+    $custom_vars = array(
+        'ajaxurl' => admin_url('admin-ajax.php'),
+        'privacy_policy_url'    => get_permalink(pll_get_post(283, pll_current_language()))
+    );
+
+    wp_localize_script('main-js', 'custom_vars', $custom_vars);
 }
 
 function theme_setup()
@@ -86,7 +92,6 @@ function filter_posts()
     get_template_part('templates/cases/casesList');
 }
 
-
 function my_connection_types()
 {
     p2p_register_connection_type(array(
@@ -143,7 +148,9 @@ $strings_to_translate = array(
     'project_info' => 'Інформація про проєкт:',
     'watch_site' => 'Переглянути сайт',
     'results' => 'Результати наших клієнтів',
-    'other_cases' => 'Інші кейси'
+    'other_cases' => 'Інші кейси',
+    'go_home' => 'Перейти на головну',
+    'our_services' => 'Всі послуги'
 );
 
 if (function_exists('pll_register_string')) {

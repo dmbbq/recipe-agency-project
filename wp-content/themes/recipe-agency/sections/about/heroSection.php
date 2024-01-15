@@ -5,7 +5,9 @@
 
 <section class="hero">
     <div class="container">
+
         <div class="hero-wrapper position-relative overflow-hidden">
+            <?php get_template_part('templates/breadCrumbs'); ?>
             <?php the_field('hero_title'); ?>
             <div class="hero-content d-flex flex-column flex-lg-row">
                 <svg class="hero-content__icon" width="42" height="42">
@@ -16,7 +18,7 @@
                     <p class="hero-text">
                          <?php the_field('hero_text'); ?>
                     </p>
-                    <button class="hero-button button-primary" type="button">
+                    <button class="hero-button button-primary feedback-js" type="button">
                         <?= translate_and_output('write_us'); ?>
                     </button>
                 </div>

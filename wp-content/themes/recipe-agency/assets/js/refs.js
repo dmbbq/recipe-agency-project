@@ -11,6 +11,10 @@ const refs = {
   swiperNavigation: $(".pagination__item"),
   filterButton: $('.filter-button'),
   filterBackdrop: $("#filter"),
+  feedbackBackdrop: $('#feedback'),
+  feedbackButtons: $('.feedback-js'),
+  appointmentButtons: $('.appointment-js'),
+  appointmentBackdrop: $('#appointment')
 };
 
 export default refs;

@@ -12,8 +12,4 @@ Template Name: Services
 
 <?php get_footer(); ?>
 
-<style>
-
-</style>
-
 

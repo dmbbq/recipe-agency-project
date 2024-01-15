@@ -8,14 +8,9 @@
   }
 
   & .details-info {
-    padding-bottom: 3.125rem;
+    padding-bottom: clamp(3.125rem, 1.896rem + 5.24vw, 8.188rem);
     border-bottom: 1px solid $seventh-bg-color;
-    margin-bottom: 4.6875rem;
-
-    @media screen and (min-width: 992px) {
-      padding-bottom: min(7.3596%, 8.1875rem);
-      margin-bottom: min(9.5506%, 10.625rem);
-    }
+    margin-bottom: clamp(4.688rem, 3.246rem + 6.15vw, 10.625rem);
 
     & > div {
       &:first-child {
@@ -65,7 +60,7 @@
       }
 
       @media screen and (min-width: 1920px) {
-        padding-right: min(6.4583vw, 7.75rem);
+        padding-right: 7.75rem;
       }
 
       & li {
@@ -115,34 +110,28 @@
     max-width: 57.5rem;
 
     & > h2 {
-      margin-bottom: 1.25rem;
+      margin-bottom: clamp(1.25rem, 0.795rem + 1.94vw, 3.125rem);
 
       font-size: clamp(1.875rem, 1.42rem + 1.94vw, 3.75rem);
       letter-spacing: -0.08438rem;
 
       @media screen and (min-width: 992px) {
-        margin-bottom: min(2.6042vw, 3.125rem);
-
         letter-spacing: -0.16875rem;
       }
 
       &:not(:first-child) {
-        margin-top: 2.5rem;
-
-        @media screen and (min-width: 992px) {
-          margin-top: min(4.1667vw, 5rem);
-        }
+        margin-top: clamp(2.5rem, 1.893rem + 2.59vw, 5rem);
       }
     }
 
     & > p {
+      margin-bottom: clamp(1.25rem, 0.795rem + 1.94vw, 3.125rem);
+
       font-family: 'Manrope', sans-serif;
       font-size: clamp(0.938rem, 0.892rem + 0.19vw, 1.125rem);
       line-height: 1.65;
 
       @media screen and (min-width: 992px) {
-        margin-bottom: min(2.6042vw, 3.125rem);
-
         line-height: 1.7;
       }
 
@@ -156,28 +145,123 @@
     }
 
     & img {
-      margin: 1.25rem 0;
-
-      @media screen and (min-width: 992px) {
-        margin: min(2.6042vw, 3.125rem) 0;
-      }
+      margin-bottom: clamp(1.25rem, 0.795rem + 1.94vw, 3.125rem);
     }
   }
 
   & .details-link {
     max-width: fit-content;
-    margin-top: 1.25rem;
-
-    @media screen and (min-width: 992px) {
-      margin-top: min(4.1667vw, 5rem);
-    }
+    margin-top: clamp(1.25rem, 0.34rem + 3.88vw, 5rem);
   }
 
   & .cases-title {
-    margin-bottom: 2.1875rem;
+    margin-bottom: clamp(2.188rem, 1.505rem + 2.91vw, 5rem);
+  }
 
-    @media screen and (min-width: 992px) {
-      margin-bottom: 5rem;
+  & .indexes-list {
+    & ul {
+      @media screen and (min-width: 768px){
+        display: flex;
+        gap: 0.75rem;
+      }
+
+      & li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 1.9375rem 3.125rem 1.875rem 1.875rem;
+        border-radius: 0.625rem;
+        border: 1px solid $sixth-bg-color;
+
+        background-color: $secondary-bg-color;
+        backdrop-filter: blur(8.5px);
+
+        @media screen and (min-width: 768px){
+          aspect-ratio: 1 / calc(13.7 / 19.5);
+
+          flex-basis: calc((100% - 1.5rem) / 3);
+
+          flex-direction: column;
+          align-items: flex-start;
+
+          padding: min(2.08333vw, 2.5rem);
+        }
+
+        &:not(:last-child){
+          @media screen and (max-width: 991px){
+            margin-bottom: 0.19rem;
+          }
+        }
+
+        & h3 {
+          font-size: clamp(1.875rem, 1.723rem + 0.65vw, 2.5rem);
+          letter-spacing: -0.08438rem;
+
+          @media screen and (min-width: 992px){
+            letter-spacing: -0.1125rem;
+          }
+
+          color: $accent-color;
+        }
+
+        & p {
+          font-family: 'Manrope', sans-serif;
+          font-size: clamp(0.875rem, 0.814rem + 0.26vw, 1.125rem);
+          letter-spacing: -0.00875rem;
+
+          @media screen and (max-width: 767px){
+            min-width: 6.9375rem;
+          }
+
+          @media screen and (min-width: 992px){
+            line-height: 1.7;
+            letter-spacing: initial;
+          }
+
+          & br {
+            @media screen and (min-width: 576px){
+              display: none;
+            }
+          }
+        }
+
+        & h3,
+        & p {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  & .single-case-cta-wrapper {
+    padding: clamp(2.8125rem, 2.507rem + 1.29vw, 4.06rem) clamp(1.875rem, 1.42rem + 1.94vw, 3.75rem);
+    margin-top: clamp(2.5rem, 1.893rem + 2.59vw, 5rem);
+
+    border-radius:$fifth-radius;
+    background-color: $primary-text-color;
+
+    & h2 {
+      margin-bottom: 1.875rem;
+
+      font-size: clamp(1.875rem, 1.845rem + 0.13vw, 2rem);
+      letter-spacing: -0.08438rem;
+
+      color:$white-color;
+
+      @media screen and (min-width: 992px){
+        margin: 0;
+
+        letter-spacing: -0.09rem;
+      }
+
+      & strong   {
+        color: $accent-color;
+      }
+    }
+
+    & button {
+        flex-shrink: 0
     }
   }
 }

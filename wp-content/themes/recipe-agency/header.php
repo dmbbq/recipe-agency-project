@@ -15,11 +15,10 @@
 
 <?php
 $page_id = get_the_ID();
-$is_black_theme = in_array($page_id, array(132, 129, 140, 138, 124, 121, 136, 134, 128, 126)) || is_singular('services') ? true : false;
+$is_black_theme = in_array($page_id, array(132, 129, 140, 138, 124, 121, 136, 134, 128, 126,283,285)) || is_singular('services') ? true : false;
 ?>
 
 <body style="visibility: hidden" class="<?= is_404() ? 'not-found' : ''; ?>">
-
 <div class="wrapper">
     <header class="header <?php echo $is_black_theme ? "black-theme" : "white-theme"; ?>">
         <div class="container">
@@ -33,7 +32,7 @@ $is_black_theme = in_array($page_id, array(132, 129, 140, 138, 124, 121, 136, 13
 
                 <?php get_template_part('templates/languagesList'); ?>
 
-                <button class="button-primary d-none d-xl-flex">
+                <button class="button-primary d-none d-xl-flex feedback-js">
                     <?= translate_and_output('write_us'); ?>
                 </button>
 

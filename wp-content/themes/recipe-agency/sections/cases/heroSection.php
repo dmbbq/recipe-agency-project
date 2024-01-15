@@ -1,5 +1,6 @@
 <section class="section--padding main-section main-section--padding-mob">
     <div class="container">
+        <?php get_template_part('templates/breadCrumbs'); ?>
         <div class="cases-wrapper d-flex align-items-center justify-content-between">
             <h1 class="mb-0">
                 <?php the_field('title'); ?>

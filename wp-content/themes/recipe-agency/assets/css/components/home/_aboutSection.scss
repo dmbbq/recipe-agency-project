@@ -88,10 +88,14 @@
 
           margin-bottom: auto;
 
+          border-radius: 0.625rem;
+
           @media screen and (min-width: 992px) {
             aspect-ratio: 1 / calc(11.5625 / 12.625);
 
             max-width: 12.625rem;
+
+            border-radius: 0.9375rem;
           }
         }
 

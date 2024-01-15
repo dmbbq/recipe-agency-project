@@ -11,9 +11,9 @@
                 </svg>
                 <?php the_field('hero_pre_title');?>
             </p>
-            <a class="hero-button" href="#cta">
+            <button type="button" class="hero-button appointment-js border-0">
                 <?php the_field('hero_button');?>
-            </a>
+            </button>
         </div>
     </div>
 </section>

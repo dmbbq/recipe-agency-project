@@ -1,12 +1,11 @@
 <?= get_header(); ?>
 
 <?php
-$cta_post_id = pll_get_post(140, pll_current_language());
 $cta_args = [
-    'title' => get_field('single_cta_title', $cta_post_id),
-    'text' => get_field('single_cta_text', $cta_post_id),
-    'image_url' => get_field('single_cta_image', $cta_post_id),
-    'image_url_mob' => get_field('single_cta_image_mob', $cta_post_id),
+    'title' => get_field('single_cta_title'),
+    'text' => get_field('single_cta_text'),
+    'image_url' => get_field('single_cta_image'),
+    'image_url_mob' => get_field('single_cta_image_mob'),
     'page' => 'single-service'
 ];
 ?>

@@ -1,0 +1,44 @@
+#privacyPolicy {
+  & h1 {
+    margin-bottom: 3.13rem;
+
+    font-size: clamp(2rem, 1.424rem + 2.46vw, 4.375rem);
+    letter-spacing: -0.09rem;
+    @media screen and (min-width: 992px) {
+      max-width: 70.05208333333333%;
+      margin-bottom: 9.38rem;
+
+      letter-spacing: -0.19688rem;
+    }
+  }
+
+  & ul {
+
+    & li {
+      margin-bottom: 2.19rem;
+      @media screen and (min-width: 992px) {
+        margin-bottom: 5rem;
+      }
+
+      & h2 {
+        margin-bottom: 1.25rem;
+        @media screen and (min-width: 992px) {
+          margin-bottom: 3.12rem;
+        }
+
+      }
+
+      p {
+        margin: 0;
+        font-family: 'Manrope', sans-serif;
+        font-size: clamp(0.875rem, 0.784rem + 0.39vw, 1.25rem);
+        letter-spacing: -0.00875rem;
+        @media screen and (min-width: 992px){
+        max-width: 57.5rem;
+        }
+      }
+    }
+
+
+  }
+}

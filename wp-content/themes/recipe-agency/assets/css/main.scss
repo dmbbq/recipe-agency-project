@@ -19,6 +19,9 @@
 //Popups
 @import "layout/popups/menu";
 @import "layout/popups/filter";
+@import "layout/popups/feedback";
+@import "layout/popups/appointment";
+
 
 //Common components
 @import "components/ctaSection";
@@ -61,5 +64,11 @@
 @import "components/singleCase/heroSection";
 @import "components/singleCase/detailsSection";
 
+//Privacy Policy page
+@import "components/privacyPolicy/mainSection";
+
 //404 page
 @import "components/404";
+
+//breadCrumbs
+@import "components/breadCrumbs";
