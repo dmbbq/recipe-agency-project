@@ -13722,6 +13722,7 @@ img {
 }
 @media screen and (min-width: 992px) {
   .modal .modal-button__icon {
+    cursor: pointer;
     fill: #FFF;
     width: 2.375rem;
     height: 2.375rem;

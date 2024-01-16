@@ -165,63 +165,63 @@ function send_message_to_telegram($contact_form)
     $telegram_token = '6980991397:AAG0bapfE7xNxcxEdIAjVYH0E_ru0X478B8';
     $chat_id = '-4163052008';
     $message = '';
-//Feedback form [UA]
-    if ($form_id === '771') {
+//Feedback form [UA , ENG]
+    if ($form_id === 771 || $form_id === 791) {
+        $submission = WPCF7_Submission::get_instance();
+        if ($submission) {
+            $posted_data = $submission->get_posted_data();
+            $message .= '<b>Форма:</b> ' . $posted_data['form-title'] . PHP_EOL;
+            $message .= PHP_EOL;
+            $message .= '<b>Контактні данні клієнта:</b>' . PHP_EOL;
+            $message .= PHP_EOL;
+            $message .= '<b>Ім\'я:</b> ' . $posted_data['username'] . PHP_EOL;
+            $message .= PHP_EOL;
+            $message .= '<b>Номер телефону:</b> ' . $posted_data['number'] . PHP_EOL;
+            $message .= PHP_EOL;
+            $message .= '<b>Завдання клієнта:</b> ' . $posted_data['description'] . PHP_EOL;
+            $message .= PHP_EOL;
+            $message .= '<b>Згоден з політикою конфіденційності:</b> ' . ($posted_data['privacy-policy'] ? 'так' : '') . PHP_EOL;
+            $message .= PHP_EOL;
+            $message .= '<b>utm_source:</b> ' . $posted_data['utm_source'] . PHP_EOL;
+            $message .= PHP_EOL;
+            $message .= '<b>utm_medium:</b> ' . $posted_data['utm_medium'] . PHP_EOL;
+            $message .= PHP_EOL;
+            $message .= '<b>utm_term:</b> ' . $posted_data['utm_term'] . PHP_EOL;
+            $message .= PHP_EOL;
+            $message .= '<b>utm_content:</b> ' . $posted_data['utm_content'] . PHP_EOL;
+            $message .= PHP_EOL;
+            $message .= '<b>utm_campaign:</b> ' . $posted_data['utm_campaign'] . PHP_EOL;
+            $message .= PHP_EOL;
+        }
+//Appointment form [UA, ENG]
+    } elseif ($form_id === 472 || $form_id === 203) {
 
         $submission = WPCF7_Submission::get_instance();
         if ($submission) {
             $posted_data = $submission->get_posted_data();
-            $message .= '<b>Контактные данные клиента:</b>' . PHP_EOL;
+            $message .= '<b>Форма:</b> ' . $posted_data['form-title'] . PHP_EOL;
             $message .= PHP_EOL;
-            $message .= '<b>Номер телефона:</b> ' . $posted_data['number'] . PHP_EOL;
+            $message .= '<b>Контактні данні клієнта:</b>' . PHP_EOL;
             $message .= PHP_EOL;
-        }
-//Feedback form [END]
-    } elseif ($form_id === 791) {
-
-        $submission = WPCF7_Submission::get_instance();
-        if ($submission) {
-            $posted_data = $submission->get_posted_data();
-            $message .= '<b>Контактные данные клиента:</b>' . PHP_EOL;
+            $message .= '<b>Ім\'я:</b> ' . $posted_data['username'] . PHP_EOL;
             $message .= PHP_EOL;
-            $message .= '<b>Номер телфона:</b> ' . $posted_data['number'] . PHP_EOL;
+            $message .= '<b>Номер телефону:</b> ' . $posted_data['number'] . PHP_EOL;
             $message .= PHP_EOL;
-        }
-//Appointment form [UA]
-    } elseif ($form_id === 472) {
-
-        $submission = WPCF7_Submission::get_instance();
-        if ($submission) {
-            $posted_data = $submission->get_posted_data();
-            $message .= '<b>Контактные данные клиента:</b>' . PHP_EOL;
+            $message .= '<b>Згоден з політикою конфіденційності:</b> ' . ($posted_data['privacy-policy'] ? 'так' : '') . PHP_EOL;
             $message .= PHP_EOL;
-            $message .= '<b>Номер телфона:</b> ' . $posted_data['number'] . PHP_EOL;
+            $message .= '<b>utm_source:</b> ' . $posted_data['utm_source'] . PHP_EOL;
+            $message .= PHP_EOL;
+            $message .= '<b>utm_medium:</b> ' . $posted_data['utm_medium'] . PHP_EOL;
+            $message .= PHP_EOL;
+            $message .= '<b>utm_term:</b> ' . $posted_data['utm_term'] . PHP_EOL;
+            $message .= PHP_EOL;
+            $message .= '<b>utm_content:</b> ' . $posted_data['utm_content'] . PHP_EOL;
+            $message .= PHP_EOL;
+            $message .= '<b>utm_campaign:</b> ' . $posted_data['utm_campaign'] . PHP_EOL;
             $message .= PHP_EOL;
         }
-//Appointment form [ENG]
-    } elseif ($form_id === 203) {
-
-        $submission = WPCF7_Submission::get_instance();
-        if ($submission) {
-            $posted_data = $submission->get_posted_data();
-            $message .= '<b>Контактные данные клиента:</b>' . PHP_EOL;
-            $message .= PHP_EOL;
-            $message .= '<b>Номер телфона:</b> ' . $posted_data['number'] . PHP_EOL;
-            $message .= PHP_EOL;
-        }
-//Mailing form [UA]
-    } elseif ($form_id === 467) {
-
-        $submission = WPCF7_Submission::get_instance();
-        if ($submission) {
-            $posted_data = $submission->get_posted_data();
-            $message .= '<b>Контактные данные клиента:</b>' . PHP_EOL;
-            $message .= PHP_EOL;
-            $message .= '<b>Номер телфона:</b> ' . $posted_data['number'] . PHP_EOL;
-            $message .= PHP_EOL;
-        }
-//Mailing form [ENG]
-    } elseif ($form_id === 541) {
+//Mailing form [UA, ENG]
+    } elseif ($form_id === 467 || $form_id === 541) {
 
         $submission = WPCF7_Submission::get_instance();
         if ($submission) {

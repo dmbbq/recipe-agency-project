@@ -137,6 +137,25 @@ $('.cf7-acceptance').prop('checked', true);
 
 $('a[href="[privacy_policy_url]"]').attr('href', custom_vars.privacy_policy_url);
 
+const findClosestH2 = (element) => {
+    const closestModal = element.closest('div.modal');
+
+    if (closestModal[0]) {
+        return closestModal.find('h2');
+    }
+
+    const closestCtaWrapper = element.closest('div.cta-wrapper');
+
+    return closestCtaWrapper.find('h2');
+};
+
+const cf7TitleInputs = $('.cf7-form-title');
+
+cf7TitleInputs.each(function () {
+    const closestH2 = findClosestH2($(this));
+    $(this).val(closestH2.text());
+});
+
 $("document").ready(function () {
     bodyEl.css("visibility", "visible");
 

@@ -839,6 +839,19 @@ $('#single-case .hero-content__button').on("click", function () {
 });
 $('.cf7-acceptance').prop('checked', true);
 $('a[href="[privacy_policy_url]"]').attr('href', custom_vars.privacy_policy_url);
+var findClosestH2 = function findClosestH2(element) {
+  var closestModal = element.closest('div.modal');
+  if (closestModal[0]) {
+    return closestModal.find('h2');
+  }
+  var closestCtaWrapper = element.closest('div.cta-wrapper');
+  return closestCtaWrapper.find('h2');
+};
+var cf7TitleInputs = $('.cf7-form-title');
+cf7TitleInputs.each(function () {
+  var closestH2 = findClosestH2($(this));
+  $(this).val(closestH2.text());
+});
 $("document").ready(function () {
   bodyEl.css("visibility", "visible");
   new wowjs_dist_wow_min__WEBPACK_IMPORTED_MODULE_6__.WOW().init();

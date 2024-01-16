@@ -217,7 +217,9 @@ img {
   }
 
   & .modal-button__icon {
+
     @media screen and (min-width: 992px){
+      cursor: pointer;
       fill: $white-color;
 
       width: 2.375rem;
