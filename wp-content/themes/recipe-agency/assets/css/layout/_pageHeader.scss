@@ -13,7 +13,15 @@
       }
 
       & a {
+
         color: $white-color;
+
+        transition: background-color 0.3s ease;
+        &:hover {
+          border-radius: inherit;
+          background-color: $accent-color;
+        }
+
       }
     }
 
@@ -90,6 +98,7 @@
     }
 
     & a {
+
       display: inline-block;
 
       padding: 0.62rem 1.25rem;
@@ -97,6 +106,14 @@
       font-family: 'Manrope', sans-serif;
       line-height: calc(1.38125 / 1.0625);
       letter-spacing: -0.02656rem;
+
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        color: $white-color;
+        border-radius: inherit;
+        background-color: $accent-color;
+      }
 
       @media screen and (min-width: 768px) and (max-width: 991px) {
         padding: 0.32rem 0.75rem;

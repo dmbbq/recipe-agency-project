@@ -109,9 +109,6 @@ $current_lang = pll_current_language();
             <span class="footer-bottom__info">
                 <?= translate_and_output('copyright'); ?>
             </span>
-            <a class="footer-bottom__info" href="#">
-                <?= translate_and_output('design'); ?>
-            </a>
         </div>
     </div>
 </footer>

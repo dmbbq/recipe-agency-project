@@ -78,6 +78,7 @@
   }
 
   & .hero-button {
+    @include hover(background-color $accent-color $secondary-accent-color);
     display: inline-flex;
     align-items: center;
     justify-content: center;

@@ -11,7 +11,7 @@ $processes_image = get_field('processes_image');
                     <p>
                         <?php the_field('processes_text'); ?>
                     </p>
-                    <button class="appointment-js processes-wrapper__link mt-auto d-flex align-items-center justify-content-center">
+                    <button class="appointment-js processes-wrapper__button mt-auto d-flex align-items-center justify-content-center">
                         <?= translate_and_output('leave_statement'); ?>
                     </button>
                 </div>

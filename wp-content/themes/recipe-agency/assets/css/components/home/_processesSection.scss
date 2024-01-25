@@ -99,7 +99,7 @@
     }
   }
 
-  & .processes-wrapper__link {
+  & .processes-wrapper__button {
     height: 3.3125rem;
     position: relative;
 
@@ -110,6 +110,17 @@
     border-radius: $secondary-radius;
     color: $primary-text-color;
     background-color: $white-color;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+
+    &:hover:after{
+      background-image: url("../images/white-arrow-btn.svg");
+
+    }
+    &:hover{
+      background-color: $black-color;
+      color: $white-color;
+    }
 
     &:after {
       content: '';
@@ -124,13 +135,19 @@
       background-size: contain;
       background-repeat: no-repeat;
 
+
+
       @media screen and (min-width: 992px) {
         width: 0.98544rem;
         height: 0.98544rem;
 
         top: 0.97rem;
         right: 0.97rem;
+
       }
+      //&:hover {
+      //  background-image: url("../images/white-arrow-btn.svg");
+      //}
     }
 
     @media screen and (min-width: 992px) {

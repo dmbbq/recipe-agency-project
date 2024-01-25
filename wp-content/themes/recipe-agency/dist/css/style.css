@@ -14255,6 +14255,11 @@ form br {
 }
 .header.white-theme .nav-list a {
   color: #FFF;
+  transition: background-color 0.3s ease;
+}
+.header.white-theme .nav-list a:hover {
+  border-radius: inherit;
+  background-color: #72AFFF;
 }
 @media screen and (max-width: 991px) {
   .header.white-theme .header-wrapper {
@@ -14321,6 +14326,12 @@ form br {
   font-family: "Manrope", sans-serif;
   line-height: 1.3;
   letter-spacing: -0.02656rem;
+  transition: background-color 0.3s ease;
+}
+.header .nav-list a:hover {
+  color: #FFF;
+  border-radius: inherit;
+  background-color: #72AFFF;
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .header .nav-list a {
@@ -14513,7 +14524,18 @@ form br {
 
 @media screen and (min-width: 1440px) {
   .footer-wrapper__item {
+    position: relative;
     padding-right: min(7.192%, 8rem);
+  }
+  .footer-wrapper__item :after {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -116px;
+    left: 0;
+    background-color: #343434;
   }
 }
 
@@ -14546,7 +14568,6 @@ form br {
 
 .footer-bottom {
   padding-top: 1.56rem;
-  border-top: 1px solid #1a1a1a;
 }
 
 .footer-bottom {
@@ -15565,6 +15586,8 @@ form br {
   }
 }
 #home .hero-button {
+  background-color: #72AFFF;
+  transition: background-color 200ms ease-in-out;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -15577,6 +15600,9 @@ form br {
   border-radius: 0.3125rem;
   color: #FFF;
   background-color: #72AFFF;
+}
+#home .hero-button:hover, #home .hero-button:focus {
+  background-color: #4391F6;
 }
 @media screen and (min-width: 1200px) {
   #home .hero-button {
@@ -15884,7 +15910,7 @@ form br {
     margin: 0;
   }
 }
-#home .processes-wrapper__link {
+#home .processes-wrapper__button {
   height: 3.3125rem;
   position: relative;
   font-size: clamp(0.813rem, 0.737rem + 0.32vw, 1.125rem);
@@ -15893,8 +15919,16 @@ form br {
   border-radius: 0.3125rem;
   color: #010101;
   background-color: #FFF;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
-#home .processes-wrapper__link:after {
+#home .processes-wrapper__button:hover:after {
+  background-image: url(../caae334da53d3866f018.svg);
+}
+#home .processes-wrapper__button:hover {
+  background-color: #000;
+  color: #FFF;
+}
+#home .processes-wrapper__button:after {
   content: "";
   position: absolute;
   width: 0.75rem;
@@ -15906,7 +15940,7 @@ form br {
   background-repeat: no-repeat;
 }
 @media screen and (min-width: 992px) {
-  #home .processes-wrapper__link:after {
+  #home .processes-wrapper__button:after {
     width: 0.98544rem;
     height: 0.98544rem;
     top: 0.97rem;
@@ -15914,7 +15948,7 @@ form br {
   }
 }
 @media screen and (min-width: 992px) {
-  #home .processes-wrapper__link {
+  #home .processes-wrapper__button {
     height: 5.3125rem;
     border-radius: 0.9375rem;
   }
@@ -16053,7 +16087,7 @@ form br {
   }
 }
 #about .hero-wrapper {
-  padding: 2.5rem 1.44rem 2.5rem 1.69rem;
+  padding: 1.5rem 1.44rem 2.5rem 1.69rem;
   border-radius: 0.625rem;
   background-color: #F9F9F9;
 }
@@ -16082,7 +16116,7 @@ form br {
 }
 #about h1 strong {
   display: block;
-  color: rgba(1, 1, 1, 0.1);
+  color: rgba(1, 1, 1, 0.4);
 }
 #about .hero-content {
   gap: 0.94rem;

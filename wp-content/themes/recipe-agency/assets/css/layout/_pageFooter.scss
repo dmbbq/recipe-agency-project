@@ -167,7 +167,22 @@
 
 .footer-wrapper__item {
   @media screen and (min-width: 1440px) {
+    position: relative;
+
     padding-right: min(7.192%, 8rem);
+
+    & :after{
+      display: inline-block;
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+
+      bottom: -116px;
+      left: 0;
+      background-color: #343434;
+
+    }
   }
 }
 
@@ -201,7 +216,7 @@
 
 .footer-bottom {
   padding-top: 1.56rem;
-  border-top: 1px solid #1a1a1a;
+  //border-top: 1px solid tomato;
 
 }
 
