@@ -852,6 +852,38 @@ cf7TitleInputs.each(function () {
   var closestH2 = findClosestH2($(this));
   $(this).val(closestH2.text());
 });
+var btnUp = {
+  el: document.querySelector('.btn-up'),
+  show: function show() {
+    // удалим у кнопки класс btn-up_hide
+    this.el.classList.remove('btn-up_hide');
+  },
+  hide: function hide() {
+    // добавим к кнопке класс btn-up_hide
+    this.el.classList.add('btn-up_hide');
+  },
+  addEventListener: function addEventListener() {
+    var _this = this;
+    // при прокрутке содержимого страницы
+    window.addEventListener('scroll', function () {
+      // определяем величину прокрутки
+      var scrollY = window.scrollY || document.documentElement.scrollTop;
+      // если страница прокручена больше чем на 400px, то делаем кнопку видимой, иначе скрываем
+      scrollY > 400 ? _this.show() : _this.hide();
+    });
+    // при нажатии на кнопку .btn-up
+    this.el.onclick = function () {
+      // переместим в начало страницы
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      });
+    };
+  }
+};
+btnUp.addEventListener();
+btnUp.addEventListener();
 $("document").ready(function () {
   bodyEl.css("visibility", "visible");
   new wowjs_dist_wow_min__WEBPACK_IMPORTED_MODULE_6__.WOW().init();

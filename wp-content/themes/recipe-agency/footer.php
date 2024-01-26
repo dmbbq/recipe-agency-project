@@ -111,6 +111,12 @@ $current_lang = pll_current_language();
             </span>
         </div>
     </div>
+
+    <a class="btn-up btn-up_hide d-flex align-items-center justify-content-center" href="#top">
+        <svg class="button-to-top__icon">
+            <use href="<?php get_image('sprite.svg#icon-button-top'); ?>"></use>
+        </svg>
+    </a>
 </footer>
 </div>
 
@@ -119,6 +125,8 @@ $current_lang = pll_current_language();
 <?php get_template_part('templates/popups/feedback'); ?>
 <?php get_template_part('templates/popups/appointment'); ?>
 <?php get_template_part('templates/popups/thankYou'); ?>
+
+
 
 <?php wp_footer(); ?>
 
